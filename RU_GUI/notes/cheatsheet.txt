@@ -1,0 +1,164 @@
+--PS monitoring--
+new terminal:
+cd /home/maps/git/misc_software/usbserial_testbeam; ./open_terminals.sh
+commands: q=quit, R=Recall, N=oN, F=oFf
+Note: Recall must be used if doing a hard power cycle (e.g. after transport)
+Setpoints:
+Fan: setpoints 12.000 V 5.000 A, OVP ENABLED @ 22.0 V OCP ENABLED @ 22.0 A
+Power: channel P6V: setpoints 3.300 V 5.000 A
+channel P25V: setpoints 0.000 V 1.000 A
+channel N25V: setpoints -5.000 V 0.200 A
+RU: setpoints 5.000 V 8.000 A, OVP ENABLED @ 6.0 V OCP ENABLED @ 10.0 A
+
+
+can close this terminal once the monitoring terminals are spawned
+
+--programming FPGAs--
+!!!Turn on PS if not already!!!
+
+new terminal:
+source ~/software/Xilinx/Vivado/2017.4/settings64.sh; cd /home/maps/git/RUv1_Test_sync2018-08/bitstreams
+vivado -mode batch -source program_3plus1.tcl
+
+done with this terminal, but keep it open for reprogramming
+
+--configure RUs--
+!!!Turn on PS if not already!!!
+
+new terminal:
+cd ~/git/RUv1_Test_sync2018-08/software/py/;source scl_source enable rh-python36
+
+./testbench1.py rdo i2c-gbtx gbtx-config ../../modules/gbt/software/GBTx_configs/GBTx0_Config_RUv1_1.xml; ./testbench2.py rdo i2c-gbtx gbtx-config ../../modules/gbt/software/GBTx_configs/GBTx0_Config_RUv1_1.xml
+./testbench1.py rdo dctrl set-dclk-mask 0; ./testbench2.py rdo dctrl set-dclk-mask 0
+./testbench1.py powerunit initialize
+./testbench1.py powerunit setup-power-IBs 1.8 1.5 1.8 1.5 0 None [0,1,2,3]
+./testbench1.py powerunit power-on-IBs [0,1,2,3]
+./testbench1.py rdo dctrl set-dclk-mask 0x1f; ./testbench2.py rdo dctrl set-dclk-mask 0x1f
+./testbench1.py setup_sensors; ./testbench2.py setup_sensors
+./testbench1.py setup_readout; ./testbench2.py setup_readout
+
+if pulsing (you also need to set SETUP_PULSE=True in the testbench):
+./testbench1.py rdo trigger-handler configure-to-send-pulses; ./testbench2.py rdo trigger-handler configure-to-send-pulses
+
+monitoring:
+./testbench1.py powerunit log-values-IBs [0,1,2,3]
+./testbench1.py rdo gth is_aligned; ./testbench2.py rdo gth is_aligned
+./testbench1.py readback_sensors; ./testbench2.py readback_sensors
+./testbench1.py reset-counters; ./testbench2.py reset-counters;watch -n1 './testbench1.py get-counters; ./testbench2.py get-counters'
+
+====
+extra commands for debug or fun:
+
+enable the data forwarding (if no ALPIDEs):
+./testbench.py rdo gbt-packer-gth set-settings --enable_data_forward=1
+
+trigger handler counter (triggers seen and sent by the trigger handler):
+./testbench.py rdo trigger-handler-monitor get-counters
+
+ALPIDE control counters (register accesses, trigger, pulse):
+./testbench.py rdo dctrl get-counters
+
+Datapath monitor (count data packets coming from the ALPIDEs):
+./testbench.py rdo datapathmon read-counters
+
+GBTx flow counter (triggers and data packets seen on the GBTx controller):
+./testbench.py rdo gbtx-flow-monitor read-counters
+
+valid range for Vout is roughly 1.5 - 2.7 V (else the DAC value calculated by _VoutToCode is outside the range 0-0xFF)
+
+====
+extra power unit commands:
+
+turn everything off:
+./testbench1.py powerunit power-off-all
+
+
+if using bias, you need to set the bias value and set the backbias_en bit on the power-on-IBs command:
+./testbench.py powerunit setup-power-IBs 1.8 1.0 1.8 0.5 -1 None [0,1,2,3]
+./testbench.py powerunit power-on-IBs [0,1,2,3] 1
+
+====
+
+Useful debug:
+./testbench.py rdo trigger-handler dump-config
+./testbench.py rdo trigger-handler get-operating-mode
+
+switch to a debug pattern on the GBTx TX:
+./testbench.py rdo gbtx01 set-tx-pattern 1
+
+====
+setting up the software:
+
+setup on CentOS 7:
+yum install centos-release-scl 
+yum install rh-python36 rh-python36-python-tkinter
+source scl_source enable rh-python36
+pip install fire pyserial pyusb imageio matplotlib
+
+copy 99-ru.rules to /etc/udev/rules.d
+udevadm control --reload-rules
+====
+stave assignments:
+
+Note the label on stave A105 says "A1-005" - we call it A105 since that's what the ALICE stave test report says.
+
+As the test report says, E103 and A105 have one totally disconnected chip each. C105 has two damaged chips (chipIDs 2 and 8) but we can run with them; the five damaged chips (0, 3, 6, 7, 8) on C104 spew hits even if they are masked, so we plan to not read them out.
+
+The FireFly signal cables are labeled ALPx since they were used in the 2018 test beam. The custom cable is labeled with the connector numbers from the Samtec drawing.
+
+stave   power   signal  RU, 3+1
+E103    M1      ALP0    RU1,J2
+C105    M2      J2      RU2
+C104    M3      ALP1    RU1,J3
+A105    M4      ALP2    RU1,J4
+
+====
+Brief summary of lane mapping (detail in ru_multistaves.txt)
+
+Lanes are 0-indexed in the firmware and .py scripts, but 1-indexed in the data format and decoder. Here we stick to 0-indexed lane numbers.
+
+The RU has 5 sets of ALPIDE clock and control lines, referenced by connector numbers. On the ALICE transition board, the connector we use is #4. On Alex's transition board, J2=0, J3=1, J4=2.
+
+An N-lane RU firmware has lanes 0 through N-1.
+
+RU 1 (27-lane firmware, Alex's transition board, 3 FireFly cables):
+lane    connector       chipID
+0       J2              0
+1       J2              1
+2       J2              2
+3       J2              3
+4       J2              4
+5       J2              5
+6       J2              6
+7       J2              7
+8       J4              8
+9       J4              7
+10      J4              6
+11      J4              5
+12      J4              4
+13      J4              3
+14      J4              2
+15      J4              1
+16      J4              0
+17      J3              8
+18      J3              7
+19      J3              6
+20      J3              5
+21      J3              4
+22      J3              3
+23      J3              2
+24      J3              1
+25      J3              0
+26      J2              8
+
+RU 2 (9-lane firmware, ALICE transition board v2.0, one side of a custom cable):
+lane    chipID
+0       2
+1       1
+2       0
+3       3
+4       4
+5       5
+6       6
+7       7
+8       8
