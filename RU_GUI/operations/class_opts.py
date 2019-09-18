@@ -4,6 +4,11 @@ import os
 import sys
 sys.path.append('sub_pages')
 #sys.path.append('sub_pages')
+import subprocess
+import time
+
+
+
 import cheatsheet
 import step_commands
 import commands
@@ -12,7 +17,8 @@ import commands
 
 
 step_commands = step_commands.step_commands
-HORI = 600
+HORI = 600 #horizontal
+VERT = 100 #vertical
 
 def declare_overall_box (self):
 #{{{
@@ -26,6 +32,9 @@ def declare_overall_box (self):
 
 def import_outside_functions(self):
 #{{{
+	#all below are functions, not menu buttons.
+	#but these functions are most related with GUI buttons or text box status change.
+
 	self.OnExit 		=	function.OnExit
 	self.OnSelectAll 	= 	function.OnSelectAll
 	self.OnButton 		= 	function.OnButton
@@ -42,7 +51,7 @@ def import_outside_functions(self):
 #}}}
 
 
-def generate_status_bar(self):
+def generate_menu_bar(self):
 #{{{
 	self.CreateStatusBar() #status bar at the bottom 
 	filemenu = wx.Menu() #menu on the top
@@ -148,11 +157,23 @@ def add_stepstatusbox (self):
 	statusbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
 	#self.status_text = wx.TextCtrl(self, -1, 'status', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
-	self.status_text = wx.TextCtrl(self, -1, 'status', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	self.status_text = wx.TextCtrl(self, -1, 'status', size=(HORI, VERT), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
 	statusbox.Add(self.status_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
 	self.box_sizer.Add(statusbox, 0, wx.ALIGN_LEFT)	
 #}}}
 
+def add_stdoutbox (self):
+#{{{
+	stdoutbox=wx.BoxSizer(wx.HORIZONTAL)
+
+	statictext=wx.StaticText(self,label='Linux Stdout:')
+	stdoutbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+	#self.stdout_text = wx.TextCtrl(self, -1, 'stdout', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
+	self.stdout_text = wx.TextCtrl(self, -1, 'stdout', size=(HORI, VERT), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	stdoutbox.Add(self.stdout_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
+	self.box_sizer.Add(stdoutbox, 0, wx.ALIGN_LEFT)	
+#}}}
 
 def exe_combobox_command(self, event):
 	path = self.path_text.GetValue()
@@ -163,17 +184,50 @@ def exe_combobox_command(self, event):
 	#exec(command)
 
 	#for system execute
+	"""
 	os.chdir(path)
+	
 	print os.getcwd()
 	
 	result = os.system(command)
 	print result
-
-
+	
 	if result == 0:
 		self.status_text.SetValue("step " + str(step) + " exec success")
 	else:
 		self.status_text.SetValue("step " + str(step) + " exec fail")
+	
+	"""
+	cmd = "cd " + path + "; " + command
+	
+	sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+
+	stdout_list = sp.stdout.readlines()
+	stderr_list = sp.stderr.readlines()
+
+	stdout_tmp = ""	
+	for line in stdout_list:
+		stdout_tmp += line
+	for line in stderr_list:
+		stdout_tmp += line
+
+	time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+	if stderr_list == []:
+		self.status_list.append(time_format + " " + "STEP " + str(step) + " exec success")
+	else:
+		self.status_list.append(time_format + " " + "STEP " + str(step) + " exec fail")
+	
+	if len(self.status_list) == 10:
+		del(self.status_list[0])
+
+	status_tmp = ""
+	for status in self.status_list:
+		status_tmp += status + "\n"
+
+	
+	self.status_text.SetValue(status_tmp)
+	self.stdout_text.SetValue(stdout_tmp)
+
 
 
 
