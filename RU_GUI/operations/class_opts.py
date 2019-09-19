@@ -19,6 +19,10 @@ import commands
 step_commands = step_commands.step_commands
 HORI = 600 #horizontal
 VERT = 100 #vertical
+textbox_style = (wx.TE_MULTILINE | wx.TE_AUTO_SCROLL)
+#(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP)
+
+
 
 def declare_overall_box (self):
 #{{{
@@ -80,20 +84,24 @@ def generate_menu_bar(self):
 #}}}
 
 def add_step_button_box(self):
-	button_box =wx.BoxSizer(wx.HORIZONTAL)
+	button_box = wx.BoxSizer(wx.HORIZONTAL)
 
 	self.step_button_list = []
 	for i in range (len(step_commands)):
 		com = step_commands[i]
 		title = com[0]
-		step_exe_button = wx.Button(self, i, title )
+		step_exe_button = wx.Button(self, i, title, size=(200, 50))
 		self.step_button_list.append(step_exe_button)	
 		self.step_button_list[i].SetBackgroundColour('red')
 		button_box.Add(self.step_button_list[i], 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5  )
 	
 		self.Bind(wx.EVT_BUTTON, lambda evt,i=self.step_button_list[i].GetId():self.exe_buttonbox_command(evt, i), self.step_button_list[i])
+		if (i + 1) % 3 == 0:
+			self.box_sizer.Add(button_box, 0, wx.ALIGN_LEFT)
+			button_box = wx.BoxSizer(wx.HORIZONTAL)
 	
-	self.box_sizer.Add(button_box, 0, wx.ALIGN_LEFT)
+	if button_box != "":
+		self.box_sizer.Add(button_box, 0, wx.ALIGN_LEFT)
 	
 
 def exe_buttonbox_command(self, event, button_num):
@@ -155,8 +163,7 @@ def add_steppathbox (self):
 	statictext=wx.StaticText(self,label='Step Path:')
 	pathbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-	#self.path_text = wx.TextCtrl(self, -1, 'path', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
-	self.path_text = wx.TextCtrl(self, -1, 'path', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	self.path_text = wx.TextCtrl(self, -1, 'path', size=(HORI, -1), style = textbox_style)
 	pathbox.Add(self.path_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
 	self.box_sizer.Add(pathbox, 0, wx.ALIGN_LEFT)	
 #}}}
@@ -168,8 +175,7 @@ def add_stepcommandbox (self):
 	statictext=wx.StaticText(self,label='Step Command:')
 	commandbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-	#self.command_text = wx.TextCtrl(self, -1, 'command', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
-	self.command_text = wx.TextCtrl(self, -1, 'command', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	self.command_text = wx.TextCtrl(self, -1, 'command', size=(HORI, -1), style=textbox_style)
 	commandbox.Add(self.command_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
 	self.box_sizer.Add(commandbox, 0, wx.ALIGN_LEFT)	
 #}}}
@@ -181,8 +187,7 @@ def add_stepexplainbox (self):
 	statictext=wx.StaticText(self,label='Step Explain:')
 	explainbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-	#self.explain_text = wx.TextCtrl(self, -1, 'explain', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
-	self.explain_text = wx.TextCtrl(self, -1, 'explain', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	self.explain_text = wx.TextCtrl(self, -1, 'explain', size=(HORI, -1), style=textbox_style)
 	explainbox.Add(self.explain_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
 	self.box_sizer.Add(explainbox, 0, wx.ALIGN_LEFT)	
 #}}}
@@ -194,8 +199,7 @@ def add_stepstatusbox (self):
 	statictext=wx.StaticText(self,label='Step Status:')
 	statusbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-	#self.status_text = wx.TextCtrl(self, -1, 'status', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
-	self.status_text = wx.TextCtrl(self, -1, 'status', size=(HORI, VERT), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	self.status_text = wx.TextCtrl(self, -1, 'status', size=(HORI, VERT), style=textbox_style)
 	statusbox.Add(self.status_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
 	self.box_sizer.Add(statusbox, 0, wx.ALIGN_LEFT)	
 #}}}
@@ -207,8 +211,7 @@ def add_stdoutbox (self):
 	statictext=wx.StaticText(self,label='Linux Stdout:')
 	stdoutbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-	#self.stdout_text = wx.TextCtrl(self, -1, 'stdout', size=(HORI, -1), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP))
-	self.stdout_text = wx.TextCtrl(self, -1, 'stdout', size=(HORI, VERT), style=(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL))
+	self.stdout_text = wx.TextCtrl(self, -1, 'stdout', size=(HORI, VERT), style=textbox_style)
 	stdoutbox.Add(self.stdout_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
 	self.box_sizer.Add(stdoutbox, 0, wx.ALIGN_LEFT)	
 #}}}
