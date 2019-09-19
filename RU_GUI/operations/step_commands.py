@@ -1,4 +1,4 @@
-step_commands = {}
+step_commands = [] 
 
 #0: title (buttom name)
 #1: path
