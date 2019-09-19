@@ -41,9 +41,10 @@ def import_outside_functions(self):
 	self.print_page_0 	=	function.print_page_0
 	self.showcheatsheet = 	cheatsheet.showcheatsheet
 	
-	self.change_combobox_command = change_combobox_command
-	self.exe_combobox_command = exe_combobox_command
+	#self.change_combobox_command = change_combobox_command
+	#self.exe_combobox_command = exe_combobox_command
 	
+	self.exe_buttonbox_command = exe_buttonbox_command
 
 
 
@@ -78,37 +79,74 @@ def generate_menu_bar(self):
 	self.Bind(wx.EVT_MENU, self.showcheatsheet, cheatsheetpage)
 #}}}
 
+def add_step_button_box(self):
+	button_box =wx.BoxSizer(wx.HORIZONTAL)
 
-def add_stepcombobox (self):
-#{{{
-	combobox=wx.BoxSizer(wx.HORIZONTAL)
-
-	statictext=wx.StaticText(self,label='Select step:')
-	combobox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
-
-	list0=[]
-	for com in step_commands:
-		list0.append(com)
-
-	self.ch1=wx.ComboBox(self, -1, value='Steps', choices=list0, style=wx.CB_SORT)
-	combobox.Add(self.ch1, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+	self.step_button_list = []
+	for i in range (len(step_commands)):
+		com = step_commands[i]
+		title = com[0]
+		step_exe_button = wx.Button(self, i, title )
+		self.step_button_list.append(step_exe_button)	
+		self.step_button_list[i].SetBackgroundColour('red')
+		button_box.Add(self.step_button_list[i], 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5  )
 	
-	step_exe_button = wx.Button(self, -1, "Execute step command" )
-	combobox.Add(step_exe_button, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5 )
-	self.box_sizer.Add(combobox, 0, wx.ALIGN_LEFT)
-	self.Bind(wx.EVT_COMBOBOX, self.change_combobox_command, self.ch1)
-	self.Bind(wx.EVT_BUTTON, self.exe_combobox_command, step_exe_button)
-#}}}
+		self.Bind(wx.EVT_BUTTON, lambda evt,i=self.step_button_list[i].GetId():self.exe_buttonbox_command(evt, i), self.step_button_list[i])
+	
+	self.box_sizer.Add(button_box, 0, wx.ALIGN_LEFT)
+	
 
-def change_combobox_command(self, event):
-#{{{
-	combo_box_value = self.ch1.GetValue()
-	self.path_text.SetValue(step_commands[combo_box_value][0])
-	self.command_text.SetValue(step_commands[combo_box_value][1])
-	self.explain_text.SetValue(step_commands[combo_box_value][2])
+def exe_buttonbox_command(self, event, button_num):
+	com = step_commands[button_num]
+	title = com [0]
+	path = com [1] 
+	cmd = com[2]
+	explain = com[3]
 
-	#print("select{0}".format(event.GetString()))
-#}}}
+	############################################ 
+	#this is showing path and command to text box,
+	#if in the future remove text box, just common these lines
+	self.path_text.SetValue(path)
+	self.command_text.SetValue(cmd)
+	self.explain_text.SetValue(explain)
+
+	path = self.path_text.GetValue()
+	command = self.command_text.GetValue()
+	############################################ 
+	
+	cmd = "cd " + path + "; " + command
+	
+	sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+
+	stdout_list = sp.stdout.readlines()
+	stderr_list = sp.stderr.readlines()
+
+	stdout_tmp = ""	
+	for line in stdout_list:
+		stdout_tmp += line
+	for line in stderr_list:
+		stdout_tmp += line
+
+	time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+	if stderr_list == []:
+		self.status_list.append(time_format + " " + "STEP " + str(button_num) + " exec success")
+		self.step_button_list[button_num].SetBackgroundColour('green')
+	else:
+		self.status_list.append(time_format + " " + "STEP " + str(button_num) + " exec fail")
+		self.step_button_list[button_num].SetBackgroundColour('red')
+	
+	if len(self.status_list) == 10:
+		del(self.status_list[0])
+
+	status_tmp = ""
+	for status in self.status_list:
+		status_tmp += status + "\n"
+
+	self.status_text.SetValue(status_tmp)
+	self.stdout_text.SetValue(stdout_tmp)
+
+
+
 	
 def add_steppathbox (self):
 #{{{
@@ -175,7 +213,57 @@ def add_stdoutbox (self):
 	self.box_sizer.Add(stdoutbox, 0, wx.ALIGN_LEFT)	
 #}}}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+#combobox, just keep it
+def add_stepcombobox (self):
+#{{{
+	combobox=wx.BoxSizer(wx.HORIZONTAL)
+
+	statictext=wx.StaticText(self,label='Select step:')
+	combobox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+	list0=[]
+	for i in range (len(step_commands)):
+		com = step_commands[i]
+		title = com[0]
+		step_name = str(i)
+		list0.append(step_name)		
+
+	self.ch1=wx.ComboBox(self, -1, value='Steps', choices=list0, style=wx.CB_SORT)
+	combobox.Add(self.ch1, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+	
+	step_exe_button = wx.Button(self, -1, "Execute step command" )
+	combobox.Add(step_exe_button, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5 )
+	self.box_sizer.Add(combobox, 0, wx.ALIGN_LEFT)
+	self.Bind(wx.EVT_COMBOBOX, self.change_combobox_command, self.ch1)
+	self.Bind(wx.EVT_BUTTON, self.exe_combobox_command, step_exe_button)
+#}}}
+
+def change_combobox_command(self, event):
+#{{{
+	combo_box_value = int(self.ch1.GetValue())
+	
+	self.path_text.SetValue(step_commands[combo_box_value][1])
+	self.command_text.SetValue(step_commands[combo_box_value][2])
+	self.explain_text.SetValue(step_commands[combo_box_value][3])
+
+	#print("select{0}".format(event.GetString()))
+#}}}
+
 def exe_combobox_command(self, event):
+#{{{
 	path = self.path_text.GetValue()
 	command = self.command_text.GetValue()
 	step = self.ch1.GetValue()
@@ -227,10 +315,7 @@ def exe_combobox_command(self, event):
 	
 	self.status_text.SetValue(status_tmp)
 	self.stdout_text.SetValue(stdout_tmp)
-
-
-
-
+#}}}
 
 def declare_input_frame (self):
 	########## Label ##########

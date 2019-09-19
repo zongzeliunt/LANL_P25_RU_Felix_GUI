@@ -26,13 +26,16 @@ class my_GUI(wx.Frame):
 		co.generate_menu_bar(self)
 	
 
+		"""
 		co.add_stepcombobox(self)
+
+		"""
+		co.add_step_button_box(self)
 		co.add_steppathbox(self)
 		co.add_stepcommandbox(self)
 		co.add_stepexplainbox(self)
 		co.add_stepstatusbox(self) 
 		co.add_stdoutbox(self) 
-
 
 		#co.declare_input_frame(self)
 		#co.declare_button(self)
