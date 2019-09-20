@@ -57,7 +57,7 @@ class my_GUI(wx.Frame):
 
 if __name__ == '__main__':
 	root = wx.App()
-	frame = my_GUI(None, title = "Ares_GUI")
+	frame = my_GUI(None, title = "RU_GUI")
 	frame.Show()
 	root.MainLoop()
 

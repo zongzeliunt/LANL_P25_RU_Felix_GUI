@@ -13,7 +13,7 @@ class cheatsheet(wx.Frame):
 		self.OnOpen()
 		
 		self.sizer.Add(self.text_box, 1, wx.EXPAND)    
-
+		self.Bind(wx.EVT_CLOSE, self.destroy)
 
 	def OnOpen(self):
 		filename = "cheatsheet.txt"
@@ -22,13 +22,18 @@ class cheatsheet(wx.Frame):
 		self.text_box.SetValue(f.read())
 		f.close()
 
-
-
+	def destroy(self, e):
+		print "page close"
+		self.Destroy()
 
 def showcheatsheet (self, e):
 	print "show cheat sheet"
-	
 	frame = cheatsheet(None, title = "cheatsheet", orig_path = self.orig_path)
 	frame.Show()
 
 
+if __name__ == '__main__':
+	root = wx.App()
+	frame = cheatsheet(None, title = "Cheatsheet", orig_path = os.getcwd())
+	frame.Show()
+	root.MainLoop()

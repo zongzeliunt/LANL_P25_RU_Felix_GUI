@@ -16,7 +16,7 @@ import commands
 
 
 
-step_commands = step_commands.step_commands
+step_commands = step_commands.step_commands_1
 HORI = 600 #horizontal
 VERT = 100 #vertical
 textbox_style = (wx.TE_MULTILINE | wx.TE_AUTO_SCROLL)
@@ -84,6 +84,7 @@ def generate_menu_bar(self):
 #}}}
 
 def add_step_button_box(self):
+#{{{
 	button_box = wx.BoxSizer(wx.HORIZONTAL)
 
 	self.step_button_list = []
@@ -102,26 +103,33 @@ def add_step_button_box(self):
 	
 	if button_box != "":
 		self.box_sizer.Add(button_box, 0, wx.ALIGN_LEFT)
-	
+#}}}
 
 def exe_buttonbox_command(self, event, button_num):
+#{{{
 	com = step_commands[button_num]
 	title = com [0]
 	path = com [1] 
 	cmd = com[2]
 	explain = com[3]
+	exe_mode = com[4]
 
-	############################################ 
-	#this is showing path and command to text box,
-	#if in the future remove text box, just common these lines
 	self.path_text.SetValue(path)
 	self.command_text.SetValue(cmd)
 	self.explain_text.SetValue(explain)
 
+	
+	if exe_mode == 0:
+		external_command_exec()
+	else:
+		path = self.path_text.GetValue()
+		command = self.command_text.GetValue()
+		exec(command + "(event)")	
+#}}}
+
+def external_command_exec ():
 	path = self.path_text.GetValue()
 	command = self.command_text.GetValue()
-	############################################ 
-	
 	cmd = "cd " + path + "; " + command
 	
 	sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
@@ -152,8 +160,6 @@ def exe_buttonbox_command(self, event, button_num):
 
 	self.status_text.SetValue(status_tmp)
 	self.stdout_text.SetValue(stdout_tmp)
-
-
 
 	
 def add_steppathbox (self):
@@ -320,6 +326,7 @@ def exe_combobox_command(self, event):
 	self.stdout_text.SetValue(stdout_tmp)
 #}}}
 
+#keep for future use
 def declare_input_frame (self):
 	########## Label ##########
 
