@@ -10,6 +10,7 @@ import time
 
 
 import cheatsheet
+import stave_config 
 import step_commands
 import commands
 
@@ -44,6 +45,7 @@ def import_outside_functions(self):
 	self.OnButton 		= 	function.OnButton
 	self.print_page_0 	=	function.print_page_0
 	self.showcheatsheet = 	cheatsheet.showcheatsheet
+	self.show_stave_config = 	stave_config.show_stave_config
 	
 	#self.change_combobox_command = change_combobox_command
 	#self.exe_combobox_command = exe_combobox_command
@@ -93,7 +95,7 @@ def add_step_button_box(self):
 		title = com[0]
 		step_exe_button = wx.Button(self, i, title, size=(200, 50))
 		self.step_button_list.append(step_exe_button)	
-		self.step_button_list[i].SetBackgroundColour('red')
+		self.step_button_list[i].SetBackgroundColour('white')
 		button_box.Add(self.step_button_list[i], 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5  )
 	
 		self.Bind(wx.EVT_BUTTON, lambda evt,i=self.step_button_list[i].GetId():self.exe_buttonbox_command(evt, i), self.step_button_list[i])
@@ -117,17 +119,18 @@ def exe_buttonbox_command(self, event, button_num):
 	self.path_text.SetValue(path)
 	self.command_text.SetValue(cmd)
 	self.explain_text.SetValue(explain)
+	clicked_button = self.step_button_list[button_num]
 
 	
 	if exe_mode == 0:
-		external_command_exec()
+		external_command_exec(self, button_num)
 	else:
 		path = self.path_text.GetValue()
 		command = self.command_text.GetValue()
-		exec(command + "(event)")	
+		exec(command + "(event, " + str(button_num) + ")")	
 #}}}
 
-def external_command_exec ():
+def external_command_exec (self, button_num):
 	path = self.path_text.GetValue()
 	command = self.command_text.GetValue()
 	cmd = "cd " + path + "; " + command
