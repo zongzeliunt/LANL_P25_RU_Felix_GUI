@@ -1,0 +1,31 @@
+#NOTE:
+#This note is for future software developer to add new features, if you are not RU system developer please don't change anything. Otherwise you could make the RU GUI not working.
+#For any question please contact Zongze Li by: zongzeli2@my.unt.edu
+
+
+#Copy this whole RU_GUI_external_opts path to the path which you want to execute ./testbench1.py. 
+#According to cheatsheet the path is 
+#	~/git/RUv1_Test_sync2018-08/software/py/
+ 
+#First, we need to add this initialize function call at testbench_base.py's Testbench's __init__ function to make sure the include_all_RU_GUI_external_opts function can be called when initialize a Testbench class type object:
+	"""
+ 		self.include_all_RU_GUI_external_opts()
+	"""
+
+#And copy this internal function to somewhere inside class Testbench:
+	"""
+	def include_all_RU_GUI_external_opts(self):
+		#LANL 
+		directory = "RU_GUI_external_opts"
+		if os.path.exists(directory):
+			sys.path.append(directory)
+			import RU_GUI_external_opts
+			RU_GUI_external_opts.include_all_external_opts(self)
+	"""
+	#Please notice package "os" and "sys" are imported in testbench1.py, but if you want to execuate testbench_base.py alone you need to import them at testbench_base.py
+
+
+#EXPLAIN
+	#This is the way of minimum affect the original code. All GUI related functions are in this RU_GUI_external_opts file. We don't need to modify testbench_base.py too much. Which can be easy to merge future update.
+	#However, we still need the class Testbench to include our functions as its class' internal function. 
+	#When add new function, if want to call by testbench_base.py or testbench1.py, please list it in include_all_external_opts(self).

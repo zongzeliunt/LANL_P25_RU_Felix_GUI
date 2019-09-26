@@ -20,7 +20,9 @@ import commands
 step_commands = step_commands.step_commands_1
 HORI = 600 #horizontal
 VERT = 100 #vertical
-textbox_style = (wx.TE_MULTILINE | wx.TE_AUTO_SCROLL)
+#textbox_style = (wx.TE_MULTILINE | wx.TE_AUTO_SCROLL)
+textbox_style = (wx.TE_MULTILINE | wx.HSCROLL)
+textbox_style = (wx.TE_MULTILINE)
 #(wx.TE_MULTILINE | wx.TE_AUTO_SCROLL | wx.TE_DONTWRAP)
 
 
@@ -127,7 +129,7 @@ def exe_buttonbox_command(self, event, button_num):
 	else:
 		path = self.path_text.GetValue()
 		command = self.command_text.GetValue()
-		exec(command + "(event, " + str(button_num) + ")")	
+		exec(command + "(event, " + str(button_num) + "," + path + ")")	
 #}}}
 
 def external_command_exec (self, button_num):

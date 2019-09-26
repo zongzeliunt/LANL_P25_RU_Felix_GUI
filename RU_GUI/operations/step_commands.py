@@ -77,7 +77,7 @@ step_commands_1.append(step)
 
 step = ["", "", "", "", ""]
 step[0] = "Show Stave config page"
-step[1] = "."
+step[1] = "'./sub_pages'"
 step[2] = "self.show_stave_config"
 step[3] = "test pop page, call internal function"
 step[4] = 1 
