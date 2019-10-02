@@ -34,12 +34,45 @@
 		#We still need to execuate testbench1.py first, not call RU_GUI_setup_sensors. We need the class testbench to initialize those senseors, then we use our function to write the parameters to the senseors.
 
 
+
+import json
+
+default_parameter_dict = {}
+default_parameter_dict["PULSE_VPULSEH"] 			= 170
+default_parameter_dict["PULSE_VPULSEL"] 			= 100
+default_parameter_dict["IBIAS"] 					= 64
+default_parameter_dict["VRESETD"] 					= 147
+default_parameter_dict["VCASN"] 					= 50 
+default_parameter_dict["VCASP"] 					= 86
+default_parameter_dict["VCLIP"] 					= 0
+default_parameter_dict["VCASN2"] 					= 57
+default_parameter_dict["IDB"]						= 29
+default_parameter_dict["ITHR"] 						= 50
+default_parameter_dict["ITHR_commitTransaction"] 	= "True"
+
+
 def include_all_external_opts(self):
+	print "include all external"
 	#self.RU_GUI_setup_sensors = RU_GUI_setup_sensors
 	self.RU_GUI_setup_sensors_debug = RU_GUI_setup_sensors_debug
 
 
-"""
+def parameter_dict_read_from_json_file ():
+#{{{
+	result_dict = {} 
+	file_name = "./RU_GUI_external_opts/parameter.json"
+ 
+	try:
+		fl = open(file_name, "r")
+		result_dict = json.load(fl)
+		fl.close()     
+	except:
+		#default values
+		result_dict	= default_parameter_dict 
+	return result_dict
+#}}}
+
+
 def RU_GUI_setup_sensors(self,enable_strobe_generation=0,LinkSpeed=3,disable_manchester=1, pattern=SensorMatrixPattern.EMPTY):
 	maskdict = self.read_maskfile("masklist_"+TBNAME+".txt")
 	#do GRST at the beginning, since it's global
@@ -57,18 +90,20 @@ def RU_GUI_setup_sensors(self,enable_strobe_generation=0,LinkSpeed=3,disable_man
 
 
 
-"""
-		#ch.setreg_VPULSEH(VPULSEH=PULSE_VPULSEH)
-		#ch.setreg_VPULSEL(VPULSEL=PULSE_VPULSEL)
-		#ch.setreg_IBIAS(IBIAS=64)
-		#ch.setreg_VRESETD(VRESETD=147)
-		#ch.setreg_VCASN(VCASN=50)
-		#ch.setreg_VCASP(VCASP=86)
-		#ch.setreg_VCLIP(VCLIP=0)
-		#ch.setreg_VCASN2(VCASN2=57)
-		#ch.setreg_IDB(IDB=29)
-		#ch.setreg_ITHR(ITHR=50,commitTransaction=True)
-"""
+		#this part is different from original
+		parameter_dict = parameter_dict_read_from_json_file()
+		ch.setreg_VPULSEH	(VPULSEH	=parameter_dict["PULSE_VPULSEH"])
+		ch.setreg_VPULSEL	(VPULSEL	=parameter_dict["PULSE_VPULSEL"])
+		ch.setreg_IBIAS		(IBIAS		=parameter_dict["IBIAS"])
+		ch.setreg_VRESETD	(VRESETD	=parameter_dict["VRESETD"])
+		ch.setreg_VCASN		(VCASN		=parameter_dict["VCASN"])
+		ch.setreg_VCASP		(VCASP		=parameter_dict["VCASP"])
+		ch.setreg_VCLIP		(VCLIP		=parameter_dict["VCLIP"])
+		ch.setreg_VCASN2	(VCASN2		=parameter_dict["VCASN2"])
+		ch.setreg_IDB		(IDB		=parameter_dict["IDB"])
+		ch.setreg_ITHR		(ITHR		=parameter_dict["ITHR"],\
+							commitTransaction=parameter_dict["commitTransaction"])
+		#end
 
 
 		for pll_off_sig in [0, 1, 0]:
@@ -118,9 +153,9 @@ def RU_GUI_setup_sensors(self,enable_strobe_generation=0,LinkSpeed=3,disable_man
 	self.rdo.dctrl.set_dctrl_mask(0x1F) #restore broadcast to all connectors
 	#do RORST at the end, since it's global
 	ch_broadcast.board.write_chip_opcode(Opcode.RORST)
-"""
 
 def RU_GUI_setup_sensors_debug():
-	print "RU GUI setup sensor debug"	
-
+	print "ARES!!!!!!!!! RU GUI setup sensor debug"
+	parameter_dict = parameter_dict_read_from_json_file()
+	print parameter_dict 
 
