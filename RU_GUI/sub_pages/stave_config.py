@@ -2,6 +2,7 @@ import wx
 import os
 import sys
 import json
+import subprocess
 
 HORI = 200 #horizontal
 VERT = 100 #vertical
@@ -36,10 +37,6 @@ class stave_config(wx.Frame):
 		self.exe_path = exe_path
 		
 		self.call_button_light_on(call_button)
-
-	#this include all external opts, declared in RU_GUI_external_opts
-	#must execute above all function calls
- 		self.include_all_RU_GUI_external_opts()
 	
 	#all parameters initialize, this function is declared in RU_GUI_external_opts
 		self.parameter_list_init()
@@ -52,20 +49,6 @@ class stave_config(wx.Frame):
 
 		#this is destroy function, with light off call button feature
 		self.Bind(wx.EVT_CLOSE, self.destroy)
-
-	#this is only debug use, must remove when release
-	def include_all_RU_GUI_external_opts(self):
-	#{{{
-		#include all RU_GUI_external_opts's functions
-
-		directory = self.exe_path + "/RU_GUI_external_opts"
-		
-		if os.path.exists(directory):
-			sys.path.append(directory)
-			import RU_GUI_external_opts
-			RU_GUI_external_opts.include_all_external_opts(self)
-	#}}}
-
 
 	def declare_parameter_input_box (self):
 	#{{{
@@ -123,8 +106,6 @@ class stave_config(wx.Frame):
 
 	def exe_button_click (self, event):
 	#{{{
-		self.RU_GUI_setup_sensors_debug()
-		"""
 		path = self.exe_path
 		command = "./testbench1.py setup_sensors;"
 
@@ -141,7 +122,6 @@ class stave_config(wx.Frame):
 			stdout_tmp += line
 		
 		self.stdout_text.SetValue(stdout_tmp)
-		"""
 	#}}}
 	
 	def write_file_button_click (self, event):
@@ -163,7 +143,7 @@ class stave_config(wx.Frame):
 
 	def parameter_dict_write_to_json_file (self):
 	#{{{
-		file_name = self.exe_path + "/RU_GUI_external_opts/parameter.json"
+		file_name = self.exe_path + "/parameter.json"
 	 
 		fl = open(file_name, "w")
 		json.dump(self.parameter_dict,fl)
@@ -173,11 +153,15 @@ class stave_config(wx.Frame):
 	def parameter_dict_read_from_json_file (self):
 	#{{{
 		result_dict = {}
-		file_name = self.exe_path + "/RU_GUI_external_opts/parameter.json"
+		file_name = self.exe_path + "/parameter.json"
 	 
 		try:
 			fl = open(file_name, "r")
 			result_dict = json.load(fl)
+			for arg in result_dict:
+				if not arg == "ITHR_commitTransaction":
+					result_dict[arg] = int(result_dict[arg])
+
 			fl.close()     
 		except:
 			#default values
@@ -218,16 +202,9 @@ class stave_config(wx.Frame):
 	#}}}
 
 def show_stave_config (self, e, button_num, path):
-	directory = path + "/RU_GUI_external_opts"
-
-	if not os.path.exists(directory):
-		#detect if RU_GUI_external_opts path exists
-		wx.MessageBox( "Path " + directory + " cannot be found. ", "Error")
-		self.step_button_list[button_num].SetBackgroundColour('red') 
-	else:		
-		frame = stave_config(None, title = "Stave_config", exe_path = path , call_button = self.step_button_list[button_num])
-		frame.Show()
-		frame.Bind(wx.EVT_CLOSE, frame.destroy)
+	frame = stave_config(None, title = "Stave_config", exe_path = path , call_button = self.step_button_list[button_num])
+	frame.Show()
+	frame.Bind(wx.EVT_CLOSE, frame.destroy)
 
 
 """

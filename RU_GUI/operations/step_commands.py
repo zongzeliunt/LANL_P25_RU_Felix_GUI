@@ -50,7 +50,7 @@ step_commands.append(step)
 
 step = ["", "", "", "", ""]
 step[0] = "Show Stave config page"
-step[1] = "'~/git/RUv1_Test_sync2018-08/software/py/'"
+step[1] = "'/home/maps/git/RUv1_Test_sync2018-08/software/py/'"
 #for real system, copy RU_GUI_external_opts folder to orig software path,
 #then change this path to the orig software path
 step[2] = "self.show_stave_config"
