@@ -16,8 +16,9 @@ def OnButton (self, e):
 		print self.area_text.GetValue()
 		dlg.Destroy()
 
+"""
 def print_page_0 (self):
 	print "this is page_0"
 	os.system("python ./page_0.py")
-
+"""
 

@@ -4,6 +4,9 @@ import os
 import sys
 sys.path.append('./operations')
 import class_opts as co 
+import step_commands
+
+
 
 class my_GUI(wx.Frame):
 	def __init__(self, parent, title):
@@ -13,6 +16,7 @@ class my_GUI(wx.Frame):
 
 		self.status_list = []
 
+		self.step_commands = step_commands.step_commands_1
 
 		wx.Frame.__init__(self, parent, title = title, size = (800, 600))
 		#1. overall box	

@@ -27,8 +27,9 @@ class stave_config(wx.Frame):
 	def __init__(self, parent, title, exe_path, call_button):
 		self.dirname = ''
 		#over all frame
-		wx.Frame.__init__(self, parent, title = title, size = (1000, 600))	
+		wx.Frame.__init__(self, parent, title = title, size = (1000, 800))	
 		
+		self.parameter_list = [] 
 		#over all sizer
 		self.sizer = wx.BoxSizer(wx.VERTICAL)
 		self.SetSizer(self.sizer)
@@ -39,7 +40,7 @@ class stave_config(wx.Frame):
 		self.call_button_light_on(call_button)
 	
 	#all parameters initialize, this function is declared in RU_GUI_external_opts
-		self.parameter_list_init()
+		self.parameter_list_init(0)
 		
 		self.declare_parameter_input_box()
 	
@@ -53,8 +54,21 @@ class stave_config(wx.Frame):
 	def declare_parameter_input_box (self):
 	#{{{
 		#declare all parameter input box
-		self.parameter_value_box_list = []
+		self.parameter_value_inputbox_list = []
+		self.parameter_value_readbox_list = []
 		 
+		labelbox=wx.BoxSizer(wx.HORIZONTAL)
+		statictext=wx.StaticText(self,size=(HORI, -1))
+		labelbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		statictext=wx.StaticText(self, label = "input", size=(HORI, -1))
+		labelbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		statictext=wx.StaticText(self, label = "output", size=(HORI, -1))
+		labelbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.sizer.Add(labelbox, 0, wx.ALIGN_LEFT)
+		
 		for i in range(len(self.parameter_list)):
 			parameter = self.parameter_list[i]
 			parameter_name = parameter[0]
@@ -62,14 +76,19 @@ class stave_config(wx.Frame):
 
 			labelbox=wx.BoxSizer(wx.HORIZONTAL)
 
-			statictext=wx.StaticText(self,label=parameter_name)
+			statictext=wx.StaticText(self,label=parameter_name, size=(HORI, -1))
 			labelbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
 			input_text = wx.TextCtrl(self, i, str(parameter_value), size=(HORI, -1), style = textbox_style)
 			labelbox.Add(input_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
+			
+			read_text = wx.TextCtrl(self, i, str(parameter_value), size=(HORI, -1), style = textbox_style)
+			labelbox.Add(read_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+	
 			self.sizer.Add(labelbox, 0, wx.ALIGN_LEFT)
 			
-			self.parameter_value_box_list.append(input_text)
+			self.parameter_value_inputbox_list.append(input_text)
+			self.parameter_value_readbox_list.append(read_text)
 	#}}}
 
 	def add_stdoutbox (self):
@@ -80,7 +99,8 @@ class stave_config(wx.Frame):
 		stdoutbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
 		self.stdout_text = wx.TextCtrl(self, -1, 'stdout', size=(600, VERT), style=textbox_style)
-		stdoutbox.Add(self.stdout_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
+		#stdoutbox.Add(self.stdout_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
+		stdoutbox.Add(self.stdout_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
 		self.sizer.Add(stdoutbox, 0, wx.ALIGN_LEFT)	
 	#}}}
 
@@ -98,10 +118,54 @@ class stave_config(wx.Frame):
 
 		button_sizer.Add(self.exe_button, 1, wx.ALIGN_LEFT)
 
+		self.write_default_file_button = wx.Button(self, 2, "Write default value to file", size=(200, 50))
+		self.write_default_file_button.SetBackgroundColour('white')
 
+		button_sizer.Add(self.write_default_file_button, 2, wx.ALIGN_LEFT)
+
+		self.read_button = wx.Button(self, 3, "Read parameter from stave", size=(200, 50))
+		self.read_button.SetBackgroundColour('white')
+		button_sizer.Add(self.read_button, 3, wx.ALIGN_LEFT)
+		
 		self.sizer.Add(button_sizer, 0, wx.ALIGN_LEFT)
 		self.Bind(wx.EVT_BUTTON, self.write_file_button_click, self.write_file_button)
+		self.Bind(wx.EVT_BUTTON, self.write_default_file_button_click, self.write_default_file_button)
 		self.Bind(wx.EVT_BUTTON, self.exe_button_click, self.exe_button)
+		self.Bind(wx.EVT_BUTTON, self.read_button_click, self.read_button)
+	#}}}
+
+	def read_button_click (self, event):
+	#{{{
+
+		path = self.exe_path
+		command = "./testbench1.py setup_sensors;"
+
+		cmd = "cd " + path + "; " + command
+
+		#ARES in real system this command must execute
+		#sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+		
+
+		result_dict = {}
+		file_name = self.exe_path + "/read_parameter.json"
+
+		fl = open(file_name, "r")
+		result_dict = json.load(fl)
+		fl.close()     
+
+		self.parameter_value_readbox_list[0].SetValue(str(result_dict["PULSE_VPULSEH"]))
+		self.parameter_value_readbox_list[1].SetValue(str(result_dict["PULSE_VPULSEL"]))
+		self.parameter_value_readbox_list[2].SetValue(str(result_dict["IBIAS"]))
+		self.parameter_value_readbox_list[3].SetValue(str(result_dict["VRESETD"]))
+		self.parameter_value_readbox_list[4].SetValue(str(result_dict["VCASN"]))
+		self.parameter_value_readbox_list[5].SetValue(str(result_dict["VCASP"]))
+		self.parameter_value_readbox_list[6].SetValue(str(result_dict["VCLIP"]))
+		self.parameter_value_readbox_list[7].SetValue(str(result_dict["VCASN2"]))
+		self.parameter_value_readbox_list[8].SetValue(str(result_dict["IDB"]))
+		self.parameter_value_readbox_list[9].SetValue(str(result_dict["ITHR"]))
+		self.parameter_value_readbox_list[10].SetValue(str(result_dict["ITHR_commitTransaction"]))
+
+
 	#}}}
 
 	def exe_button_click (self, event):
@@ -124,14 +188,24 @@ class stave_config(wx.Frame):
 		self.stdout_text.SetValue(stdout_tmp)
 	#}}}
 	
+	def write_default_file_button_click (self, event):
+	#{{{
+		self.parameter_list_init(1)
+		for i in range (len(self.parameter_list)):
+			this_parameter = self.parameter_list[i]
+			self.parameter_value_inputbox_list[i].SetValue(str(this_parameter[1]))
+
+		self.parameter_dict_write_to_json_file()
+		self.write_default_file_button.SetBackgroundColour('green')
+	#}}}
+	
 	def write_file_button_click (self, event):
 	#{{{
-		print "write file button click"
 		#parameter list is only for sequence order
 		#operations are still doing on parameter dict
 
-		for i in range (len(self.parameter_value_box_list)):
-			this_parameter = self.parameter_value_box_list[i].GetValue()
+		for i in range (len(self.parameter_value_inputbox_list)):
+			this_parameter = self.parameter_value_inputbox_list[i].GetValue()
 			#print self.parameter_list[i][0] + " :" +  this_parameter
 			parameter_name = self.parameter_list[i][0]
 			self.parameter_dict[parameter_name] = this_parameter
@@ -169,28 +243,36 @@ class stave_config(wx.Frame):
 		return result_dict
 	#}}}
 
-	def parameter_list_init(self):
+	def parameter_list_init(self, mode):
 	#{{{
 		self.parameter_dict = {}
-		self.parameter_dict = self.parameter_dict_read_from_json_file()
-		
-		self.parameter_list = [] 
+		if mode == 0:
+			#read parameter from json file
+			self.parameter_dict = self.parameter_dict_read_from_json_file()
+		else:
+			#get parameter from default dict
+			self.parameter_dict = default_parameter_dict
+
 		#this list is just used to make parameter dict have sequence order
-		self.parameter_list.append(["PULSE_VPULSEH", 			self.parameter_dict["PULSE_VPULSEH"]])
-		self.parameter_list.append(["PULSE_VPULSEL", 			self.parameter_dict["PULSE_VPULSEL"]])
-		self.parameter_list.append(["IBIAS", 					self.parameter_dict["IBIAS"]])
-		self.parameter_list.append(["VRESETD", 					self.parameter_dict["VRESETD"]])
-		self.parameter_list.append(["VCASN",  					self.parameter_dict["VCASN"]])
-		self.parameter_list.append(["VCASP", 					self.parameter_dict["VCASP"]])
-		self.parameter_list.append(["VCLIP", 					self.parameter_dict["VCLIP"]])
-		self.parameter_list.append(["VCASN2", 					self.parameter_dict["VCASN2"]])
-		self.parameter_list.append(["IDB", 						self.parameter_dict["IDB"]])
-		self.parameter_list.append(["ITHR", 					self.parameter_dict["ITHR"]])
-		self.parameter_list.append(["ITHR_commitTransaction", 	self.parameter_dict["ITHR_commitTransaction"]])
+		
+		self.parameter_list = [[] for i in range(len(self.parameter_dict))]
+
+		self.parameter_list[0] = ["PULSE_VPULSEH", 			self.parameter_dict["PULSE_VPULSEH"]]
+		self.parameter_list[1] = ["PULSE_VPULSEL", 			self.parameter_dict["PULSE_VPULSEL"]]
+		self.parameter_list[2] = ["IBIAS", 					self.parameter_dict["IBIAS"]]
+		self.parameter_list[3] = ["VRESETD", 					self.parameter_dict["VRESETD"]]
+		self.parameter_list[4] = ["VCASN",  					self.parameter_dict["VCASN"]]
+		self.parameter_list[5] = ["VCASP", 					self.parameter_dict["VCASP"]]
+		self.parameter_list[6] = ["VCLIP", 					self.parameter_dict["VCLIP"]]
+		self.parameter_list[7] = ["VCASN2", 					self.parameter_dict["VCASN2"]]
+		self.parameter_list[8] = ["IDB", 						self.parameter_dict["IDB"]]
+		self.parameter_list[9] = ["ITHR", 					self.parameter_dict["ITHR"]]
+		self.parameter_list[10] = ["ITHR_commitTransaction", 	self.parameter_dict["ITHR_commitTransaction"]]
 	#}}}
 	
 	#{{{
 	def call_button_light_on(self, call_button):
+		#the call_button is the upper page's button, calling this sub page
 		#initilize call button and light it on 
 		#we need to change call button color when close the frame
 		self.call_button = call_button

@@ -11,13 +11,11 @@ import time
 
 import cheatsheet
 import stave_config 
-import step_commands
 import commands
 
 
 
 
-step_commands = step_commands.step_commands_1
 HORI = 600 #horizontal
 VERT = 100 #vertical
 #textbox_style = (wx.TE_MULTILINE | wx.TE_AUTO_SCROLL)
@@ -45,16 +43,14 @@ def import_outside_functions(self):
 	self.OnExit 		=	function.OnExit
 	self.OnSelectAll 	= 	function.OnSelectAll
 	self.OnButton 		= 	function.OnButton
-	self.print_page_0 	=	function.print_page_0
-	self.showcheatsheet = 	cheatsheet.showcheatsheet
+	self.showorigcheatsheet = 	cheatsheet.showorigcheatsheet
+	self.showcheatsheet = cheatsheet.showcheatsheet
 	self.show_stave_config = 	stave_config.show_stave_config
 	
 	#self.change_combobox_command = change_combobox_command
 	#self.exe_combobox_command = exe_combobox_command
 	
 	self.exe_buttonbox_command = exe_buttonbox_command
-
-
 
 	#self. = function.
 #}}}
@@ -64,9 +60,9 @@ def generate_menu_bar(self):
 #{{{
 	self.CreateStatusBar() #status bar at the bottom 
 	filemenu = wx.Menu() #menu on the top
-	menu_page_0 = filemenu.Append(wx.ID_NEW, "&Page0", "Open Page 0")
+	#menu_page_0 = filemenu.Append(0, "&Page0", "Open Page 0")
 #	menu_page_0 = filemenu.Append(wx.ID_ANY, "&Page0", "Open Page 0")
-	menu_page_1 = filemenu.Append(wx.ID_ANY, "&Page1", "Open Page 1")
+	#menu_page_1 = filemenu.Append(1, "&Page1", "Open Page 1")
 	menuExit 	= filemenu.Append(wx.ID_EXIT, "E&xit", " Terminate the program")
 
 	# menu bar will include menu
@@ -75,16 +71,25 @@ def generate_menu_bar(self):
 
 	
 	cheatsheetmenu = wx.Menu()
-	cheatsheetpage = cheatsheetmenu.Append(wx.ID_NEW, "&cheatsheet", "View cheatsheet")
+	origcheatsheetpage = cheatsheetmenu.Append(2, "&Original cheatsheet", "View original cheatsheet")
+	cheatsheetpage = cheatsheetmenu.Append(3, "&cheatsheet", "View cheatsheet")
 
 	menuBar.Append(cheatsheetmenu, "&Cheatsheet")
 
 
 	self.SetMenuBar(menuBar)
 
-	self.Bind(wx.EVT_MENU, self.print_page_0, menu_page_0)
+	#self.Bind(wx.EVT_MENU, self.print_page_0, menu_page_0)
+		#keep for debug
+	
 	self.Bind(wx.EVT_MENU, self.OnExit, menuExit)
-	self.Bind(wx.EVT_MENU, self.showcheatsheet, cheatsheetpage)
+	self.Bind(wx.EVT_MENU, self.showorigcheatsheet, origcheatsheetpage)
+	#this is a way use step_commands as function argument
+		#in fact, self.step_commands is a global variable, I can access it in showcheatsheet function
+		#however, maybe in the future, I need to make class's inline function pointer to have input argument
+		#so keep this way for future reference
+	self.Bind(wx.EVT_MENU, lambda evt = origcheatsheetpage.GetId():self.showorigcheatsheet(evt, self.step_commands), cheatsheetpage)
+	self.Bind(wx.EVT_MENU, lambda evt = cheatsheetpage.GetId():self.showcheatsheet(evt, self.step_commands), cheatsheetpage)
 #}}}
 
 def add_step_button_box(self):
@@ -92,8 +97,8 @@ def add_step_button_box(self):
 	button_box = wx.BoxSizer(wx.HORIZONTAL)
 
 	self.step_button_list = []
-	for i in range (len(step_commands)):
-		com = step_commands[i]
+	for i in range (len(self.step_commands)):
+		com = self.step_commands[i]
 		title = com[0]
 		step_exe_button = wx.Button(self, i, title, size=(200, 50))
 		self.step_button_list.append(step_exe_button)	
@@ -111,7 +116,7 @@ def add_step_button_box(self):
 
 def exe_buttonbox_command(self, event, button_num):
 #{{{
-	com = step_commands[button_num]
+	com = self.step_commands[button_num]
 	title = com [0]
 	path = com [1] 
 	cmd = com[2]
@@ -249,8 +254,8 @@ def add_stepcombobox (self):
 	combobox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
 	list0=[]
-	for i in range (len(step_commands)):
-		com = step_commands[i]
+	for i in range (len(self.step_commands)):
+		com = self.step_commands[i]
 		title = com[0]
 		step_name = str(i)
 		list0.append(step_name)		
@@ -269,9 +274,9 @@ def change_combobox_command(self, event):
 #{{{
 	combo_box_value = int(self.ch1.GetValue())
 	
-	self.path_text.SetValue(step_commands[combo_box_value][1])
-	self.command_text.SetValue(step_commands[combo_box_value][2])
-	self.explain_text.SetValue(step_commands[combo_box_value][3])
+	self.path_text.SetValue(self.step_commands[combo_box_value][1])
+	self.command_text.SetValue(self.step_commands[combo_box_value][2])
+	self.explain_text.SetValue(self.step_commands[combo_box_value][3])
 
 	#print("select{0}".format(event.GetString()))
 #}}}

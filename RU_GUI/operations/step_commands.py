@@ -56,7 +56,7 @@ step[1] = "'/home/maps/git/RUv1_Test_sync2018-08/software/py/'"
 step[2] = "self.show_stave_config"
 step[3] = "test pop page, call internal function"
 step[4] = 1 
-
+step_commands.append(step)
 
 step_commands_1 = []
 
