@@ -1,7 +1,7 @@
 import wx
 
 def print_warning(self):
-	print "warning"
+	print ("warning")
 
 def OnExit(self,e):
 	self.Close(True)
@@ -13,7 +13,7 @@ def OnSelectAll(self, event):
 def OnButton (self, e):
 	dlg = wx.MessageDialog(self, "A small text editor.", "About Sample Editor", wx.OK)
 	if dlg.ShowModal() == wx.ID_OK:
-		print self.area_text.GetValue()
+		print (self.area_text.GetValue())
 		dlg.Destroy()
 
 """

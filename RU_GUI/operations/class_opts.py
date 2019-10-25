@@ -11,7 +11,7 @@ import time
 
 import cheatsheet
 import stave_config 
-import commands
+import power_control 
 
 
 
@@ -46,6 +46,7 @@ def import_outside_functions(self):
 	self.showorigcheatsheet = 	cheatsheet.showorigcheatsheet
 	self.showcheatsheet = cheatsheet.showcheatsheet
 	self.show_stave_config = 	stave_config.show_stave_config
+	self.show_power_control = 	power_control.show_power_control
 	
 	#self.change_combobox_command = change_combobox_command
 	#self.exe_combobox_command = exe_combobox_command
@@ -149,9 +150,9 @@ def external_command_exec (self, button_num):
 
 	stdout_tmp = ""	
 	for line in stdout_list:
-		stdout_tmp += line
+		stdout_tmp += str(line)
 	for line in stderr_list:
-		stdout_tmp += line
+		stdout_tmp += str(line)
 
 	time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	if stderr_list == []:

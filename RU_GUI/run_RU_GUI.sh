@@ -2,7 +2,7 @@
 #source scl_source enable rh-python36
 #source ~/software/Xilinx/Vivado/2017.4/settings64.sh
 
-which python
+which python3
 which vivado 
 
-/usr/bin/python RU_GUI.py
+python3 RU_GUI.py

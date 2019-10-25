@@ -1,0 +1,45 @@
+http://www.programmersought.com/article/8909217790/
+
+yum install -y dpkg-devel
+yum install -y libjpeg-turbo-devel
+yum install -y libtiff-devel
+yum install -y SDL SDL-devel
+yum install -y gstreamer-plugins-base-devel
+yum install -y gstreamer gstreamer-devel
+yum install -y gtk2 gtk2-devel
+yum install -y gtk3 gtk3-devel
+yum install -y webkitgtk3-devel webkitgtk3 webkitgtk4-devel webkitgtk4
+yum install -y libSM libSM-devel
+yum install -y tk tk-devel
+yum install -y wxGTK wxBase wxGTK-gl wxGTK-devel wxGTK3-devel
+yum install -y freeglut freeglut-devel
+yum install -y libestr-devel
+yum install -y libnotify-devel
+yum install -y libconfig-devel
+
+
+yum install libgnomeui-devel
+
+yum install gtk2 gtk2-devel gtk2-devel-docs
+
+yum install gnome-devel gnome-devel-docs
+
+yum install libXext-devel
+
+yum install libpng-devel
+
+pip3 install wxPython 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

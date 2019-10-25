@@ -24,7 +24,7 @@ default_parameter_dict["ITHR"] 						= 50
 default_parameter_dict["ITHR_commitTransaction"] 	= "True"
 
 class stave_config(wx.Frame):
-	def __init__(self, parent, title, exe_path, call_button):
+	def __init__(self, parent, title, exe_path, call_button = ""):
 		self.dirname = ''
 		#over all frame
 		wx.Frame.__init__(self, parent, title = title, size = (1000, 800))	
@@ -276,10 +276,12 @@ class stave_config(wx.Frame):
 		#initilize call button and light it on 
 		#we need to change call button color when close the frame
 		self.call_button = call_button
-		self.call_button.SetBackgroundColour('green') 
+		if not self.call_button == "":
+			self.call_button.SetBackgroundColour('green') 
 
 	def destroy(self, e):
-		self.call_button.SetBackgroundColour('blue') 
+		if not self.call_button == "":
+			self.call_button.SetBackgroundColour('blue') 
 		self.Destroy()
 	#}}}
 
@@ -292,7 +294,7 @@ def show_stave_config (self, e, button_num, path):
 """
 if __name__ == '__main__':
 	root = wx.App()
-	frame = stave_config(None, title = "Stave_config", orig_path = os.getcwd())
+	frame = stave_config(None, title = "Stave_config", exe_path = os.getcwd())
 	frame.Show()
 	root.MainLoop()
 """
