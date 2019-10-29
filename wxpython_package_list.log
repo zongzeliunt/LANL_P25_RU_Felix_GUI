@@ -28,6 +28,8 @@ yum install libXext-devel
 
 yum install libpng-devel
 
+pip install pathlib2
+
 pip3 install wxPython 
  
  

@@ -66,7 +66,7 @@ step_commands.append(step)
 step_commands_1 = []
 
 step = ["", "", "", "", ""]
-step[0] = "Open power supply control page"
+step[0] = "PS control page"
 step[1] = "'./sub_pages'"
 step[2] = "self.show_power_control"
 step[3] = "power supply control"

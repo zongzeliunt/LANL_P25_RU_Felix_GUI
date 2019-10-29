@@ -2,21 +2,22 @@ import wx
 import os
 import sys
 import json
-
+import time
 
 HORI = 200 #horizontal
 VERT = 100 #vertical
 textbox_style = (wx.TE_MULTILINE | wx.HSCROLL)
 
+WAIT = 1000
+
+#WAIT = 200
+ 
 
 class power_control(wx.Frame):
 	def __init__(self, parent, title, exe_path, call_button = ""):
 		self.dirname = ''
 		#over all frame
 		wx.Frame.__init__(self, parent, title = title, size = (1000, 800))	
-		
-		
-
 
 		#over all sizer
 		self.sizer = wx.BoxSizer(wx.VERTICAL)
@@ -26,55 +27,253 @@ class power_control(wx.Frame):
 		self.exe_path = exe_path
 		
 		lib_path = 	self.exe_path + '/power_supply_control_lib'
-		sys.path.append(lib_path)
-		import e3636a_monitor_lib_version as e3636a
-		
-
-
+	
 		self.call_button_light_on(call_button)
 
-		self.declare_PS_0_box()
+
+		#PS 0
+		#==============================================================================
+		#operate library
+		sys.path.append(lib_path)
+		import e3636a_monitor_lib_version as e3636a
+
+		self.declare_PS_0_buttom_box()
+		self.declare_PS_0_status_box()
+		self.PS_0_buttom_event_bind()
+		
+		#DEBUG
+		#e3636a.PS_0_serial_connect(self)
+
+
+		self.PS_0_timer = wx.Timer(self)
+		self.PS_0_timer.Start(WAIT)
+		
+		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
+		
+		#DEBUG
+		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
+		
+
+		self.PS_0_last_opt = "r1"
+			#initial status is recall_1, need to call redraw_settings
+			#w: wait, o: on, f: off, r0: recall_0, r1: recall_1
+	
+
+
+
+		#PS 1
+		#==============================================================================
+		""" 
+		self.declare_PS_1_buttom_box()
+		self.declare_PS_1_status_box()
+		self.PS_1_buttom_event_bind()
+		
+		self.PS_1_timer = wx.Timer(self)
+		self.PS_1_timer.Start(WAIT)  
+		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
+
+		""" 
+		
+	
+
 
 		self.Bind(wx.EVT_CLOSE, self.destroy)
-	
 
-
-
-	def declare_PS_0_box(self):
-		
+	def declare_PS_0_buttom_box(self):
+		#{{{
 		#three buttons
-		buttonbox=wx.BoxSizer(wx.HORIZONTAL)
-		statictext=wx.StaticText(self, label = "PS_0", size=(HORI, -1))
-		buttonbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		buttombox=wx.BoxSizer(wx.HORIZONTAL)
+		buttomtext=wx.StaticText(self, label = "PS_0", size=(HORI, -1))
+		buttombox.Add(buttomtext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 		
-		self.PS_0_start = wx.Button(self, 0, "PS 0 START", size=(HORI, 50))
-		buttonbox.Add(self.PS_0_start, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
-		self.PS_0_off = wx.Button(self, 0, "PS 0 OFF", size=(HORI, 50))
-		buttonbox.Add(self.PS_0_off, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
-		self.PS_0_recall = wx.Button(self, 0, "PS 0 Recall", size=(HORI, 50))
-		buttonbox.Add(self.PS_0_recall, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		self.PS_0_on_buttom = wx.Button(self, 0, "PS_0 ON", size=(HORI, 50))
+		self.PS_0_on_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_0_on_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.PS_0_off_buttom = wx.Button(self, 1, "PS_0 OFF", size=(HORI, 50))
+		self.PS_0_off_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_0_off_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 		
-		self.sizer.Add(buttonbox, 0, wx.ALIGN_LEFT)
+		self.PS_0_recall_buttom = wx.Button(self, 2, "PS_0 Recall", size=(HORI, 50))
+		self.PS_0_recall_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_0_recall_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.sizer.Add(buttombox, 0, wx.ALIGN_LEFT)
+		#}}}
 	
+	def declare_PS_0_status_box(self):
+		#{{{
 		#status box	
 		PS_0_status_box=wx.BoxSizer(wx.HORIZONTAL)
 
-		statictext=wx.StaticText(self,label='PS 0 status box:', size=(HORI, VERT))
-		PS_0_status_box.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		statustext=wx.StaticText(self,label='PS_0 status box:', size=(HORI, VERT))
+		PS_0_status_box.Add(statustext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-		self.PS_0_status_text = wx.TextCtrl(self, -1, 'PS 0 status', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_0_status_text = wx.TextCtrl(self, 0, 'PS_0 status', size=(HORI * 1.5, VERT), style=textbox_style)
 		PS_0_status_box.Add(self.PS_0_status_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
-		self.PS_0_operate_text = wx.TextCtrl(self, -1, 'PS 0 operate', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_0_operate_text = wx.TextCtrl(self, 1, 'PS_0 operate', size=(HORI * 1.5, VERT), style=textbox_style)
 		PS_0_status_box.Add(self.PS_0_operate_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
 		
 		self.sizer.Add(PS_0_status_box, 0, wx.ALIGN_LEFT)	
+		#}}}
+		
+	def PS_0_buttom_event_bind(self):
+	#{{{
+		self.Bind(wx.EVT_BUTTON, self.PS_0_on, self.PS_0_on_buttom)
+		self.Bind(wx.EVT_BUTTON, self.PS_0_off, self.PS_0_off_buttom)
+		self.Bind(wx.EVT_BUTTON, self.PS_0_recall, self.PS_0_recall_buttom)
+
+
+	def PS_0_on (self, e):
+		self.PS_0_on_buttom.SetBackgroundColour('green')
+		self.PS_0_off_buttom.SetBackgroundColour('white')
+		self.PS_0_recall_buttom.SetBackgroundColour('white')
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_0_operate_text.SetValue(now_time + " PS_0 on")
+		self.PS_0_last_opt = "o"
+		
+	def PS_0_off (self, e):
+		self.PS_0_off_buttom.SetBackgroundColour('green')
+		self.PS_0_on_buttom.SetBackgroundColour('white')
+		self.PS_0_recall_buttom.SetBackgroundColour('white')
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_0_operate_text.SetValue(now_time + " PS_0 off")
+		self.PS_0_last_opt = "f"
+
+	def PS_0_recall (self, e):
+		self.PS_0_recall_buttom.SetBackgroundColour('green')
+		self.PS_0_off_buttom.SetBackgroundColour('white')
+		self.PS_0_on_buttom.SetBackgroundColour('white')
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_0_operate_text.SetValue(now_time + " PS_0 recall")
+		self.PS_0_last_opt = "r0"
+	#}}}
+
+
+
+
+	def PS_0_opt_process(self, e):
+		#all operations must be done in the gap of WAIT!
+		#my WAIT is 1000 or 1s, if sleep more than that could have error!
+
+		#w: wait, o: on, f: off, r0: recall_0, r1: recall_1
+
+		last_opt = self.PS_0_last_opt
+
+		if last_opt == "w":
+			status = e3636a.get_status()
+			#get status wait 0.4 s
+			self.PS_0_status_text.SetValue(status)
+			self.PS_0_last_opt = "w"
+		elif last_opt == "o":
+			e3636a.power_on(self.PS_0_ser)
+			self.PS_0_last_opt = "w"
+		elif last_opt == "f":
+			e3636a.power_off(self.PS_0_ser)
+			self.PS_0_last_opt = "w"
+		elif last_opt == "r0":
+			e3636a.power_recall(self.PS_0_ser)
+			self.PS_0_last_opt = "r1"
+		elif last_opt == "r1":
+			status = e3636a.redraw_settings(self.PS_0_ser)
+			self.PS_0_status_text.SetValue(status)
+			self.PS_0_last_opt = "w"
+		else:
+			self.PS_0_last_opt = "w"
+
+
+
+
+	def PS_0_opt_process_debug(self, e):
+		#Example: https://blog.csdn.net/rumswell/article/details/6564181
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_0_status_text.SetValue(now_time + " " + self.PS_0_last_opt)
+
+		self.PS_0_last_opt = "w"
+
+
+		#this is the gap all operations must be done!:
+		#	WAIT / 1000 - 0.1
+		#
+		#time.sleep(WAIT / 1000 - 0.1)
+	
+
+
+	def declare_PS_1_buttom_box(self):
+		#{{{
+		#three buttons
+		buttombox=wx.BoxSizer(wx.HORIZONTAL)
+		buttomtext=wx.StaticText(self, label = "PS_1", size=(HORI, -1))
+		buttombox.Add(buttomtext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.PS_1_on_buttom = wx.Button(self, 3, "PS_1 ON", size=(HORI, 50))
+		self.PS_1_on_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_1_on_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.PS_1_off_buttom = wx.Button(self, 4, "PS_1 OFF", size=(HORI, 50))
+		self.PS_1_off_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_1_off_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.PS_1_recall_buttom = wx.Button(self, 5, "PS_1 Recall", size=(HORI, 50))
+		self.PS_1_recall_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_1_recall_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.sizer.Add(buttombox, 0, wx.ALIGN_LEFT)
+		#}}}
+	
+	def declare_PS_1_status_box(self):
+		#{{{
+		#status box	
+		PS_1_status_box=wx.BoxSizer(wx.HORIZONTAL)
+
+		statustext=wx.StaticText(self,label='PS_1 status box:', size=(HORI, VERT))
+		PS_1_status_box.Add(statustext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.PS_1_status_text = wx.TextCtrl(self, 2, 'PS_1 status', size=(HORI * 1.5, VERT), style=textbox_style)
+		PS_1_status_box.Add(self.PS_1_status_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
+		self.PS_1_operate_text = wx.TextCtrl(self, 3, 'PS_1 operate', size=(HORI * 1.5, VERT), style=textbox_style)
+		PS_1_status_box.Add(self.PS_1_operate_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
+		
+		self.sizer.Add(PS_1_status_box, 0, wx.ALIGN_LEFT)	
+		#}}}
+		
+	def PS_1_buttom_event_bind(self):
+	#{{{
+		self.Bind(wx.EVT_BUTTON, self.PS_1_on, self.PS_1_on_buttom)
+		self.Bind(wx.EVT_BUTTON, self.PS_1_off, self.PS_1_off_buttom)
+		self.Bind(wx.EVT_BUTTON, self.PS_1_recall, self.PS_1_recall_buttom)
+
+
+	def PS_1_on (self, e):
+		self.PS_1_on_buttom.SetBackgroundColour('green')
+		self.PS_1_off_buttom.SetBackgroundColour('white')
+		self.PS_1_recall_buttom.SetBackgroundColour('white')
+		self.PS_1_operate_text.SetValue("PS_1 on")
+		
+	def PS_1_off (self, e):
+		self.PS_1_off_buttom.SetBackgroundColour('green')
+		self.PS_1_on_buttom.SetBackgroundColour('white')
+		self.PS_1_recall_buttom.SetBackgroundColour('white')
+		self.PS_1_operate_text.SetValue("PS_1 off")
+
+	def PS_1_recall (self, e):
+		self.PS_1_recall_buttom.SetBackgroundColour('green')
+		self.PS_1_off_buttom.SetBackgroundColour('white')
+		self.PS_1_on_buttom.SetBackgroundColour('white')
+		self.PS_1_operate_text.SetValue("PS_1 recall")
+	#}}}
+
+
+	#def PS_1_opt_process(self, e):
 		
 
 
 
 
 
-
+	def PS_1_opt_process_debug(self, e):
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime() )
+		self.PS_1_status_text.SetValue(now_time)
 
 
 	#{{{
