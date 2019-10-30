@@ -1,8 +1,10 @@
+#!/usr/bin/env python
 #import serial
 import sys, time
 
-
 WAIT = 0.2
+
+
 def redraw_settings(ser):
 	outstr = ""
 	ser.write("*IDN?\r\n".encode())
@@ -11,30 +13,13 @@ def redraw_settings(ser):
 	
 	time.sleep(WAIT)
 	
-	ser.write("INST:NSEL 1\r\n".encode())
-	outstr += print_settings(ser) + "\n"
-	time.sleep(WAIT)
-	
-	ser.write("INST:NSEL 2\r\n".encode())
 	outstr += print_settings(ser) + "\n"
 	time.sleep(WAIT)
 	return outstr
-
-def get_status (ser):
-	outstr = ""
-	ser.write("INST:NSEL 1\r\n".encode())
-	out_str += print_status(ser) + "\n"
-	time.sleep(WAIT)
-
-	ser.write("INST:NSEL 2\r\n".encode())
-	out_str += print_status(ser) + "\n"
-	time.sleep(WAIT)
-	return outstr
-
 
 def power_on(ser):
     ser.write("OUTPUT ON\r\n".encode())
-    
+        
 def power_off(ser):
     ser.write("OUTPUT OFF\r\n".encode())
 
@@ -43,12 +28,7 @@ def recall_settings(ser):
 
 def print_settings(ser,end="\n"):
 #{{{
-	#no need to change
     outstr = ""
-    ser.write("INST:SEL?\r\n".encode()); response = ser.readline()
-    channel = response.decode().strip()
-    outstr += "channel {0}: ".format(channel)
-
     ser.write("VOLT?\r\n".encode()); response = ser.readline()
     volt_set = float(response)
     ser.write("CURR?\r\n".encode()); response = ser.readline()
@@ -59,19 +39,23 @@ def print_settings(ser,end="\n"):
     ovp_enabled = "ENABLED" if int(response)==1 else "DISABLED"
     ser.write("VOLT:PROT:LEVEL?\r\n".encode()); response = ser.readline()
     ovp_setpoint = float(response)
-    outstr += "OVP {0} @ {1} V".format(ovp_enabled, ovp_setpoint)
+    outstr += "OVP {0} @ {1} V ".format(ovp_enabled, ovp_setpoint)
+
+    #not supported by E3646A?
+    ser.write("CURR:PROT:STATE?\r\n".encode()); response = ser.readline()
+    ocp_enabled = "ENABLED" if int(response)==1 else "DISABLED"
+    ser.write("CURR:PROT:LEVEL?\r\n".encode()); response = ser.readline()
+    ocp_setpoint = float(response)
+    outstr += "OCP {0} @ {1} A".format(ocp_enabled, ocp_setpoint)
 
     return outstr
 #}}}
 
-def print_status(ser,end="\n"):
-#{{{
-	#no need to change
 
+def print_status(ser,end="\n"):
     outstr = ""
-    ser.write("INST:SEL?\r\n".encode()); response = ser.readline()
-    channel = response.decode().strip()
-    outstr += "channel {0}: ".format(channel)
+    #ser.write("APPLY?\r\n".encode()); response = ser.readline()
+    #print(response.decode().strip())
 
     ser.write("OUTPUT?\r\n".encode()); response = ser.readline()
     output_enabled = "ON" if int(response)==1 else "OFF"
@@ -85,33 +69,35 @@ def print_status(ser,end="\n"):
 
     ser.write("VOLT:PROT:TRIP?\r\n".encode()); response = ser.readline()
     ovp_tripped = "TRIPPED" if int(response)==1 else "OK"
-    outstr += "OVP {0}".format(ovp_tripped)
+    outstr += "OVP {0} ".format(ovp_tripped)
+
+    #not supported by E3646A?
+    ser.write("CURR:PROT:TRIP?\r\n".encode()); response = ser.readline()
+    ocp_tripped = "TRIPPED" if int(response)==1 else "OK"
+    outstr += "OCP {0}".format(ocp_tripped)
 
     return outstr
-#}}}
 
 #DEBUG
 """
-def e3636a_serial_connect(self, PS_0_USB_ID):
-	ser = serial.Serial(PS_0_USB_ID, 9600, timeout=1, dsrdtr=True)
+def e3633a_serial_connect(USB_ID):
+	ser = serial.Serial(USB_ID, 9600, timeout=1, dsrdtr=True)
 	ser.flush()
 	ser.write("SYST:REM\r\n".encode())
 	return ser
 """
 
-
-def e3636a_serial_connect_debug(self, USB_ID):
-	print ("this is from e3636a lib")
+def e3633a_serial_connect_debug(self, USB_ID):
+	print ("this is from e3633a lib")
 	debug_ser = USB_ID + "_debug_ser"
 	return debug_ser
-#{{{
-"""
 
+"""
 def main(stdscr):
     stdscr.clear()
     stdscr.nodelay(True)
-    initwindow = stdscr.subwin(3,80,0,0)
-    monitorwindow = stdscr.subwin(2,80,3,0)
+    initwindow = stdscr.subwin(2,80,0,0)
+    monitorwindow = stdscr.subwin(1,80,2,0)
 
     ser = serial.Serial(sys.argv[1], 9600, timeout=1, dsrdtr=True)
     ser.flush()
@@ -135,15 +121,7 @@ def main(stdscr):
         elif c == ord('F'):
             power_off(ser)
             monitorwindow.erase()
-
-
-        ser.write("INST:NSEL 1\r\n".encode())
-        time.sleep(WAIT)
         monitorwindow.addstr(0,0,print_status(ser))
         monitorwindow.refresh()
-        ser.write("INST:NSEL 2\r\n".encode())
         time.sleep(WAIT)
-        monitorwindow.addstr(1,0,print_status(ser))
-        monitorwindow.refresh()
 """
-#}}}

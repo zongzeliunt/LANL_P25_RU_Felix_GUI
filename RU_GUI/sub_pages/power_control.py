@@ -30,51 +30,79 @@ class power_control(wx.Frame):
 	
 		self.call_button_light_on(call_button)
 
+		sys.path.append(lib_path)
 
-		#PS 0
+		#PS_0
 		#==============================================================================
 		#operate library
-		sys.path.append(lib_path)
 		import e3636a_monitor_lib_version as e3636a
+		self.e3636a = e3636a
+
+		PS_0_USB_ID = "/dev/ttyUSB_id4"
 
 		self.declare_PS_0_buttom_box()
 		self.declare_PS_0_status_box()
 		self.PS_0_buttom_event_bind()
 		
 		#DEBUG
-		#e3636a.PS_0_serial_connect(self)
-
+		#self.PS_0_ser = e3636a.e3636a_serial_connect(self, PS_0_USB_ID)
+		self.PS_0_ser = e3636a.e3636a_serial_connect_debug(self, PS_0_USB_ID)
 
 		self.PS_0_timer = wx.Timer(self)
 		self.PS_0_timer.Start(WAIT)
 		
-		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
-		
 		#DEBUG
+		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
 		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
-		
 
 		self.PS_0_last_opt = "r1"
 			#initial status is recall_1, need to call redraw_settings
 			#w: wait, o: on, f: off, r0: recall_0, r1: recall_1
-	
 
 
-
-		#PS 1
+		#PS_1
 		#==============================================================================
-		""" 
+		#operate library
+		import e3633a_monitor_lib_version as e3633a
+		self.e3633a = e3633a
+
+		PS_1_USB_ID = "/dev/ttyUSB_id5"
 		self.declare_PS_1_buttom_box()
 		self.declare_PS_1_status_box()
 		self.PS_1_buttom_event_bind()
 		
+		#DEBUG
+		self.PS_1_ser = e3633a.e3633a_serial_connect_debug(self, PS_1_USB_ID)
+		
 		self.PS_1_timer = wx.Timer(self)
 		self.PS_1_timer.Start(WAIT)  
-		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
-
-		""" 
 		
+		#DEBUG
+		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_1_opt_process, self.PS_1_timer)
+
+		self.PS_1_last_opt = "r1"
 	
+		#PS_2
+		#==============================================================================
+		#operate library
+
+		PS_2_USB_ID = "/dev/ttyUSB_id6"
+		self.declare_PS_2_buttom_box()
+		self.declare_PS_2_status_box()
+		self.PS_2_buttom_event_bind()
+		
+		#DEBUG
+		self.PS_2_ser = e3633a.e3633a_serial_connect_debug(self, PS_2_USB_ID)
+		
+		self.PS_2_timer = wx.Timer(self)
+		self.PS_2_timer.Start(WAIT)  
+		
+		#DEBUG
+		self.Bind(wx.EVT_TIMER, self.PS_2_opt_process_debug, self.PS_2_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_2_opt_process, self.PS_2_timer)
+
+		self.PS_2_last_opt = "r1"
 
 
 		self.Bind(wx.EVT_CLOSE, self.destroy)
@@ -149,10 +177,8 @@ class power_control(wx.Frame):
 		self.PS_0_last_opt = "r0"
 	#}}}
 
-
-
-
 	def PS_0_opt_process(self, e):
+		#{{{
 		#all operations must be done in the gap of WAIT!
 		#my WAIT is 1000 or 1s, if sleep more than that could have error!
 
@@ -161,36 +187,31 @@ class power_control(wx.Frame):
 		last_opt = self.PS_0_last_opt
 
 		if last_opt == "w":
-			status = e3636a.get_status()
+			status = self.e3636a.get_status(self.PS_0_ser)
 			#get status wait 0.4 s
 			self.PS_0_status_text.SetValue(status)
 			self.PS_0_last_opt = "w"
 		elif last_opt == "o":
-			e3636a.power_on(self.PS_0_ser)
+			self.e3636a.power_on(self.PS_0_ser)
 			self.PS_0_last_opt = "w"
 		elif last_opt == "f":
-			e3636a.power_off(self.PS_0_ser)
+			self.e3636a.power_off(self.PS_0_ser)
 			self.PS_0_last_opt = "w"
 		elif last_opt == "r0":
-			e3636a.power_recall(self.PS_0_ser)
+			self.e3636a.recall_settings(self.PS_0_ser)
 			self.PS_0_last_opt = "r1"
 		elif last_opt == "r1":
-			status = e3636a.redraw_settings(self.PS_0_ser)
+			status = self.e3636a.redraw_settings(self.PS_0_ser)
 			self.PS_0_status_text.SetValue(status)
 			self.PS_0_last_opt = "w"
 		else:
 			self.PS_0_last_opt = "w"
-
-
-
+		#}}}
 
 	def PS_0_opt_process_debug(self, e):
 		#Example: https://blog.csdn.net/rumswell/article/details/6564181
 		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 		self.PS_0_status_text.SetValue(now_time + " " + self.PS_0_last_opt)
-
-		self.PS_0_last_opt = "w"
-
 
 		#this is the gap all operations must be done!:
 		#	WAIT / 1000 - 0.1
@@ -248,32 +269,179 @@ class power_control(wx.Frame):
 		self.PS_1_on_buttom.SetBackgroundColour('green')
 		self.PS_1_off_buttom.SetBackgroundColour('white')
 		self.PS_1_recall_buttom.SetBackgroundColour('white')
-		self.PS_1_operate_text.SetValue("PS_1 on")
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_1_operate_text.SetValue(now_time + " PS_1 on")
+		self.PS_1_last_opt = "o"
 		
 	def PS_1_off (self, e):
 		self.PS_1_off_buttom.SetBackgroundColour('green')
 		self.PS_1_on_buttom.SetBackgroundColour('white')
 		self.PS_1_recall_buttom.SetBackgroundColour('white')
-		self.PS_1_operate_text.SetValue("PS_1 off")
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_1_operate_text.SetValue(now_time + " PS_1 off")
+		self.PS_1_last_opt = "f"
 
 	def PS_1_recall (self, e):
 		self.PS_1_recall_buttom.SetBackgroundColour('green')
 		self.PS_1_off_buttom.SetBackgroundColour('white')
 		self.PS_1_on_buttom.SetBackgroundColour('white')
-		self.PS_1_operate_text.SetValue("PS_1 recall")
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_1_operate_text.SetValue(now_time + " PS_1 recall")
+		self.PS_1_last_opt = "r0"
 	#}}}
 
+	def PS_1_opt_process(self, e):
+		#{{{
+		#all operations must be done in the gap of WAIT!
+		#my WAIT is 1000 or 1s, if sleep more than that could have error!
 
-	#def PS_1_opt_process(self, e):
-		
+		#w: wait, o: on, f: off, r0: recall_0, r1: recall_1
 
+		last_opt = self.PS_1_last_opt
 
-
-
+		if last_opt == "w":
+			status = self.e3633a.print_status(PS_1_ser)
+			#get status wait 0.4 s
+			self.PS_1_status_text.SetValue(status)
+			self.PS_1_last_opt = "w"
+		elif last_opt == "o":
+			self.e3633a.power_on(self.PS_1_ser)
+			self.PS_1_last_opt = "w"
+		elif last_opt == "f":
+			self.e3633a.power_off(self.PS_1_ser)
+			self.PS_1_last_opt = "w"
+		elif last_opt == "r0":
+			self.e3633a.recall_settings(self.PS_1_ser)
+			self.PS_1_last_opt = "r1"
+		elif last_opt == "r1":
+			status = self.e3633a.redraw_settings(self.PS_1_ser)
+			self.PS_1_status_text.SetValue(status)
+			self.PS_1_last_opt = "w"
+		else:
+			self.PS_1_last_opt = "w"
+		#}}}
 
 	def PS_1_opt_process_debug(self, e):
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime() )
-		self.PS_1_status_text.SetValue(now_time)
+		#Example: https://blog.csdn.net/rumswell/article/details/6564181
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_1_status_text.SetValue(now_time + " " + self.PS_1_last_opt)
+
+		#this is the gap all operations must be done!:
+		#	WAIT / 1000 - 0.1
+
+
+	def declare_PS_2_buttom_box(self):
+		#{{{
+		#three buttons
+		buttombox=wx.BoxSizer(wx.HORIZONTAL)
+		buttomtext=wx.StaticText(self, label = "PS_2", size=(HORI, -1))
+		buttombox.Add(buttomtext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.PS_2_on_buttom = wx.Button(self, 6, "PS_2 ON", size=(HORI, 50))
+		self.PS_2_on_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_2_on_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.PS_2_off_buttom = wx.Button(self, 7, "PS_2 OFF", size=(HORI, 50))
+		self.PS_2_off_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_2_off_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.PS_2_recall_buttom = wx.Button(self, 8, "PS_2 Recall", size=(HORI, 50))
+		self.PS_2_recall_buttom.SetBackgroundColour('white')
+		buttombox.Add(self.PS_2_recall_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.sizer.Add(buttombox, 0, wx.ALIGN_LEFT)
+		#}}}
+	
+	def declare_PS_2_status_box(self):
+		#{{{
+		#status box	
+		PS_2_status_box=wx.BoxSizer(wx.HORIZONTAL)
+
+		statustext=wx.StaticText(self,label='PS_2 status box:', size=(HORI, VERT))
+		PS_2_status_box.Add(statustext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.PS_2_status_text = wx.TextCtrl(self, 2, 'PS_2 status', size=(HORI * 1.5, VERT), style=textbox_style)
+		PS_2_status_box.Add(self.PS_2_status_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
+		self.PS_2_operate_text = wx.TextCtrl(self, 3, 'PS_2 operate', size=(HORI * 1.5, VERT), style=textbox_style)
+		PS_2_status_box.Add(self.PS_2_operate_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
+		
+		self.sizer.Add(PS_2_status_box, 0, wx.ALIGN_LEFT)	
+		#}}}
+		
+	def PS_2_buttom_event_bind(self):
+	#{{{
+		self.Bind(wx.EVT_BUTTON, self.PS_2_on, self.PS_2_on_buttom)
+		self.Bind(wx.EVT_BUTTON, self.PS_2_off, self.PS_2_off_buttom)
+		self.Bind(wx.EVT_BUTTON, self.PS_2_recall, self.PS_2_recall_buttom)
+
+
+	def PS_2_on (self, e):
+		self.PS_2_on_buttom.SetBackgroundColour('green')
+		self.PS_2_off_buttom.SetBackgroundColour('white')
+		self.PS_2_recall_buttom.SetBackgroundColour('white')
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_2_operate_text.SetValue(now_time + " PS_2 on")
+		self.PS_2_last_opt = "o"
+		
+	def PS_2_off (self, e):
+		self.PS_2_off_buttom.SetBackgroundColour('green')
+		self.PS_2_on_buttom.SetBackgroundColour('white')
+		self.PS_2_recall_buttom.SetBackgroundColour('white')
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_2_operate_text.SetValue(now_time + " PS_2 off")
+		self.PS_2_last_opt = "f"
+
+	def PS_2_recall (self, e):
+		self.PS_2_recall_buttom.SetBackgroundColour('green')
+		self.PS_2_off_buttom.SetBackgroundColour('white')
+		self.PS_2_on_buttom.SetBackgroundColour('white')
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_2_operate_text.SetValue(now_time + " PS_2 recall")
+		self.PS_2_last_opt = "r0"
+	#}}}
+
+	def PS_2_opt_process(self, e):
+		#{{{
+		#all operations must be done in the gap of WAIT!
+		#my WAIT is 1000 or 1s, if sleep more than that could have error!
+
+		#w: wait, o: on, f: off, r0: recall_0, r1: recall_1
+
+		last_opt = self.PS_2_last_opt
+
+		if last_opt == "w":
+			status = self.e3633a.get_status(self.PS_2_ser)
+			#get status wait 0.4 s
+			self.PS_2_status_text.SetValue(status)
+			self.PS_2_last_opt = "w"
+		elif last_opt == "o":
+			self.e3633a.power_on(self.PS_2_ser)
+			self.PS_2_last_opt = "w"
+		elif last_opt == "f":
+			self.e3633a.power_off(self.PS_2_ser)
+			self.PS_2_last_opt = "w"
+		elif last_opt == "r0":
+			self.e3633a.recall_settings(self.PS_2_ser)
+			self.PS_2_last_opt = "r1"
+		elif last_opt == "r1":
+			status = self.e3633a.redraw_settings(self.PS_2_ser)
+			self.PS_2_status_text.SetValue(status)
+			self.PS_2_last_opt = "w"
+		else:
+			self.PS_2_last_opt = "w"
+		#}}}
+
+	def PS_2_opt_process_debug(self, e):
+		#Example: https://blog.csdn.net/rumswell/article/details/6564181
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		self.PS_2_status_text.SetValue(now_time + " " + self.PS_2_last_opt)
+
+		#this is the gap all operations must be done!:
+		#	WAIT / 1000 - 0.1
+
+
+
+
 
 
 	#{{{
