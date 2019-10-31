@@ -45,8 +45,8 @@ class power_control(wx.Frame):
 		self.PS_0_buttom_event_bind()
 		
 		#DEBUG
-		#self.PS_0_ser = e3636a.e3636a_serial_connect(self, PS_0_USB_ID)
-		self.PS_0_ser = e3636a.e3636a_serial_connect_debug(self, PS_0_USB_ID)
+		#self.PS_0_ser = e3636a.e3636a_serial_connect(PS_0_USB_ID)
+		self.PS_0_ser = e3636a.e3636a_serial_connect_debug(PS_0_USB_ID)
 
 		self.PS_0_timer = wx.Timer(self)
 		self.PS_0_timer.Start(WAIT)
@@ -72,7 +72,8 @@ class power_control(wx.Frame):
 		self.PS_1_buttom_event_bind()
 		
 		#DEBUG
-		self.PS_1_ser = e3633a.e3633a_serial_connect_debug(self, PS_1_USB_ID)
+		#self.PS_1_ser = e3633a.e3633a_serial_connect(PS_1_USB_ID)
+		self.PS_1_ser = e3633a.e3633a_serial_connect_debug(PS_1_USB_ID)
 		
 		self.PS_1_timer = wx.Timer(self)
 		self.PS_1_timer.Start(WAIT)  
@@ -93,7 +94,8 @@ class power_control(wx.Frame):
 		self.PS_2_buttom_event_bind()
 		
 		#DEBUG
-		self.PS_2_ser = e3633a.e3633a_serial_connect_debug(self, PS_2_USB_ID)
+		#self.PS_2_ser = e3633a.e3633a_serial_connect(PS_2_USB_ID)
+		self.PS_2_ser = e3633a.e3633a_serial_connect_debug(PS_2_USB_ID)
 		
 		self.PS_2_timer = wx.Timer(self)
 		self.PS_2_timer.Start(WAIT)  
@@ -134,12 +136,12 @@ class power_control(wx.Frame):
 		#status box	
 		PS_0_status_box=wx.BoxSizer(wx.HORIZONTAL)
 
-		statustext=wx.StaticText(self,label='PS_0 status box:', size=(HORI, VERT))
+		statustext=wx.StaticText(self,label='PS_0 status box:', size=(HORI * 0.5, VERT))
 		PS_0_status_box.Add(statustext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-		self.PS_0_status_text = wx.TextCtrl(self, 0, 'PS_0 status', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_0_status_text = wx.TextCtrl(self, 0, 'PS_0 status', size=(HORI * 2.5, VERT), style=textbox_style)
 		PS_0_status_box.Add(self.PS_0_status_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
-		self.PS_0_operate_text = wx.TextCtrl(self, 1, 'PS_0 operate', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_0_operate_text = wx.TextCtrl(self, 1, 'PS_0 operate', size=(HORI , VERT), style=textbox_style)
 		PS_0_status_box.Add(self.PS_0_operate_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
 		
 		self.sizer.Add(PS_0_status_box, 0, wx.ALIGN_LEFT)	
@@ -247,12 +249,12 @@ class power_control(wx.Frame):
 		#status box	
 		PS_1_status_box=wx.BoxSizer(wx.HORIZONTAL)
 
-		statustext=wx.StaticText(self,label='PS_1 status box:', size=(HORI, VERT))
+		statustext=wx.StaticText(self,label='PS_1 status box:', size=(HORI *0.5, VERT))
 		PS_1_status_box.Add(statustext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-		self.PS_1_status_text = wx.TextCtrl(self, 2, 'PS_1 status', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_1_status_text = wx.TextCtrl(self, 2, 'PS_1 status', size=(HORI * 2.5, VERT), style=textbox_style)
 		PS_1_status_box.Add(self.PS_1_status_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
-		self.PS_1_operate_text = wx.TextCtrl(self, 3, 'PS_1 operate', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_1_operate_text = wx.TextCtrl(self, 3, 'PS_1 operate', size=(HORI , VERT), style=textbox_style)
 		PS_1_status_box.Add(self.PS_1_operate_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
 		
 		self.sizer.Add(PS_1_status_box, 0, wx.ALIGN_LEFT)	
@@ -357,12 +359,12 @@ class power_control(wx.Frame):
 		#status box	
 		PS_2_status_box=wx.BoxSizer(wx.HORIZONTAL)
 
-		statustext=wx.StaticText(self,label='PS_2 status box:', size=(HORI, VERT))
+		statustext=wx.StaticText(self,label='PS_2 status box:', size=(HORI * 0.5, VERT))
 		PS_2_status_box.Add(statustext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 
-		self.PS_2_status_text = wx.TextCtrl(self, 2, 'PS_2 status', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_2_status_text = wx.TextCtrl(self, 2, 'PS_2 status', size=(HORI * 2.5, VERT), style=textbox_style)
 		PS_2_status_box.Add(self.PS_2_status_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
-		self.PS_2_operate_text = wx.TextCtrl(self, 3, 'PS_2 operate', size=(HORI * 1.5, VERT), style=textbox_style)
+		self.PS_2_operate_text = wx.TextCtrl(self, 3, 'PS_2 operate', size=(HORI , VERT), style=textbox_style)
 		PS_2_status_box.Add(self.PS_2_operate_text, 1, flag=wx.LEFT |wx.FIXED_MINSIZE,border=5)	
 		
 		self.sizer.Add(PS_2_status_box, 0, wx.ALIGN_LEFT)	

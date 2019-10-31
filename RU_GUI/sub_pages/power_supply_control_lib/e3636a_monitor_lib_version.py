@@ -1,3 +1,4 @@
+#DEBUG
 #import serial
 import sys, time
 
@@ -92,7 +93,7 @@ def print_status(ser,end="\n"):
 
 #DEBUG
 """
-def e3636a_serial_connect(self, PS_0_USB_ID):
+def e3636a_serial_connect(PS_0_USB_ID):
 	ser = serial.Serial(PS_0_USB_ID, 9600, timeout=1, dsrdtr=True)
 	ser.flush()
 	ser.write("SYST:REM\r\n".encode())
@@ -100,7 +101,7 @@ def e3636a_serial_connect(self, PS_0_USB_ID):
 """
 
 
-def e3636a_serial_connect_debug(self, USB_ID):
+def e3636a_serial_connect_debug(USB_ID):
 	print ("this is from e3636a lib")
 	debug_ser = USB_ID + "_debug_ser"
 	return debug_ser

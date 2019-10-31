@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#DEBUG
 #import serial
 import sys, time
 
@@ -87,7 +88,7 @@ def e3633a_serial_connect(USB_ID):
 	return ser
 """
 
-def e3633a_serial_connect_debug(self, USB_ID):
+def e3633a_serial_connect_debug(USB_ID):
 	print ("this is from e3633a lib")
 	debug_ser = USB_ID + "_debug_ser"
 	return debug_ser
