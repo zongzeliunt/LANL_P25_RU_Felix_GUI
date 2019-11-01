@@ -34,27 +34,12 @@ step_commands.append(step)
 
 step = ["", "", "", "", ""]
 step[0] = "Run DAQ"
-step[1] = " ~/meeg/felix/daq/felix_rcdaq/build"
-step[2] = "../setup_felix_rcdaq_felixTrigger.sh ; daq_set_runtype calib"
+step[1] = " ~/meeg/felix/daq/felix_rcdaq"
+step[2] = "./setup_felix_rcdaq_felixTrigger.sh ; daq_set_runtype calib"
 step[3] = "Run DAQ"
 step[4] = "0"
 step_commands.append(step)
 
-step = ["", "", "", "", ""]
-step[0] = ""
-step[1] = ""
-step[2] = ""
-step[3] = ""
-step[4] = ""
-step_commands.append(step)
-
-step = ["", "", "", "", ""]
-step[0] = ""
-step[1] = ""
-step[2] = ""
-step[3] = ""
-step[4] = ""
-step_commands.append(step)
 
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 #debug

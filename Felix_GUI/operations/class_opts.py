@@ -10,9 +10,6 @@ import time
 
 
 import cheatsheet
-import stave_config 
-import power_control 
-
 
 
 
@@ -45,8 +42,6 @@ def import_outside_functions(self):
 	self.OnButton 		= 	function.OnButton
 	self.showorigcheatsheet = 	cheatsheet.showorigcheatsheet
 	self.showcheatsheet = cheatsheet.showcheatsheet
-	self.show_stave_config = 	stave_config.show_stave_config
-	self.show_power_control = 	power_control.show_power_control
 	
 	#self.change_combobox_command = change_combobox_command
 	#self.exe_combobox_command = exe_combobox_command
@@ -150,9 +145,9 @@ def external_command_exec (self, button_num):
 
 	stdout_tmp = ""	
 	for line in stdout_list:
-		stdout_tmp += str(line)
+		stdout_tmp += str(line) + '\n'
 	for line in stderr_list:
-		stdout_tmp += str(line)
+		stdout_tmp += str(line) + '\n'
 
 	time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	if stderr_list == []:
@@ -167,7 +162,7 @@ def external_command_exec (self, button_num):
 
 	status_tmp = ""
 	for status in self.status_list:
-		status_tmp += status + "\n"
+		status_tmp += status + '\n'
 
 	self.status_text.SetValue(status_tmp)
 	self.stdout_text.SetValue(stdout_tmp)
@@ -315,9 +310,9 @@ def exe_combobox_command(self, event):
 
 	stdout_tmp = ""	
 	for line in stdout_list:
-		stdout_tmp += line
+		stdout_tmp += line + '\n'
 	for line in stderr_list:
-		stdout_tmp += line
+		stdout_tmp += line + '\n'
 
 	time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
 	if stderr_list == []:
@@ -330,7 +325,7 @@ def exe_combobox_command(self, event):
 
 	status_tmp = ""
 	for status in self.status_list:
-		status_tmp += status + "\n"
+		status_tmp += status + '\n'
 
 	
 	self.status_text.SetValue(status_tmp)
