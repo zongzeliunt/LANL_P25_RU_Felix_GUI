@@ -1,0 +1,2515 @@
+2019-10-30 15:03:24,989 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:24,989 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:24,993 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:24,997 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:25,000 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:25,004 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:25,010 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:25,015 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:25,021 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:25,025 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,238 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, True, False, False, True, True]
+2019-10-30 15:03:35,247 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:03:35,248 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,250 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,264 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,273 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,279 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,284 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,289 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,293 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,296 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,299 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,304 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:03:35,305 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,305 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,308 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,311 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,314 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,317 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,320 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,322 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,326 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,329 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,334 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:03:35,334 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,335 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,338 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,340 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,344 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,347 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,350 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,353 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,356 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,358 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,363 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:03:35,363 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,364 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,366 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,369 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,372 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,375 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,378 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,381 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,384 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,387 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,391 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:03:35,391 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,392 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,396 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,399 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,402 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,405 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,408 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,411 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,414 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,417 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,421 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:03:35,421 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,422 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,425 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,428 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,430 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,434 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,437 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,440 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,444 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,447 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,451 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:03:35,451 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,451 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,456 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,460 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,464 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,468 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,472 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,476 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,479 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,481 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,486 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:03:35,486 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,487 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,490 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,493 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,496 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,499 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,503 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,506 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,509 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,512 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,516 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:03:35,517 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,517 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,520 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,525 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,533 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,536 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,539 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,542 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,545 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,549 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,554 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:03:35,554 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:03:35,555 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:03:35,557 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:03:35,563 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:03:35,566 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:03:35,569 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:03:35,572 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:03:35,574 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:03:35,578 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:03:35,580 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:03:35,585 - root - ERROR - Could not align all transceivers to comma: [True, True, False, False, False, False, False, False, False]
+2019-10-30 15:09:42,626 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:09:42,626 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:09:42,629 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:09:42,632 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:09:42,634 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:09:42,637 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:09:42,640 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:09:42,643 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:09:42,646 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:09:42,649 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,294 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, False, False, False, True, False]
+2019-10-30 15:10:01,303 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:10:01,305 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,308 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,328 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,337 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,343 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,355 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,358 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,361 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,368 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,371 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,375 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:10:01,375 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,375 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,378 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,381 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,384 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,388 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,391 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,396 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,399 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,403 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,409 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:10:01,409 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,410 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,412 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,415 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,418 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,424 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,428 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,433 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,440 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,445 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,453 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:10:01,453 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,455 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,463 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,471 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,481 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,491 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,498 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,505 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,513 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,520 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,536 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:10:01,537 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,538 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,542 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,549 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,559 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,565 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,572 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,575 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,579 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,584 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,588 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:10:01,589 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,589 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,593 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,597 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,601 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,604 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,608 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,613 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,618 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,623 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,631 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:10:01,632 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,633 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,643 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,648 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,651 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,654 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,657 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,661 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,664 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,667 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,671 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:10:01,672 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,672 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,676 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,679 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,682 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,686 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,690 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,693 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,696 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,699 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,704 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:10:01,704 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,705 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,709 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,711 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,718 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,721 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,724 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,727 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,729 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,732 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,737 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:10:01,737 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:10:01,738 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:10:01,741 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:10:01,745 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:10:01,748 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:10:01,755 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:10:01,757 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:10:01,760 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:10:01,763 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:10:01,766 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:10:01,771 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, False, False, False]
+2019-10-30 15:12:55,299 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:12:55,300 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:13:00,634 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:14:32,003 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:14:32,004 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:14:36,732 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:16:03,560 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:16:03,561 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:16:08,077 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:19:26,506 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:26,507 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,289 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 15:19:33,299 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:19:33,300 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,303 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,323 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:19:33,324 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,326 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,333 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:19:33,334 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,335 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,342 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:19:33,342 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,343 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,348 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:19:33,349 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,349 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,358 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:19:33,359 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,359 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,364 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:19:33,365 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,365 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,371 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:19:33,371 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,372 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,377 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:19:33,377 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,378 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,382 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:19:33,385 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:33,386 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:33,393 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 15:19:39,853 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:39,854 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:42,995 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 15:19:42,999 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:19:42,999 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,000 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,004 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:19:43,005 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,005 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,014 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:19:43,014 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,015 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,023 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:19:43,023 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,024 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,032 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:19:43,032 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,033 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,041 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:19:43,042 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,043 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,052 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:19:43,052 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,053 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,061 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:19:43,062 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,063 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,068 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:19:43,068 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,069 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,074 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:19:43,074 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:19:43,075 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:19:43,078 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 15:20:06,134 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:20:06,135 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:20:11,811 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:20:29,014 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:20:29,015 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:20:32,930 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:20:52,478 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:20:52,479 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:20:52,481 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:20:56,602 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:22:01,489 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:01,490 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:01,493 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:07,353 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:07,354 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:07,359 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:14,216 - root - ERROR - Could not lock to all sensor clocks: [True, False]
+2019-10-30 15:22:14,218 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:22:21,972 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:22:21,972 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:21,973 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:21,977 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:21,981 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:22:21,982 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:21,983 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:21,988 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:21,994 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:22:21,994 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:21,995 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,007 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,019 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:22:22,020 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,021 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,026 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,037 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:22:22,037 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,038 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,040 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,046 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:22:22,046 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,047 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,053 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,057 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:22:22,058 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,058 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,061 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,069 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:22:22,069 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,070 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,073 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,080 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:22:22,081 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,081 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,084 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,089 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:22:22,089 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:22,089 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:22,092 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:22,098 - root - ERROR - Could not align all transceivers to comma: [True, False]
+2019-10-30 15:22:39,790 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:22:39,790 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:22:39,793 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:22:42,992 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:23:47,058 - root - ERROR - Could not lock to all sensor clocks: [False, True]
+2019-10-30 15:23:47,061 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:23:47,062 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,062 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,065 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,069 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:23:47,069 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,070 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,074 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,079 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:23:47,080 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,080 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,084 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,089 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:23:47,090 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,091 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,095 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,100 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:23:47,100 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,101 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,105 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,110 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:23:47,110 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,111 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,114 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,118 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:23:47,119 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:47,119 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:47,124 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:47,128 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:23:50,708 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:50,708 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:50,711 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,590 - root - ERROR - Could not lock to all sensor clocks: [False, True]
+2019-10-30 15:23:54,598 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:23:54,598 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,599 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,602 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,608 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:23:54,608 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,609 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,613 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,619 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:23:54,620 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,621 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,625 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,631 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:23:54,631 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,632 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,636 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,641 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:23:54,642 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,642 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,645 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,649 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:23:54,649 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,650 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,654 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,660 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:23:54,660 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:23:54,661 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:23:54,664 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:23:54,670 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:26:41,331 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:26:41,332 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:26:41,335 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:26:41,337 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:26:46,470 - root - ERROR - Could not lock to all sensor clocks: [True, True, False]
+2019-10-30 15:26:46,473 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:27:02,337 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:02,338 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:02,341 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:02,343 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:05,527 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:27:40,986 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:40,987 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:40,991 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:40,994 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:40,997 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:41,000 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:41,005 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:41,014 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:41,022 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,178 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, False, False, True, False]
+2019-10-30 15:27:44,187 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:27:44,188 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,190 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,207 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,217 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,222 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,227 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,232 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,237 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,240 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,249 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:27:44,249 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,250 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,253 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,257 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,261 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,264 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,267 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,271 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,275 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,281 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:27:44,281 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,282 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,285 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,289 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,293 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,296 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,298 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,301 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,304 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,309 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:27:44,310 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,310 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,314 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,317 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,321 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,325 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,327 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,330 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,332 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,337 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:27:44,338 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,339 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,344 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,349 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,352 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,355 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,358 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,361 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,364 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,369 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:27:44,369 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,369 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,372 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,375 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,377 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,381 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,385 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,387 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,390 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,394 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:27:44,394 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,394 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,397 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,400 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,403 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,406 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,412 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,415 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,418 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,422 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:27:44,422 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,423 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,426 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,429 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,432 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,435 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,438 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,441 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,443 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,451 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:27:44,451 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,451 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,454 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,456 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,461 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,465 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,472 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,475 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,478 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,482 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:27:44,482 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:27:44,483 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:27:44,485 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:27:44,489 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:27:44,492 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:27:44,495 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:27:44,498 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:27:44,503 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:27:44,506 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:27:44,511 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, False, False, False]
+2019-10-30 15:29:14,910 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:14,910 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:14,914 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:14,917 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,674 - root - ERROR - Could not lock to all sensor clocks: [True, True, False]
+2019-10-30 15:29:20,679 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:29:20,680 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,680 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,683 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,686 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,692 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:29:20,692 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,693 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,696 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,702 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,707 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:29:20,708 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,709 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,712 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,716 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,721 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:29:20,722 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,722 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,726 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,729 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,733 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:29:20,734 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,734 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,739 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,742 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,748 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:29:20,748 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,749 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,752 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,755 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,759 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:29:20,760 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,760 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,763 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,766 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,771 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:29:20,771 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,771 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,774 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,778 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,783 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:29:20,783 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,784 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,787 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,789 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,793 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:29:20,794 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:29:20,794 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:29:20,798 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:29:20,801 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:29:20,805 - root - ERROR - Could not align all transceivers to comma: [True, True, False]
+2019-10-30 15:30:52,878 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:52,879 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:52,882 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:52,885 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:52,888 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:52,897 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:52,903 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:52,907 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:52,915 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:56,853 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, False, True, True, True]
+2019-10-30 15:30:56,863 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:30:56,864 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:56,867 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:56,880 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:56,894 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:56,902 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:56,910 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:56,913 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:56,916 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:56,924 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:56,931 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:30:56,931 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:56,932 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:56,940 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:56,944 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:56,946 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:56,951 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:56,957 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:56,962 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:56,971 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:56,976 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:30:56,977 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:56,977 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:56,984 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:56,990 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:56,999 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,003 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,006 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,011 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,014 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,019 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:30:57,019 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,020 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,025 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,028 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,032 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,037 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,041 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,045 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,055 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,068 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:30:57,068 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,069 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,074 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,078 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,081 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,084 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,087 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,091 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,094 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,098 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:30:57,098 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,099 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,102 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,106 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,109 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,112 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,115 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,118 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,122 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,127 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:30:57,127 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,128 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,130 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,133 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,137 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,140 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,143 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,146 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,149 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,154 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:30:57,155 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,156 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,159 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,161 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,164 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,167 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,171 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,174 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,177 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,182 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:30:57,183 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,183 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,187 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,190 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,192 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,195 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,199 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,202 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,205 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,209 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:30:57,209 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:30:57,210 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:30:57,214 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:30:57,218 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:30:57,221 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:30:57,225 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:30:57,228 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:30:57,231 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:30:57,234 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:30:57,239 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, False, False, False]
+2019-10-30 15:32:51,137 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:32:51,137 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:32:51,140 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:32:57,672 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:38:48,075 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:38:48,076 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:02,697 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:02,697 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,724 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:39:10,725 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,725 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,729 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:39:10,729 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,730 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,734 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:39:10,734 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,734 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,740 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:39:10,740 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,741 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,746 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:39:10,746 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,747 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,754 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:39:10,755 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,756 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,761 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:39:10,762 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,762 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,767 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:39:10,768 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,768 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,773 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:39:10,774 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,774 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,778 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:39:10,778 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:10,779 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:39:10,783 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 15:39:35,258 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:39:35,259 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:39:40,034 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:40:03,373 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:40:03,374 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:40:09,857 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 15:40:09,858 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:40:25,676 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 15:40:25,680 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:40:43,981 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:40:43,982 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:40:48,435 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:41:11,140 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:41:11,140 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:41:11,143 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:41:18,353 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:42:40,364 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:42:40,365 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:42:40,370 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:42:40,376 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:42:47,607 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:43:50,727 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:50,728 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:50,731 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:50,734 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:50,736 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:50,740 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:50,743 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:50,746 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:50,749 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:50,756 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:54,984 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, False, False, True, False, False]
+2019-10-30 15:43:54,987 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:43:54,988 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:54,989 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:54,993 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:54,997 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,002 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,005 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,011 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,015 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,020 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,024 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,029 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:43:55,029 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,034 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,039 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,044 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,051 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,057 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,064 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,070 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,075 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,078 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,083 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:43:55,083 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,083 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,086 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,089 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,093 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,097 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,100 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,102 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,106 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,111 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,115 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:43:55,115 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,116 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,120 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,123 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,126 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,128 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,131 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,133 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,136 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,139 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,144 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:43:55,144 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,144 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,147 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,150 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,154 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,157 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,159 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,162 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,165 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,167 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,172 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:43:55,172 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,173 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,175 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,178 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,182 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,186 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,189 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,193 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,197 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,199 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,204 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:43:55,204 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,205 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,207 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,210 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,214 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,218 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,221 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,224 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,226 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,230 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,235 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:43:55,236 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,236 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,240 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,244 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,246 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,250 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,254 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,256 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,259 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,261 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,265 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:43:55,266 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,266 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,269 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,272 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,277 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,280 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,283 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,285 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,288 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,291 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,296 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:43:55,296 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:43:55,297 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:43:55,300 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:43:55,302 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:43:55,308 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:43:55,311 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:43:55,314 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:43:55,316 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:43:55,319 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:43:55,321 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:43:55,326 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, False, False, False]
+2019-10-30 15:44:25,769 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:25,769 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:25,772 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:25,775 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:25,777 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:25,780 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:25,784 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:25,787 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:25,790 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,278 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, False, False, True]
+2019-10-30 15:44:30,287 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:44:30,288 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,292 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,308 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,318 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,324 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,331 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,338 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,342 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,346 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,352 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:44:30,352 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,353 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,356 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,358 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,362 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,365 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,368 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,371 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,376 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,380 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:44:30,381 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,381 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,384 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,387 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,391 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,394 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,397 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,400 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,404 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,409 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:44:30,410 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,411 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,414 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,418 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,420 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,424 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,428 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,431 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,435 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,439 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:44:30,440 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,440 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,443 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,448 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,452 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,456 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,459 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,461 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,465 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,471 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:44:30,471 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,471 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,475 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,479 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,482 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,488 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,492 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,497 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,501 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,505 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:44:30,506 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,506 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,510 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,516 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,519 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,522 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,525 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,529 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,532 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,536 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:44:30,536 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,537 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,544 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,547 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,550 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,553 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,555 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,559 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,562 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,566 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:44:30,567 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,567 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,571 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,574 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,576 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,579 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,582 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,585 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,587 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,592 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:44:30,592 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:44:30,592 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:44:30,595 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:44:30,599 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:44:30,602 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:44:30,605 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:44:30,608 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:44:30,611 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:44:30,614 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:44:30,619 - root - ERROR - Could not align all transceivers to comma: [False, False, False, False, False, False, False]
+2019-10-30 15:45:34,323 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:34,324 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:34,327 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:34,329 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:34,332 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:34,335 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:34,338 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:34,341 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:37,940 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, False, True, False]
+2019-10-30 15:45:37,942 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:45:37,942 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:37,943 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:37,947 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:37,950 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:37,953 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:37,959 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:37,963 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:37,965 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:37,972 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:45:37,972 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:37,973 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:37,976 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:37,979 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:37,985 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:37,991 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:37,997 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,003 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,012 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:45:38,012 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,013 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,019 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,023 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,029 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,035 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,041 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,047 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,055 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:45:38,056 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,057 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,063 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,067 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,070 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,076 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,079 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,082 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,086 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:45:38,087 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,088 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,092 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,096 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,101 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,103 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,106 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,110 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,115 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:45:38,115 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,116 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,118 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,122 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,126 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,131 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,135 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,139 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,144 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:45:38,144 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,145 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,148 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,150 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,153 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,157 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,160 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,163 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,168 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:45:38,168 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,169 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,173 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,176 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,179 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,181 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,186 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,190 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,194 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:45:38,194 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,195 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,198 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,202 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,205 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,208 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,211 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,214 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,219 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:45:38,220 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:45:38,220 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 15:45:38,224 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 15:45:38,227 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 15:45:38,231 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 15:45:38,235 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 15:45:38,238 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 15:45:38,241 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:45:38,246 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, False, False]
+2019-10-30 15:47:12,066 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:47:12,067 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:47:17,051 - root - INFO - All Transceivers aligned to comma
+2019-10-30 15:48:30,517 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:30,518 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:30,521 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,557 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:48:40,558 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,561 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,573 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,579 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:48:40,579 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,580 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,583 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,587 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:48:40,588 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,588 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,595 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,601 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:48:40,601 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,602 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,605 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,611 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:48:40,611 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,612 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,614 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,619 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:48:40,619 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,620 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,624 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,630 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:48:40,630 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,630 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,634 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,639 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:48:40,639 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,640 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,642 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,647 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:48:40,647 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,648 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,651 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,655 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:48:40,655 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:48:40,656 - ALPIDE.7 - INFO - initializing chip
+2019-10-30 15:48:40,659 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:48:40,664 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 15:56:09,905 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:09,907 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:09,910 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,466 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 15:56:19,467 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,467 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,470 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,474 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 15:56:19,475 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,475 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,479 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,484 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 15:56:19,484 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,485 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,487 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,493 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 15:56:19,493 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,494 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,497 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,501 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 15:56:19,501 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,502 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,505 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,510 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 15:56:19,510 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,511 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,513 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,517 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 15:56:19,518 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,518 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,521 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,526 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 15:56:19,526 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,527 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,530 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,534 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 15:56:19,534 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,535 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,538 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,543 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 15:56:19,543 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 15:56:19,544 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 15:56:19,546 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 15:56:19,550 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:04:00,381 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:04:00,383 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,385 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,398 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,413 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:04:00,413 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,414 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,419 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,430 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:04:00,431 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,431 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,434 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,442 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:04:00,443 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,443 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,446 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,451 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:04:00,451 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,452 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,455 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,461 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:04:00,461 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,462 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,465 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,469 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:04:00,469 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,470 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,473 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,477 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:04:00,478 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,478 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,484 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,488 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:04:00,489 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,489 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,492 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,496 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:04:00,496 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:04:00,497 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:04:00,500 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:04:00,505 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:15:46,529 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:15:46,534 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:16:09,040 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:09,041 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:09,044 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,307 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:16:13,310 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,312 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,324 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,341 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:16:13,342 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,343 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,349 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,356 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:16:13,357 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,357 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,361 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,367 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:16:13,368 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,368 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,372 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,377 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:16:13,378 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,378 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,381 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,385 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:16:13,385 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,386 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,390 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,396 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:16:13,396 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,397 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,400 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,407 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:16:13,407 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,408 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,411 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,415 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:16:13,415 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,416 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,420 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,424 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:16:13,424 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:16:13,425 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:16:13,427 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:16:13,431 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:20:35,155 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:35,156 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:35,158 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:35,161 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:35,164 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:35,166 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:35,170 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,387 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, False, False]
+2019-10-30 16:20:43,396 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:20:43,397 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,400 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,412 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,422 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,429 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,434 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,440 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,445 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:20:43,446 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,446 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,449 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,453 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,458 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,461 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,465 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,471 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:20:43,472 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,472 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,476 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,478 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,481 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,485 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,489 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,494 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:20:43,494 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,494 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,497 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,500 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,503 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,506 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,509 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,515 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:20:43,515 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,516 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,519 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,523 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,527 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,529 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,532 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,538 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:20:43,538 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,539 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,542 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,545 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,548 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,551 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,555 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,559 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:20:43,560 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,560 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,563 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,565 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,568 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,570 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,573 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,577 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:20:43,577 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,578 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,581 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,584 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,586 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,590 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,593 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,597 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:20:43,597 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,597 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,600 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,603 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,606 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,608 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,611 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,615 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:20:43,615 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:20:43,616 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:20:43,620 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:20:43,623 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:20:43,625 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:20:43,628 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:20:43,630 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:20:43,634 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, False]
+2019-10-30 16:21:56,467 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:56,468 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:56,471 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:56,473 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:56,476 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:56,479 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:56,484 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,552 - root - ERROR - Could not lock to all sensor clocks: [True, True, True, True, False, True]
+2019-10-30 16:21:59,556 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:21:59,557 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,557 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,560 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,562 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,565 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,568 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,571 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,575 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:21:59,576 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,576 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,580 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,583 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,586 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,588 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,594 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,599 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:21:59,599 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,600 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,602 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,605 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,607 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,610 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,614 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,619 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:21:59,619 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,619 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,626 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,629 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,631 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,634 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,636 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,640 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:21:59,641 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,641 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,644 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,647 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,650 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,653 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,656 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,660 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:21:59,661 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,661 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,664 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,667 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,669 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,672 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,675 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,680 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:21:59,680 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,681 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,683 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,687 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,690 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,694 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,697 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,700 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:21:59,701 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,701 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,705 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,708 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,711 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,714 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,719 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,723 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:21:59,724 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,724 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,727 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,730 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,733 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,736 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,739 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,743 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:21:59,743 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:21:59,744 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:21:59,747 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:21:59,751 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:21:59,753 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:21:59,756 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:21:59,759 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:21:59,763 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False, False, True]
+2019-10-30 16:22:32,320 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:22:32,320 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:22:35,335 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:22:50,572 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:22:50,573 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:22:54,387 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:23:11,417 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:11,418 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:23:14,661 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:23:28,982 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:23:28,982 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:28,983 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:28,988 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:23:28,989 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:28,990 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:28,994 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:23:28,994 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:28,995 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,001 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:23:29,002 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,004 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,009 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:23:29,010 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,011 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,016 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:23:29,016 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,018 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,025 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:23:29,026 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,027 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,032 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:23:29,033 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,033 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,047 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:23:29,048 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,049 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,058 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:23:29,059 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:29,060 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:29,066 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:23:36,087 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:36,087 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,295 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:23:39,297 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,299 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,319 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:23:39,320 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,322 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,330 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:23:39,331 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,332 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,339 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:23:39,339 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,340 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,345 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:23:39,346 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,346 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,351 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:23:39,351 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,351 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,360 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:23:39,360 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,361 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,366 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:23:39,367 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,367 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,373 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:23:39,374 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,374 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,378 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:23:39,379 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:23:39,379 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:23:39,385 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:24:03,216 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:03,216 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,492 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:24:06,494 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,497 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,510 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:24:06,510 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,511 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,517 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:24:06,517 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,518 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,523 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:24:06,523 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,524 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,531 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:24:06,531 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,532 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,537 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:24:06,537 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,538 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,547 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:24:06,547 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,548 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,553 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:24:06,554 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,555 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,561 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:24:06,561 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,562 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,569 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:24:06,570 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:06,570 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:24:06,574 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:24:24,948 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:24:24,949 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:24,949 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:24,955 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:24:24,955 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:24,956 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:24,960 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:24:24,961 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:24,962 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:24,969 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:24:24,969 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:24,970 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:24,975 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:24:24,976 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:24,977 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:24,986 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:24:24,987 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:24,988 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:24,995 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:24:25,000 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:25,001 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:25,009 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:24:25,009 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:25,010 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:25,016 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:24:25,016 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:25,017 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:25,023 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:24:25,023 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:25,024 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:25,029 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:24:34,036 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:34,037 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:24:37,731 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:24:59,260 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:24:59,260 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,456 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:25:02,457 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,460 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,473 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:25:02,474 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,474 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,478 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:25:02,479 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,479 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,487 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:25:02,488 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,488 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,493 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:25:02,493 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,494 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,501 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:25:02,501 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,502 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,505 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:25:02,506 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,506 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,510 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:25:02,510 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,511 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,516 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:25:02,516 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,517 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,522 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:25:02,522 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:02,522 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:25:02,526 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:25:13,357 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:13,358 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,636 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:25:16,640 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:25:16,641 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:16,641 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,646 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:25:16,646 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:16,646 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,652 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:25:16,652 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:16,653 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,659 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:25:16,659 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:16,660 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,665 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:25:16,666 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:16,667 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,673 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:25:16,673 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:16,674 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:16,677 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:25:31,465 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:25:31,474 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:25:31,476 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:31,479 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:31,501 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:25:31,502 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:31,503 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:31,510 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:25:42,744 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:25:42,752 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:25:42,752 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,752 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,756 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:25:42,757 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,758 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,762 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:25:42,762 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,763 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,767 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:25:42,767 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,768 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,773 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:25:42,774 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,774 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,780 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:25:42,780 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,781 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,786 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:25:42,787 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,787 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,793 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:25:42,793 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,793 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,797 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:25:42,798 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,798 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,803 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:25:42,803 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:25:42,804 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:25:42,809 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:26:07,492 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:07,493 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,578 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:26:11,578 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,579 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,583 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:26:11,583 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,583 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,588 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:26:11,588 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,589 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,593 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:26:11,593 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,594 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,598 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:26:11,598 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,599 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,605 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:26:11,605 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,606 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,611 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:26:11,611 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,612 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,617 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:26:11,617 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,617 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,623 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:26:11,623 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,624 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,629 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:26:11,629 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:11,630 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:11,634 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:26:19,038 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:26:19,040 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:26:19,040 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,041 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,046 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:26:19,046 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,047 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,054 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:26:19,054 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,055 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,059 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:26:19,060 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,060 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,071 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:26:19,072 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,073 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,086 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:26:19,086 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,087 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,091 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:26:19,091 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,091 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,095 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:26:19,096 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,096 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,100 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:26:19,100 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,101 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,107 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:26:19,107 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:19,108 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:19,111 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:26:31,080 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:31,081 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,370 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:26:36,381 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:26:36,382 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,385 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,397 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:26:36,398 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,398 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,404 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:26:36,404 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,405 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,415 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:26:36,416 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,416 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,422 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:26:36,422 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,423 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,428 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:26:36,428 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,430 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,434 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:26:36,434 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,435 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,440 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:26:36,441 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,442 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,448 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:26:36,448 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,448 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,454 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:26:36,454 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:36,455 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:26:36,460 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:26:59,384 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:26:59,384 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:26:59,385 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:26:59,387 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:27:09,203 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:09,204 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:27:13,420 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:27:31,164 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:31,164 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:27:35,257 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:27:54,621 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:27:54,622 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,622 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,627 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:27:54,628 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,628 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,632 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:27:54,632 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,633 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,639 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:27:54,639 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,640 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,644 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:27:54,644 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,645 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,651 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:27:54,651 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,652 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,657 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:27:54,657 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,658 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,664 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:27:54,664 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,665 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,671 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:27:54,672 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,672 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,676 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:27:54,676 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:54,677 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:27:54,682 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:27:57,347 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:27:57,348 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,823 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:28:00,824 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,824 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,829 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:28:00,829 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,830 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,834 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:28:00,835 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,836 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,846 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:28:00,847 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,852 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,862 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:28:00,862 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,863 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,874 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:28:00,874 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,875 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,885 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:28:00,885 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,887 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,900 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:28:00,900 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,901 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,909 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:28:00,909 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,910 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,914 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:28:00,914 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:00,915 - ALPIDE.3 - INFO - initializing chip
+2019-10-30 16:28:00,922 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:28:16,196 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:16,197 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:28:19,460 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:28:19,469 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:28:19,470 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:19,472 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:28:19,481 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:28:19,481 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:19,481 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:28:19,486 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:28:19,490 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:19,491 - ALPIDE.4 - INFO - initializing chip
+2019-10-30 16:28:19,496 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:28:34,504 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:28:34,509 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:28:34,509 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,510 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,515 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:28:34,515 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,516 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,520 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:28:34,521 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,521 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,526 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:28:34,526 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,527 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,533 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:28:34,533 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,534 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,539 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:28:34,540 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,540 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,544 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:28:34,545 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,546 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,551 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:28:34,551 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,552 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,558 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:28:34,558 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,559 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,565 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:28:34,565 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:34,566 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:34,571 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:28:37,158 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:37,158 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,402 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:28:40,403 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,406 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,413 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:28:40,413 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,414 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,419 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:28:40,419 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,420 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,425 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:28:40,425 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,426 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,431 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:28:40,432 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,432 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,438 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:28:40,438 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,439 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,444 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:28:40,444 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,445 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,450 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:28:40,450 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,451 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,455 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:28:40,455 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,456 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,460 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:28:40,461 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:40,461 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:28:40,465 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:28:53,452 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:28:53,452 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,453 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,457 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:28:53,458 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,458 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,462 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:28:53,463 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,463 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,470 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:28:53,470 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,471 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,475 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:28:53,475 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,479 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,484 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:28:53,484 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,485 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,489 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:28:53,489 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,490 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,495 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:28:53,495 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,496 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,500 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:28:53,500 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,501 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,506 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:28:53,506 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:53,506 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:53,510 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:28:56,428 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:28:56,428 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:28:59,491 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:28:59,493 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:29:36,812 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:29:36,812 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:29:39,519 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:30:04,963 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:04,964 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:08,354 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:30:25,138 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:25,139 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,500 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-30 16:30:28,506 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:30:28,507 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,507 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,511 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:30:28,511 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,512 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,517 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:30:28,517 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,518 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,522 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:30:28,522 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,526 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,530 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:30:28,530 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,531 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,536 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:30:28,536 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,536 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,543 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:30:28,544 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,544 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,548 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:30:28,548 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,549 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,553 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:30:28,553 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,554 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,558 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:30:28,558 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:28,559 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:28,564 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:30:48,884 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:48,885 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,703 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:30:51,703 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,704 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,709 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:30:51,709 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,710 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,714 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:30:51,715 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,715 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,721 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:30:51,721 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,721 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,726 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:30:51,726 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,727 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,732 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:30:51,733 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,733 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,737 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:30:51,738 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,738 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,742 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:30:51,743 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,743 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,749 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:30:51,749 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,749 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,754 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:30:51,754 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:30:51,754 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:30:51,758 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-30 16:31:07,341 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:31:07,341 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:31:10,376 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:31:39,550 - root - ERROR - Could not lock to all sensor clocks: [True, False, False]
+2019-10-30 16:31:39,557 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:31:39,558 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:31:39,558 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:31:39,561 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:31:39,564 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:31:39,568 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:31:39,571 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:31:44,164 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:31:44,165 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:31:44,168 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:31:44,171 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:31:44,174 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:31:49,600 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:31:49,601 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:31:49,603 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:31:49,606 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:31:49,609 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:31:54,952 - root - INFO - All Transceivers aligned to comma
+2019-10-30 16:32:36,773 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:36,774 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:36,776 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:36,779 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:36,782 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:36,784 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,657 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:32:39,657 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,658 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,660 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,663 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,666 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,669 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,674 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:32:39,674 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,675 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,677 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,684 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,687 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,691 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,696 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:32:39,697 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,698 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,702 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,704 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,707 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,710 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,714 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:32:39,715 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,715 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,720 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,723 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,726 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,730 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,735 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:32:39,735 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,736 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,738 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,741 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,744 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,747 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,751 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:32:39,752 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,752 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,755 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,758 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,761 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,763 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,768 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:32:39,769 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,769 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,772 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,774 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,777 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,781 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,785 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:32:39,785 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,786 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,789 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,792 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,795 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,798 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,802 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:32:39,803 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,803 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,806 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,809 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,812 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,817 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,828 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:32:39,828 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:32:39,829 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:32:39,832 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:32:39,835 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:32:39,839 - ALPIDE.5 - INFO - initializing chip
+2019-10-30 16:32:39,842 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:32:39,849 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False]
+2019-10-30 16:33:02,517 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:02,517 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:02,520 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:02,523 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:02,526 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:02,529 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,281 - root - INFO - Not Aligned, retry 1/10
+2019-10-30 16:33:06,282 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,285 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,298 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,312 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,318 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,328 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,333 - root - INFO - Not Aligned, retry 2/10
+2019-10-30 16:33:06,334 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,334 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,341 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,344 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,347 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,349 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,354 - root - INFO - Not Aligned, retry 3/10
+2019-10-30 16:33:06,354 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,354 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,357 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,360 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,364 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,367 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,371 - root - INFO - Not Aligned, retry 4/10
+2019-10-30 16:33:06,371 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,372 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,375 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,378 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,381 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,384 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,389 - root - INFO - Not Aligned, retry 5/10
+2019-10-30 16:33:06,389 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,390 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,393 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,395 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,398 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,400 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,406 - root - INFO - Not Aligned, retry 6/10
+2019-10-30 16:33:06,406 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,407 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,410 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,413 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,415 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,420 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,424 - root - INFO - Not Aligned, retry 7/10
+2019-10-30 16:33:06,424 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,425 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,428 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,431 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,434 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,437 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,441 - root - INFO - Not Aligned, retry 8/10
+2019-10-30 16:33:06,441 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,442 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,445 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,449 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,451 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,454 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,458 - root - INFO - Not Aligned, retry 9/10
+2019-10-30 16:33:06,459 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,459 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,462 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,465 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,468 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,471 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,478 - root - INFO - Not Aligned, retry 10/10
+2019-10-30 16:33:06,479 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:06,479 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:06,482 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:06,484 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:06,487 - ALPIDE.6 - INFO - initializing chip
+2019-10-30 16:33:06,490 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:06,494 - root - ERROR - Could not align all transceivers to comma: [True, True, True, False]
+2019-10-30 16:33:21,874 - ALPIDE.15 - INFO - resetting chip
+2019-10-30 16:33:21,875 - ALPIDE.0 - INFO - initializing chip
+2019-10-30 16:33:21,879 - ALPIDE.1 - INFO - initializing chip
+2019-10-30 16:33:21,883 - ALPIDE.2 - INFO - initializing chip
+2019-10-30 16:33:21,887 - ALPIDE.8 - INFO - initializing chip
+2019-10-30 16:33:24,887 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:09:03,065 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:03,066 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:03,069 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:03,072 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:03,074 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,697 - root - INFO - Not Aligned, retry 1/10
+2019-10-31 12:09:34,698 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,698 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,701 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,704 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,706 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,712 - root - INFO - Not Aligned, retry 2/10
+2019-10-31 12:09:34,713 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,713 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,717 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,719 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,722 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,727 - root - INFO - Not Aligned, retry 3/10
+2019-10-31 12:09:34,728 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,728 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,733 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,736 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,739 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,744 - root - INFO - Not Aligned, retry 4/10
+2019-10-31 12:09:34,744 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,744 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,747 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,751 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,755 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,759 - root - INFO - Not Aligned, retry 5/10
+2019-10-31 12:09:34,760 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,760 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,763 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,766 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,769 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,773 - root - INFO - Not Aligned, retry 6/10
+2019-10-31 12:09:34,773 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,774 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,776 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,779 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,782 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,787 - root - INFO - Not Aligned, retry 7/10
+2019-10-31 12:09:34,787 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,788 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,791 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,795 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,798 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,801 - root - INFO - Not Aligned, retry 8/10
+2019-10-31 12:09:34,802 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,802 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,805 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,807 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,810 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,814 - root - INFO - Not Aligned, retry 9/10
+2019-10-31 12:09:34,815 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,816 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,822 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,826 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,829 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,833 - root - INFO - Not Aligned, retry 10/10
+2019-10-31 12:09:34,834 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:09:34,834 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:09:34,837 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:09:34,840 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:09:34,843 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:09:34,847 - root - ERROR - Could not align all transceivers to comma: [True, True, False]
+2019-10-31 12:10:18,182 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:18,183 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:18,186 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:18,189 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:18,192 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,329 - root - INFO - Not Aligned, retry 1/10
+2019-10-31 12:10:22,331 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,333 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,345 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,355 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,362 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,369 - root - INFO - Not Aligned, retry 2/10
+2019-10-31 12:10:22,370 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,370 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,373 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,377 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,379 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,383 - root - INFO - Not Aligned, retry 3/10
+2019-10-31 12:10:22,384 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,384 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,387 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,391 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,395 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,399 - root - INFO - Not Aligned, retry 4/10
+2019-10-31 12:10:22,399 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,400 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,402 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,405 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,407 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,411 - root - INFO - Not Aligned, retry 5/10
+2019-10-31 12:10:22,411 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,412 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,415 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,417 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,421 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,426 - root - INFO - Not Aligned, retry 6/10
+2019-10-31 12:10:22,427 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,427 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,430 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,432 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,435 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,439 - root - INFO - Not Aligned, retry 7/10
+2019-10-31 12:10:22,439 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,439 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,442 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,445 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,447 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,452 - root - INFO - Not Aligned, retry 8/10
+2019-10-31 12:10:22,452 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,453 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,458 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,460 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,463 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,467 - root - INFO - Not Aligned, retry 9/10
+2019-10-31 12:10:22,467 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,467 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,470 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,473 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,475 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,479 - root - INFO - Not Aligned, retry 10/10
+2019-10-31 12:10:22,479 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:22,480 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:10:22,484 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:10:22,487 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:10:22,491 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:10:22,495 - root - ERROR - Could not align all transceivers to comma: [True, True, False]
+2019-10-31 12:10:53,255 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:10:56,976 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:10:56,977 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:11:00,712 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:11:11,530 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-31 12:11:11,532 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:11:24,188 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:11:24,189 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:11:27,864 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:11:37,556 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:11:37,557 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:11:40,636 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:11:53,259 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:11:53,259 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:11:57,196 - root - ERROR - Could not lock to all sensor clocks: [False]
+2019-10-31 12:11:57,201 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:12:04,471 - root - INFO - Not Aligned, retry 1/10
+2019-10-31 12:12:04,471 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,472 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,476 - root - INFO - Not Aligned, retry 2/10
+2019-10-31 12:12:04,476 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,477 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,481 - root - INFO - Not Aligned, retry 3/10
+2019-10-31 12:12:04,481 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,481 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,486 - root - INFO - Not Aligned, retry 4/10
+2019-10-31 12:12:04,486 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,487 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,491 - root - INFO - Not Aligned, retry 5/10
+2019-10-31 12:12:04,491 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,492 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,496 - root - INFO - Not Aligned, retry 6/10
+2019-10-31 12:12:04,496 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,496 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,501 - root - INFO - Not Aligned, retry 7/10
+2019-10-31 12:12:04,501 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,502 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,507 - root - INFO - Not Aligned, retry 8/10
+2019-10-31 12:12:04,507 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,508 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,511 - root - INFO - Not Aligned, retry 9/10
+2019-10-31 12:12:04,512 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,512 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,516 - root - INFO - Not Aligned, retry 10/10
+2019-10-31 12:12:04,516 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:04,517 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:04,521 - root - ERROR - Could not align all transceivers to comma: [False]
+2019-10-31 12:12:13,729 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:13,729 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:17,063 - root - INFO - Not Aligned, retry 1/10
+2019-10-31 12:12:17,064 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:17,064 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:17,068 - root - INFO - Not Aligned, retry 2/10
+2019-10-31 12:12:17,069 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:12:17,069 - ALPIDE.2 - INFO - initializing chip
+2019-10-31 12:12:17,073 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:13:10,514 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 12:13:10,515 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 12:13:10,518 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 12:13:10,521 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 12:13:14,113 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:13:27,089 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:14:23,324 - root - INFO - All Transceivers aligned to comma
+2019-10-31 12:15:35,075 - ALPIDE.0 - INFO - calibration of discr sign completed: True
+2019-10-31 12:15:35,180 - ALPIDE.0 - INFO - calibration of half lsb completed: False
+2019-10-31 12:15:36,273 - ALPIDE.0 - INFO - calibration of offset completed: 12
+2019-10-31 12:15:36,482 - ALPIDE.1 - INFO - calibration of discr sign completed: True
+2019-10-31 12:15:36,585 - ALPIDE.1 - INFO - calibration of half lsb completed: False
+2019-10-31 12:15:37,670 - ALPIDE.1 - INFO - calibration of offset completed: 6
+2019-10-31 12:15:37,879 - ALPIDE.8 - INFO - calibration of discr sign completed: True
+2019-10-31 12:15:37,981 - ALPIDE.8 - INFO - calibration of half lsb completed: False
+2019-10-31 12:15:39,079 - ALPIDE.8 - INFO - calibration of offset completed: 2
+2019-10-31 14:37:34,610 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 14:37:34,611 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 14:37:34,613 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 14:37:34,616 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 14:37:46,877 - root - INFO - All Transceivers aligned to comma
+2019-10-31 15:18:06,764 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:18:07,765 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:18:08,765 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:18:09,765 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:18:09,766 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. Max number of retries reached
+2019-10-31 15:18:18,445 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:18:19,446 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:18:20,446 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:22:39,160 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 15:22:39,161 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 15:22:39,164 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 15:22:39,167 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 15:22:46,720 - root - INFO - All Transceivers aligned to comma
+2019-10-31 15:36:22,162 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:23,163 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:24,163 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:25,164 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:25,165 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. Max number of retries reached
+2019-10-31 15:36:33,923 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:34,923 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:35,923 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:36,924 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 15:36:36,924 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. Max number of retries reached
+2019-10-31 15:37:15,974 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 15:37:15,975 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 15:37:15,977 - Module Id 4: DCTRL - ERROR - status read is 0X0 while 0x3F was expected. status 0X00. data 0X00. Connector 0, Phase 0
+2019-10-31 15:37:15,980 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 15:37:15,982 - Module Id 4: DCTRL - ERROR - status read is 0X0 while 0x3F was expected. status 0X00. data 0XBF81. Connector 0, Phase 0
+2019-10-31 15:37:15,982 - Module Id 4: DCTRL - ERROR - chipid read is 0b0000000 while 0b0000001 was expected
+2019-10-31 15:37:15,982 - Module Id 4: DCTRL - ERROR - Connector 0, Phase 0
+2019-10-31 15:37:24,843 - ALPIDE.15 - INFO - resetting chip
+2019-10-31 15:37:24,844 - ALPIDE.0 - INFO - initializing chip
+2019-10-31 15:37:24,848 - ALPIDE.1 - INFO - initializing chip
+2019-10-31 15:37:24,851 - ALPIDE.8 - INFO - initializing chip
+2019-10-31 15:37:33,835 - root - INFO - All Transceivers aligned to comma
+2019-10-31 17:44:05,624 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:06,626 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:07,627 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:08,628 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:08,629 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. Max number of retries reached
+2019-10-31 17:44:17,272 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:18,272 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:19,273 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:20,273 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. retry
+2019-10-31 17:44:20,273 - Communication - WARNING - Result size mismatch. Expected 4 bytes, read 0 bytes. Max number of retries reached
