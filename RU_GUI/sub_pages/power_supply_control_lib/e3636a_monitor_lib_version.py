@@ -24,11 +24,11 @@ def redraw_settings(ser):
 def get_status (ser):
 	outstr = ""
 	ser.write("INST:NSEL 1\r\n".encode())
-	out_str += print_status(ser) + "\n"
+	outstr += print_status(ser) + "\n"
 	time.sleep(WAIT)
 
 	ser.write("INST:NSEL 2\r\n".encode())
-	out_str += print_status(ser) + "\n"
+	outstr += print_status(ser) + "\n"
 	time.sleep(WAIT)
 	return outstr
 

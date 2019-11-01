@@ -302,7 +302,7 @@ class power_control(wx.Frame):
 		last_opt = self.PS_1_last_opt
 
 		if last_opt == "w":
-			status = self.e3633a.print_status(PS_1_ser)
+			status = self.e3633a.print_status(self.PS_1_ser)
 			#get status wait 0.4 s
 			self.PS_1_status_text.SetValue(status)
 			self.PS_1_last_opt = "w"

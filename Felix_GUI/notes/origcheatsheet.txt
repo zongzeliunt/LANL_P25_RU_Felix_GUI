@@ -1,0 +1,226 @@
+==== set up the GTM (or, use the KC705 - below)
+
+plug an Ethernet cable into the GTM and the server's right-hand Ethernet port (marked "LAN"), power on the GTM - it should respond to ping
+e.g. run ping 192.168.100.38, kill with ctrl+c
+
+(There can occassionally be a conflict with addresses at this stage. If this occurs try:
+
+su
+systemctl stop NetworkManager
+systemctl disable NetworkManager
+systemctl start NetworkManager
+systemctl enable network.service
+
+Rebooting will likely be required to re-establish connection)
+
+login root, password root
+
+
+To initialize the GTM:
+ssh root@192.168.100.38 'cd /gtm;./gtm_init'
+----
+Dev file opened correctly
+Device Programmed...
+Writing vGTMG Register 8 to 255  (0xff)
+regAddr: 8  (0x8)
+Value Written...
+Writing vGTMG Register 8 to 0  (0x0)
+regAddr: 8  (0x8)
+Value Written...
+Writing vGTMG Register 5 to 1  (0x1)
+regAddr: 5  (0x5)
+Value Written...
+Writing vGTMG Register 5 to 0  (0x0)
+regAddr: 5  (0x5)
+Value Written...
+----
+
+GTM notes:
+
+LEMO 1 is an input that I can drive with a TTL signal to make a L1-accept pulse. It looks like the input needs to be at least 1 RHIC clock wide, but is edge-detected - so 110 ns wide works, but much wider is also fine.
+LEMO 3 is a TTL output that seems to correspond to the L1-accept. It's clock-synchronous and fixed-width, 2 RHIC clocks wide.
+LEMO 4 is a clock output that looks like the GT refclk - nominally 112.8 MHz.
+LED 2 pulses on L1-accept.
+All of the above runs once gtm_init has run, whether or not the scheduler is running. I played with the scheduler; the load_loopleds_gtm0 demo works, and I loaded the "cmdbits_counter" program and saw that working on the ILA.
+
+I notice that our GTM runs a little fast - 113.28 MHz.
+
+
+==== set up the KC705 (or, use the GTM - above)
+Power on the SRS clock generator first, at 112.8 MHz.
+
+Power on the KC705. It should configure itself from flash and you will see the signals on the scope; if it doesn't, power cycle it.
+
+MGT_CLK_N, MGT_CLK_P: differential LVDS clock input, connect to SMA ports at the back of the SRS clock generator, drive at 112.8 MHz
+
+USER_GPIO_N: trigger in, drive with TTL (minimum width one 56.4 MHz clock tick, wider is fine)
+
+USER_GPIO_P: trigger out
+
+USER_CLK_N, USER_CLK_P: clock out, differential LVDS
+
+
+==== set up FELIX
+cd ~/git/felix-firmware-sync2018-08/bitstreams; source /opt/Xilinx/Vivado/2015.4/settings64.sh
+
+program FELIX:
+vivado -mode batch -source program.tcl
+
+If you have problems, try plugging in pulser trigger here
+Ensure that the hardware target address in 'program.tcl' is correct. You can check by running vivado then 'Open Hardware Manager' and finally 'Open target' in the green bar
+
+(this should hang ~30 seconds on program_hw_devices, but it will usually fail quickly "There is no active target available for server at localhost:3121" the first time you run it after boot - just run again if that happens)
+
+su
+/home/maps/newfelix/software/pcie_hotplug/pcie_hotplug_remove.sh
+/home/maps/newfelix/software/pcie_hotplug/pcie_hotplug_rescan.sh
+/etc/init.d/drivers_flx stop
+/etc/init.d/drivers_flx start
+
+done with this terminal (you can do the exit command then keep using same terminal)
+
+==== set up DAQ
+cd ~/meeg/felix/daq/felix_rcdaq/build;source ~/newfelix/software/setup.sh; source ~/meeg/rcdaq/setup.sh
+
+"flx-info" should not give you errors, "/etc/init.d/drivers_flx status" should give you information on 2 FELIX endpoints, both should give you the FW version
+
+program the clock and initialize the GBT links and GTM receiver (GTM must be up):
+flx-init -X ~/gtm/clockscripts/Si5345-RevB-40_08MHz.slabtimeproj_1_10_17-Registers_2_10_output_default.h
+
+reg_addr=0xb24, reg_data=0xdb, num_regs = 2
+reg_addr=0xb25, reg_data=0x02, num_regs = 1
+Configuration done...
+Enabling output...
+LOS register = 0x20
+Sticky LOS register = 0xf0
+LOL register = 0x00
+Found lock in 1 seconds
+Sticky LOL register = 0x08
+flx-init: warning: Not all channels align!
+flx-init: warning: 2 channels not aligned
+
+
+==== set up the RU and ALPIDEs
+
+ssh to NUC at 192.168.100.2
+ssh 192.168.100.2
+
+then
+if you want a desktop, run "vncserver -geometry 1600x1000" on the NUC, then use VNC to connect to 192.168.100.2:5901
+or 
+you can use screen/remote desktop viewer
+
+---If you can't start the VNC server you can remove extra X-files by:
+ps
+(kill the PID of Xvnc)
+kill <PID>
+su
+rm /tmp/.X11-unix/X*
+
+#ADD POWER SUPPLY INSTRUCTIONS HERE
+---NUC COMMANDS---
+follow script in /home/maps/git/RUv1_Test_sync2018-08/notes/setup.txt
+---END OF NUC COMMANDS---
+
+
+==== run the DAQ
+--- the prdf data directory is moved to /home/maps/meeg/felix/daq/felix_rcdaq/beamtest2019/   @4/30/2019
+
+---Ensure you don't change back to the NUC terminal---
+cd ~/meeg/felix/daq/felix_rcdaq/build;source ~/newfelix/software/setup.sh; source ~/meeg/rcdaq/setup.sh
+
+//--- run type: beam; calib; junk; longrun;
+../setup_felix_rcdaq_felixTrigger.sh ;daq_set_runtype calib       
+
+
+---Take a short dummy run before real data to sync trigger and events--- 
+---YOU MUST TAKE THE DUMMY RUN ON REAL DATA TO SYNC THE TRIGGERS!!!---
+
+start a run:
+daq_begin
+
+stop a run:
+daq_end
+
+print the DAQ state:
+daq_status
+
+kill the DAQ (takes a few seconds):
+daq_shutdown
+
+monitor the DMA:
+source ~/newfelix/software/setup.sh;watch -n 0.5 flx-dma-stat
+
+get last event number:
+dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0 -i |tail
+
+display last event (use last event number from above command):
+ddump ../beamtest2018/calib/calib_00000708-0000.prdf -n 10 -e 47892 -g|less
+
+count events:
+dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0|wc
+
+count empty events:
+dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0 -i|grep 'length:    14'|wc
+
+count non-empty events:
+dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0 -i|grep "Data Event"|grep -v 'length:    14'|wc
+
+==== run online monitoring
+cd /home/maps/meeg/felix/daq/felix_rcdaq/online_monitoring/
+
+root -l './scripts/run_om.C'
+
+==== copy run data to external hardrive
+A bash command has been placed in .bashrc to copy all types of run data to the external hardrive. Use:
+backup_data <first run> <last run>
+
+The drive might need to be mounted first. If so, do:
+su
+mount_external
+
+The mount should be from /dev/sdc1 but occasionally has appeared as /dev/sdd1
+
+To unmount, do:
+su
+unmount_external
+
+On the BNL server, you can upload the data via:
+upload_data
+
+==== make a new PIXEL MASK
+Remove existing pixel mask.  Go into Nuc and run command:
+clear_pixel_mask 
+then push this cleared mask to the chips:
+./testbench1.py setup_sensors; ./testbench2.py setup_sensors
+./testbench1.py setup_readout; ./testbench2.py setup_readout
+
+
+Take a dark run with pulser and no beam and remember the run number to
+type into <runNumber> below, then:
+
+cd /home/maps/meeg/felix/daq/felix_rcdaq/online_monitoring
+root -l './scripts/open_file.C(<runNumber>,0,"calib")'
+mask_pixels()
+
+exit root
+
+then scp to the NUC with the following alias, it moves the two text files to
+the NUC: 
+push_pixel_mask
+
+then make a backup of the new masks:
+cp masklist_testbench1.txt pixel_mask/masklist_testbench1_[YourNameHere].txt
+cp masklist_testbench2.txt pixel_mask/masklist_testbench2_[YourNameHere].txt
+
+
+then on the NUC setup the sensors and RUs again to push the new masks.
+./testbench1.py setup_sensors; ./testbench2.py setup_sensors
+./testbench1.py setup_readout; ./testbench2.py setup_readout
+
+==== random notes
+rebuilding newbasic (decoder):
+cd ~/meeg/rcdaq/build/newbasic
+source ~/newfelix/software/setup.sh; source ~/meeg/rcdaq/setup.sh
+../../online_distribution/newbasic/autogen.sh --prefix=/home/maps/meeg/rcdaq/install
+make -j12 install

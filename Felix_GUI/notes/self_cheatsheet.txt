@@ -1,0 +1,100 @@
+1) script: 
+			source /opt/Xilinx/Vivado/2015.4/settings64.sh
+			source ~/newfelix/software/setup.sh; 
+			source ~/meeg/rcdaq/setup.sh
+
+
+
+
+
+2) Buttom: program FELIX:
+	cd ~/git/felix-firmware-sync2018-08/bitstreams;
+	vivado -mode batch -source program.tcl
+
+3) don't know how:
+	su
+	/home/maps/newfelix/software/pcie_hotplug/pcie_hotplug_remove.sh
+	/home/maps/newfelix/software/pcie_hotplug/pcie_hotplug_rescan.sh
+	/etc/init.d/drivers_flx stop
+	/etc/init.d/drivers_flx start
+
+
+3) Buttom: set up DAQ
+	cd ~/meeg/felix/daq/felix_rcdaq/build;
+	flx-init -X ~/gtm/clockscripts/Si5345-RevB-40_08MHz.slabtimeproj_1_10_17-Registers_2_10_output_default.h
+
+
+4) Buttom: run DAQ
+	cd ~/meeg/felix/daq/felix_rcdaq/build;
+	../setup_felix_rcdaq_felixTrigger.sh ;daq_set_runtype calib       
+		//--- run type: beam; calib; junk; longrun;
+
+		start a run:
+		daq_begin
+
+		stop a run:
+		daq_end
+
+		print the DAQ state:
+		daq_status
+
+		kill the DAQ (takes a few seconds):
+		daq_shutdown
+
+5) Buttom: monitor the DMA:
+	watch -n 0.5 flx-dma-stat
+
+6) Buttom: get last event number:
+	dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0 -i |tail
+
+7) Buttom: display last event (use last event number from above command):
+	ddump ../beamtest2018/calib/calib_00000708-0000.prdf -n 10 -e 47892 -g|less
+
+8) Buttom: count events:
+	dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0|wc
+
+9) Buttom: count empty events:
+	dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0 -i|grep 'length:    14'|wc
+
+10) Buttom: count non-empty events:
+	dlist ../beamtest2018/calib/calib_00000708-0000.prdf -n 0 -i|grep "Data Event"|grep -v 'length:    14'|wc
+
+11) Buttom: ==== run online monitoring
+	cd /home/maps/meeg/felix/daq/felix_rcdaq/online_monitoring/
+	root -l './scripts/run_om.C'
+
+12) maybe Page: ==== copy run data to external hardrive
+	backup_data <first run> <last run>
+		A bash command has been placed in .bashrc to copy all types of run data to the external hardrive. 
+
+
+13) Mounted external driver. If so, do:
+	su
+	mount_external
+
+		The mount should be from /dev/sdc1 but occasionally has appeared as /dev/sdd1
+
+	To unmount, do:
+	su
+	unmount_external
+
+	On the BNL server, you can upload the data via:
+	upload_data
+
+
+
+Take a dark run with pulser and no beam and remember the run number to
+type into <runNumber> below, then:
+
+cd /home/maps/meeg/felix/daq/felix_rcdaq/online_monitoring
+root -l './scripts/open_file.C(<runNumber>,0,"calib")'
+mask_pixels()
+
+exit root
+
+==== random notes
+rebuilding newbasic (decoder):
+cd ~/meeg/rcdaq/build/newbasic
+source ~/newfelix/software/setup.sh; source ~/meeg/rcdaq/setup.sh
+../../online_distribution/newbasic/autogen.sh --prefix=/home/maps/meeg/rcdaq/install
+make -j12 install

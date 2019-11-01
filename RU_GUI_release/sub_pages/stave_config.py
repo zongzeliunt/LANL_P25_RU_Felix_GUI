@@ -145,17 +145,15 @@ class stave_config(wx.Frame):
 		#ARES in real system this command must execute
 		sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 		
+		self.read_button.SetBackgroundColour('green')
 
 		result_dict = {}
 		file_name = self.exe_path + "/read_parameter.json"
-		print (file_name)
-
 
 
 		fl = open(file_name, "r")
 		result_dict = json.load(fl)
 		fl.close()     
-		print (result_dict)
 
 		self.parameter_value_readbox_list[0].SetValue(str(result_dict["PULSE_VPULSEH"]))
 		self.parameter_value_readbox_list[1].SetValue(str(result_dict["PULSE_VPULSEL"]))
@@ -185,11 +183,14 @@ class stave_config(wx.Frame):
 
 		stdout_tmp = ""	
 		for line in stdout_list:
-			stdout_tmp += str(line)
-			#self.exe_button.SetBackgroundColour('green')
+			stdout_tmp += str(line) + '\n'
 		for line in stderr_list:
-			stdout_tmp += str(line)
-			#self.exe_button.SetBackgroundColour('red')
+			stdout_tmp += str(line) + '\n'
+		
+		if stderr_list == []:
+                        self.exe_button.SetBackgroundColour('green')
+		else:
+                        self.exe_button.SetBackgroundColour('green')
 		
 		self.stdout_text.SetValue(stdout_tmp)
 	#}}}
