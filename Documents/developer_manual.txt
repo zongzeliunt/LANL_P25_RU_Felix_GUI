@@ -1,0 +1,63 @@
+Author: Zongze Li
+zongzeli2@my.unt.edu
+
+Here is something must hidden from user. If you are not a developer, please do not change anything in source code.
+
+1. For calling sub pages from GUI page
+	If you developed a sub page, please first import this sub page's python file as external lib on the top of class_opts.py then add the sub page's show_page function to the function "import_outside_functions" in class_opts.py.
+	For example:
+		1) Path "sub_pages" is already added to class_opts.py.
+		2) The sub page power_control is defined in file "power_control.py". So please add one command "import power_control" on the top of class_opts.py.
+		3) Then, please add one more command "self.show_power_control = power_control.show_power_control" in the function "import_outside_functions" in class_opts.py. This can ensure class_opts.py can call sub page power_control's show page function.
+		4) To make the sub page able to be opened by GUI's bottom, please add one step_command in step_commands.py. The command element in the step should be the sub page's showing function. For example:
+			step = ["", "", "", "", ""]
+			step[0] = "PS control page"
+			step[1] = "'./sub_pages'"
+				#path
+			step[2] = "self.show_power_control"
+				#class_opt function
+			step[3] = "power supply control"
+				#explain
+			step[4] = 1
+				#mode
+			step_commands.append(step)
+		   This can make sure the function "exe_buttonbox_command" in class_opts.py can call sub page's showing function.  
+		5) "exe_buttonbox_command" function is executing step_commands listed in step_commands.py according to their mode. 
+			Mode == 0 means executing commands in the same way as linux command line. The command execution results can be extracted from stdout or stderr and can be shown on stdout_box on GUI page.
+			Mode == 1 means opening sub page. The method of opening sub page is use python command 'exec(command + "(event, " + str(button_num) + "," + path + ")")'. So, to guarantee consistency of function calling, all variables in sub page showing functions must in this format: 
+				def show_power_control (self, e, button_num, path):
+			No matter if the element "path" is useful in sub page or not.
+
+2. For sub page "power_control"
+	Sub page "power_control" is designed to control power supply devices. All the controlling functions are defined in library files "e3633a/e3646a_monitor_lib_version.py". These files are converted from original files from "/home/maps/git/misc_software/usbserial_testbeam/".
+	In sub page power_control there are three groups of power supply devices:
+		PS_0: e3646a type, /dev/ttyUSB_id4 
+		PS_1: e3633a type, /dev/ttyUSB_id5 
+		PS_2: e3633a type, /dev/ttyUSB_id6
+	Currently, only PS_1 (e3633a type,  /dev/ttyUSB_id5) is fully tested. So in the release version only PS_1's is really connected with USB port, PS_0 and PS_1 are using debug function. Once PS_0 and PS_2 are ready to test, please uncomment:
+			#self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
+		and comment:
+			self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
+		And uncomment:
+			self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
+		and comment:	
+			#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
+	
+	IMPORTANT:
+	In the command line control method (/home/maps/git/misc_software/usbserial_testbeam/e3646a/e3633a_monitor.py) it use a while loop to update power supply devices' status. My understanding is once write command to power supply device the control process need to wait a period for devices' respond. That is why in  there are a lot of sleep(WAIT). 
+
+	One main different from my sub page to the original command line control method is the pages generated from wxpython library cannot use while loop, otherwise the following functions cannot be called. As I can find in each while loop round it will wait no longer than one second. Only recall_settings need to wait one second (5*WAIT). This made me assign each PS device a timer which will trigger the PS_*_opt_process function in each one second. 
+	Once user click the bottom for one PS device, the value of "self.PS_*_last_opt" will change to: 
+	"o": on
+	"f": off
+	"r0": recall
+	"r1": redraw_settings
+	Each stage executed, the last_opt will change to: 	
+	"w": wait
+
+	Each second when PS_*_opt_process triggered, it will do operation according to the value of last_opt. The state machine listed in PS_*_opt_process is clear.
+	As the main function in e3646/e3636a_monitor.py described, when connected with USB port the initial operation is redraw_settings(), so I make each device's last_opt initial value as 'r1', which will call redraw_settings() function.
+	As recall_settings function need to wait one second, 'r0' status will occupy one second. 
+	
+	   
+	

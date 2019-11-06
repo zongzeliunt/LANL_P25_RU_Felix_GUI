@@ -48,8 +48,6 @@ def import_outside_functions(self):
 	self.show_stave_config = 	stave_config.show_stave_config
 	self.show_power_control = 	power_control.show_power_control
 	
-	#self.change_combobox_command = change_combobox_command
-	#self.exe_combobox_command = exe_combobox_command
 	
 	self.exe_buttonbox_command = exe_buttonbox_command
 
@@ -246,96 +244,7 @@ def add_stdoutbox (self):
 
 
 
-#combobox, just keep it
-def add_stepcombobox (self):
-#{{{
-	combobox=wx.BoxSizer(wx.HORIZONTAL)
 
-	statictext=wx.StaticText(self,label='Select step:')
-	combobox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
-
-	list0=[]
-	for i in range (len(self.step_commands)):
-		com = self.step_commands[i]
-		title = com[0]
-		step_name = str(i)
-		list0.append(step_name)		
-
-	self.ch1=wx.ComboBox(self, -1, value='Steps', choices=list0, style=wx.CB_SORT)
-	combobox.Add(self.ch1, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
-	
-	step_exe_button = wx.Button(self, -1, "Execute step command" )
-	combobox.Add(step_exe_button, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5 )
-	self.box_sizer.Add(combobox, 0, wx.ALIGN_LEFT)
-	self.Bind(wx.EVT_COMBOBOX, self.change_combobox_command, self.ch1)
-	self.Bind(wx.EVT_BUTTON, self.exe_combobox_command, step_exe_button)
-#}}}
-
-def change_combobox_command(self, event):
-#{{{
-	combo_box_value = int(self.ch1.GetValue())
-	
-	self.path_text.SetValue(self.step_commands[combo_box_value][1])
-	self.command_text.SetValue(self.step_commands[combo_box_value][2])
-	self.explain_text.SetValue(self.step_commands[combo_box_value][3])
-
-	#print("select{0}".format(event.GetString()))
-#}}}
-
-def exe_combobox_command(self, event):
-#{{{
-	path = self.path_text.GetValue()
-	command = self.command_text.GetValue()
-	step = self.ch1.GetValue()
-
-	#for python script debug, use exec
-	#exec(command)
-
-	#for system execute
-	"""
-	os.chdir(path)
-	
-	print os.getcwd()
-	
-	result = os.system(command)
-	print result
-	
-	if result == 0:
-		self.status_text.SetValue("step " + str(step) + " exec success")
-	else:
-		self.status_text.SetValue("step " + str(step) + " exec fail")
-	
-	"""
-	cmd = "cd " + path + "; " + command
-	
-	sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-
-	stdout_list = sp.stdout.readlines()
-	stderr_list = sp.stderr.readlines()
-
-	stdout_tmp = ""	
-	for line in stdout_list:
-		stdout_tmp += line + '\n'
-	for line in stderr_list:
-		stdout_tmp += line + '\n'
-
-	time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-	if stderr_list == []:
-		self.status_list.append(time_format + " " + "STEP " + str(step) + " exec success")
-	else:
-		self.status_list.append(time_format + " " + "STEP " + str(step) + " exec fail")
-	
-	if len(self.status_list) == 10:
-		del(self.status_list[0])
-
-	status_tmp = ""
-	for status in self.status_list:
-		status_tmp += status + '\n'
-
-	
-	self.status_text.SetValue(status_tmp)
-	self.stdout_text.SetValue(stdout_tmp)
-#}}}
 
 #keep for future use
 def declare_input_frame (self):

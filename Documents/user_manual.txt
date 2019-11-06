@@ -1,0 +1,61 @@
+Author: Zongze Li
+zongzeli2@my.unt.edu
+
+1. Basic
+	This is Los Alamos National Labortory TA53 P-25 MVTX experiment GUI control system. This GUI system have two sub systems, one for Felix server and one for Readout Unit system control.
+	Please copy RU_GUI_release folder to RU NUC computer and Felix_GUI folder to Felix server. RU_GUI folder is for developer to debug and develop locally. It have no controlling feature but only show debug messages. If you are a user please do not use this folder.
+	Both systems are developed using the same software architecture. So their page layout are same. However, their features are controlled by different configration files.
+	
+	This GUI system is developed using python and must require wxpython library. Currently (11/15/2019) wxpython library are installed to python3.6 on both machines. If in the future you want to use this GUI system on other machine, please use the list in "wxpython_package_list.log" as reference to install all required packages. 
+	Be careful: Gard said update to newer version of GTK could make Felix system not working. This is not varified but could happen. 
+
+2. RU GUI system
+	Please use "run_RU_GUI.sh" to run the GUI. All currently required source commands are listed in this file. For example, "source scl_source enable rh-python36" is making RU NUC use python3.6 as default python. 
+	A sub-page "power_control" needs to use lib "serial" which installed in python3.6 to control the power supply devices. That is way we need to use python 3.6 to run this GUI. 
+		
+	1) Folder "operations"
+		If you are a user, please only edit one file in this folder, "step_commands.py".
+		You can add whatever execution you want in this file, please make sure the format is following this:
+		
+		#0: title (buttom name)
+			Title will be shown on the command buttom.
+		#1: path
+			The path you want to execute your command.
+		#2: command
+			The command you want to execute. 
+			For example, you want to program the RU board using vivado, your vivado tcl file is stored at "/home/maps/git/RUv1_Test_sync2018-08/bitstreams/" and the FPGA program command is "vivado -mode batch -source program_3plus1.tcl". Please list the path and command in step[1] and step[2]
+		#3: explain
+			Will show in explain box.
+		#4: mode
+			If mode == 0, it is executing commands just like command line.
+			If mode == 1 is for specific feature sub page. This step's "command" element is the sub page's python function, not command line command. If you don't have a specific feature sub page, please do not use mode 1.
+			For more details about sub page, please refer developer_manual.txt.
+		I have listed a template in the file.
+
+		All steps of operations will automatically generate an execution buttom on GUI page. The only thing you should worry is if you have large number of steps, every time you open the GUI page you need to manually adjust its size.
+
+
+	2) Folder "py_gui"
+		This folder is copied from "/home/maps/git/RUv1_Test_sync2018-08/software/py/" but some functions in testbench_base.py are edited. So if in the future the RU board controling software (testbench_base.py) have update, please also modify the corresponding file accordingly.
+		You can paste this folder to anywhere in NUC, just please list the absolute path in its corresponding step's "path" element. 
+ 	
+	3) Folder "sub_pages"
+		Now we can have three sub_pages, all of them are stored in this folder:
+		A) cheatsheet
+			RU GUI main page have a menu to show cheatsheet. Original cheatsheet is copied from original system. Cheatsheet is generated according step_commands.py.
+		B) power_control
+			Power control sub page is used to control power supply devices. All three power supply devices are listed here. We can make them on/off/recall. Currently only PS_1 (5V, 1.8A) can be controlled.
+			The "path" element in step_commands.py for opening power_control page is not really useful. 
+		C) stave_control
+			Stave_control is configuating staves by calling functions in folder "py_gui". It have four buttoms:
+			a. Write 11 parameters in configuation file in py_gui.
+			b. Write the parameters from configuation file to stave chip.
+			c. Write default parameter values to configuation file.
+			d. Read parameter values from stave chips and write to feed back file in py_gui, then show on the sub page.
+
+			Currently we only have one stave chip working, this sub page can only operate on this chip.
+	4) Folder "notes"
+		Original cheatsheet is here.
+
+3. Felix GUI system
+	Felix GUI system is implemented in the same way as RU GUI system. Felix GUI system do not have any sub page except cheatsheet page. And all commands in Falix GUI system's step_command.py file is copied from Felix server's cheatsheet. 

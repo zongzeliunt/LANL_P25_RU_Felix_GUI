@@ -35,8 +35,8 @@ class power_control(wx.Frame):
 		#PS_0
 		#==============================================================================
 		#operate library
-		import e3636a_monitor_lib_version as e3636a
-		self.e3636a = e3636a
+		import e3646a_monitor_lib_version as e3646a
+		self.e3646a = e3646a
 
 		PS_0_USB_ID = "/dev/ttyUSB_id4"
 
@@ -45,8 +45,8 @@ class power_control(wx.Frame):
 		self.PS_0_buttom_event_bind()
 		
 		#DEBUG
-		#self.PS_0_ser = e3636a.e3636a_serial_connect(PS_0_USB_ID)
-		self.PS_0_ser = e3636a.e3636a_serial_connect_debug(PS_0_USB_ID)
+		#self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
+		self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
 
 		self.PS_0_timer = wx.Timer(self)
 		self.PS_0_timer.Start(WAIT)
@@ -189,21 +189,21 @@ class power_control(wx.Frame):
 		last_opt = self.PS_0_last_opt
 
 		if last_opt == "w":
-			status = self.e3636a.get_status(self.PS_0_ser)
+			status = self.e3646a.get_status(self.PS_0_ser)
 			#get status wait 0.4 s
 			self.PS_0_status_text.SetValue(status)
 			self.PS_0_last_opt = "w"
 		elif last_opt == "o":
-			self.e3636a.power_on(self.PS_0_ser)
+			self.e3646a.power_on(self.PS_0_ser)
 			self.PS_0_last_opt = "w"
 		elif last_opt == "f":
-			self.e3636a.power_off(self.PS_0_ser)
+			self.e3646a.power_off(self.PS_0_ser)
 			self.PS_0_last_opt = "w"
 		elif last_opt == "r0":
-			self.e3636a.recall_settings(self.PS_0_ser)
+			self.e3646a.recall_settings(self.PS_0_ser)
 			self.PS_0_last_opt = "r1"
 		elif last_opt == "r1":
-			status = self.e3636a.redraw_settings(self.PS_0_ser)
+			status = self.e3646a.redraw_settings(self.PS_0_ser)
 			self.PS_0_status_text.SetValue(status)
 			self.PS_0_last_opt = "w"
 		else:
