@@ -3,6 +3,7 @@ import os
 import sys
 import json
 import subprocess
+import time
 
 HORI = 200 #horizontal
 VERT = 100 #vertical
@@ -34,8 +35,12 @@ class stave_config(wx.Frame):
 		self.sizer = wx.BoxSizer(wx.VERTICAL)
 		self.SetSizer(self.sizer)
 		
-		#orig path assign, maybe not useful
+		#orig path assign, in this page is very useful 
 		self.exe_path = exe_path
+		
+		#all internal variable declare
+		self.stave_list_init()
+		self.status_list = []	
 		
 		self.call_button_light_on(call_button)
 	
@@ -43,9 +48,13 @@ class stave_config(wx.Frame):
 		self.parameter_list_init(0)
 		
 		self.declare_parameter_input_box()
+		
+		self.declare_stave_select_box()
 	
-		self.add_stdoutbox()
+		self.declare_stdoutbox()
 
+		self.declare_status_box()
+		
 		self.declare_exe_button()
 
 		#this is destroy function, with light off call button feature
@@ -91,7 +100,7 @@ class stave_config(wx.Frame):
 			self.parameter_value_readbox_list.append(read_text)
 	#}}}
 
-	def add_stdoutbox (self):
+	def declare_stdoutbox (self):
 	#{{{
 		stdoutbox=wx.BoxSizer(wx.HORIZONTAL)
 
@@ -104,6 +113,36 @@ class stave_config(wx.Frame):
 		self.sizer.Add(stdoutbox, 0, wx.ALIGN_LEFT)	
 	#}}}
 
+	def declare_status_box(self):
+		#{{{
+		#status box	
+		statusbox=wx.BoxSizer(wx.HORIZONTAL)
+
+		statictext=wx.StaticText(self,label='Done operations:')
+		statusbox.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		self.status_text = wx.TextCtrl(self, -1, 'status', size=(600, VERT), style=textbox_style)
+		statusbox.Add(self.status_text, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)	
+		self.sizer.Add(statusbox, 0, wx.ALIGN_LEFT)	
+		#}}}
+
+	def declare_stave_select_box(self):
+	#{{{
+		stave_select_box=wx.BoxSizer(wx.HORIZONTAL)
+		statictext=wx.StaticText(self,label='Select stave')
+		stave_select_box.Add(statictext, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+		stave_select_list = []
+		for stave_name in self.stave_list:
+			stave_select_list.append(stave_name)		
+
+		self.stave_select_combo_box=wx.ComboBox(self, -1, value='Select stave', choices=stave_select_list, size = (200, 50),style=wx.CB_SORT)
+		stave_select_box.Add(self.stave_select_combo_box, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+		
+		self.sizer.Add(stave_select_box, 0, wx.ALIGN_LEFT)
+
+		#self.Bind(wx.EVT_COMBOBOX, self.change_combobox_command, self.stave_select_combo_box)
+	#}}}
 	def declare_exe_button (self):	
 	#{{{		
 		#declare config exe button
@@ -138,18 +177,48 @@ class stave_config(wx.Frame):
 	#{{{
 
 		path = self.exe_path
-		command = "./testbench1.py read_sensors;"
+
+		stave_name = self.stave_select_combo_box.GetValue()
+	
+		if stave_name == 'Select stave':
+			#not selected any stave
+			self.read_button.SetBackgroundColour('red')
+				
+			self.stdout_text.SetValue("Please select one stave to operate")
+			return
+
+
+
+		command = "./" + self.stave_list[stave_name] + " read_sensors"
+		
+		self.stdout_text.SetValue("")
 
 		cmd = "cd " + path + "; " + command
 
-		#ARES in real system this command must execute
-		sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+		stdout_list = []	
+		stderr_list = []	
 		
-		self.read_button.SetBackgroundColour('green')
+		#DEBUG
+		#In release version open this	
+		sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+		stdout_list = sp.stdout.readlines()
+		stderr_list = sp.stderr.readlines()
+		
+		stdout_tmp = ""	
+		for line in stdout_list:
+			stdout_tmp += str(line) + '\n'
+		for line in stderr_list:
+			stdout_tmp += str(line) + '\n'
+		
+		if stderr_list == []:
+                        self.read_button.SetBackgroundColour('green')
+		else:
+                        self.read_button.SetBackgroundColour('red')
+		
+		self.stdout_text.SetValue(stdout_tmp)
 
 		result_dict = {}
 		file_name = self.exe_path + "/read_parameter.json"
-
 
 		fl = open(file_name, "r")
 		result_dict = json.load(fl)
@@ -168,15 +237,34 @@ class stave_config(wx.Frame):
 		self.parameter_value_readbox_list[10].SetValue(str(result_dict["ITHR_commitTransaction"]))
 
 
+		self.update_status_list ( "read", stave_name)
 	#}}}
 
 	def exe_button_click (self, event):
 	#{{{
 		path = self.exe_path
-		command = "./testbench1.py setup_sensors;"
+	
+		stave_name = self.stave_select_combo_box.GetValue()
+	
+		if stave_name == 'Select stave':
+			#not selected any stave
+			self.read_button.SetBackgroundColour('red')
+				
+			self.stdout_text.SetValue("Please select one stave to operate")
+			return
+
+
+
+		command = "./" + self.stave_list[stave_name] + " setup_sensors"
+		
+		self.stdout_text.SetValue("")
 
 		cmd = "cd " + path + "; " + command
-		
+		stdout_list = []	
+		stderr_list = []
+
+		#DEBUG
+		#in release version open this	
 		sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 		stdout_list = sp.stdout.readlines()
 		stderr_list = sp.stderr.readlines()
@@ -193,6 +281,7 @@ class stave_config(wx.Frame):
                         self.exe_button.SetBackgroundColour('green')
 		
 		self.stdout_text.SetValue(stdout_tmp)
+		self.update_status_list ( "exe", stave_name)
 	#}}}
 	
 	def write_default_file_button_click (self, event):
@@ -204,6 +293,7 @@ class stave_config(wx.Frame):
 
 		self.parameter_dict_write_to_json_file()
 		self.write_default_file_button.SetBackgroundColour('green')
+		self.update_status_list ("write_default")
 	#}}}
 	
 	def write_file_button_click (self, event):
@@ -220,6 +310,47 @@ class stave_config(wx.Frame):
 		#can write to json file and call stave config function
 		self.parameter_dict_write_to_json_file()
 		self.write_file_button.SetBackgroundColour('green')
+		self.update_status_list ("write")
+	#}}}
+
+	def update_status_list (self, opt, stave_name = ""):
+	#{{{
+		time_format = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		
+		if opt == "write":
+			self.status_list.append(time_format + " Write parameter to configuration file.")
+		if opt == "exe":
+			self.status_list.append(time_format + " Write parameter from configuration file to stave " + stave_name)
+		if opt == "write_default":
+			self.status_list.append(time_format + " Write default parameter to configuration file.")
+		if opt == "read":
+			self.status_list.append(time_format + " Read parameter values from stave " + stave_name)
+
+		if len(self.status_list) == 10:
+			del(self.status_list[0])
+
+		status_tmp = ""
+		for i in range (len(self.status_list) - 1, -1, -1):
+			status = self.status_list[i]
+			status_tmp += status + '\n'
+
+		self.status_text.SetValue(status_tmp)
+	#}}}
+
+	def stave_list_init(self):
+	#{{{
+		self.stave_list = {}
+		stave_config_file = self.exe_path + "/stave_config_file.txt"
+	 
+		fl = open(stave_config_file, "r")
+		for line in fl.readlines():
+			line = line.replace("\n", "")	
+			line = line.split(" ")
+			stave_name = line[0]
+			stave_cmd = line[1]
+			self.stave_list[stave_name] = stave_cmd
+	
+		fl.close()     
 	#}}}
 
 	def parameter_dict_write_to_json_file (self):

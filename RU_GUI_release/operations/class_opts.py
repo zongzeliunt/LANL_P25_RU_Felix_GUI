@@ -164,7 +164,9 @@ def external_command_exec (self, button_num):
 		del(self.status_list[0])
 
 	status_tmp = ""
-	for status in self.status_list:
+	
+	for i in range (len(self.status_list) - 1, -1, -1):
+		status = self.status_list[i]
 		status_tmp += status + '\n'
 
 	self.status_text.SetValue(status_tmp)
