@@ -66,8 +66,10 @@ Here is something must hidden from user. If you are not a developer, please do n
 	I suggest you copy the "py_gui" folder to the same path of "py", r,g, "/home/maps/git/misc_software/usbserial_testbeam/"
 	As I said in user_manual.txt, please update the files in "py_gui" if the files in "py" have any update.
 	Here are three important things need to pay attention:
-		1) Right now we only have one stave to test, so my stave_config sub page will only call "./testbench1.py setup_sensors" in "exe_button_click". If in the future you have more than one stave want to configure, please add a stave select feature.
-		2) The stave config result message are shown from stderr, not stdout. So use stderr message as reference to color the button is not a good idea.
-		3) I add a "read_sensors" function in testbench_base.py which will read parameters from stave 1 (use testbench1.py to call this function). The read button must be click twice to read parameters. Temporary don't know why.
+		1) Once click the "Config stave" button or "Read parameter from stave" button, the function "exe_button_click" or "read_button_click" will create a command according to the testbench file name the user listed in "py_gui/stave_config_file.txt". For example:
+			command = "./testbench1.py setup_sensors"
+			In previous command line version, testbench files are using python library "fire" to call functions in testbench_base.py use the similar way of calling linux commands. 
+		2) If write parameters to stave, the linux command execute result messages are shown from stderr, not stdout. So use stderr message as reference to color the button is not a good idea.
+		3) I add a "read_sensors" function in testbench_base.py to read parameters from staves. We can use the testbench file (such as testbench1.py) to call this "read_sensors" function to read parameters from the stave you want to read. The read button must be click twice to read parameters. I don't know why at this time.
   
 	

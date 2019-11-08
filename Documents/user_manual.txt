@@ -2,6 +2,7 @@ Author: Zongze Li
 zongzeli2@my.unt.edu
 
 1. Basic
+=============================================================
 	This is Los Alamos National Labortory TA53 P-25 MVTX experiment GUI control system. This GUI system have two sub systems, one for Felix server and one for Readout Unit system control.
 	Please copy RU_GUI_release folder to RU NUC computer and Felix_GUI folder to Felix server. RU_GUI folder is for developer to debug and develop locally. It have no controlling feature but only show debug messages. If you are a user please do not use this folder.
 	Both systems are developed using the same software architecture. So their page layout are same. However, their features are controlled by different configration files.
@@ -10,6 +11,7 @@ zongzeli2@my.unt.edu
 	Be careful: Gard said update to newer version of GTK could make Felix system not working. This is not varified but could happen. 
 
 2. RU GUI system
+=============================================================
 	Please use "run_RU_GUI.sh" to run the GUI. All currently required source commands are listed in this file. For example, "source scl_source enable rh-python36" is making RU NUC use python3.6 as default python. 
 	A sub-page "power_control" needs to use lib "serial" which installed in python3.6 to control the power supply devices. That is way we need to use python 3.6 to run this GUI. 
 		
@@ -37,7 +39,11 @@ zongzeli2@my.unt.edu
 
 	2) Folder "py_gui"
 		This folder is copied from "/home/maps/git/RUv1_Test_sync2018-08/software/py/" but some functions in testbench_base.py are edited. So if in the future the RU board controling software (testbench_base.py) have update, please also modify the corresponding file accordingly.
-		You can paste this folder to anywhere in NUC, just please list the absolute path in its corresponding step's "path" element. 
+		You can paste this folder to anywhere in NUC, just please list the absolute path in its corresponding step's "path" element.
+		There is a stave list file called "stave_config_file.txt" in this folder which represents all staves and their corresponding testbench file. Right now we only have one stave to test so there is only one line in this file. For example:
+			stave_1 testbench1.py
+		"stave_1" is the stave name, you can change it as you wish. "testbench1.py" is this stave's testbench file name. According to the cheatsheet, in the previous command line version this file is using python library "fire" to call functions in testbench_base.py as calling commands in linux command line. 
+		I created a stave selecter in sub page "stave_control". All stave name can be automatically listed in the selecter. 
  	
 	3) Folder "sub_pages"
 		Now we can have three sub_pages, all of them are stored in this folder:
@@ -47,7 +53,7 @@ zongzeli2@my.unt.edu
 			Power control sub page is used to control power supply devices. All three power supply devices are listed here. We can make them on/off/recall. Currently only PS_1 (5V, 1.8A) can be controlled.
 			The "path" element in step_commands.py for opening power_control page is not really useful. 
 		C) stave_control
-			Stave_control is configuating staves by calling functions in folder "py_gui". It have four buttoms:
+			Sub page Stave_control is configuating staves by calling functions in folder "py_gui". It have four buttoms:
 			a. Write 11 parameters to "parameter.json" file in py_gui.
 			b. Write the parameters from configuation file to stave chip.
 			c. Write default parameter values to configuation file.
@@ -55,10 +61,13 @@ zongzeli2@my.unt.edu
 			Please notice: 
 			a. If there is no "parameter.json" file in py_gui, "config stave" operation will write default values to stave.
 			b. You don't need to write parameter.json file before you config staves.
+			c. As I mentioned in py_gui section, please write stave name and corresponding testbench file in "py_gui/stave_config_file.txt". Please select one stave before you write parameter or try to read, otherwise you will receive an error message. 
+			
 
-			Currently we only have one stave chip working, this sub page can only operate on this chip.
+
 	4) Folder "notes"
 		Original cheatsheet is here.
 
 3. Felix GUI system
+=============================================================
 	Felix GUI system is implemented in the same way as RU GUI system. Felix GUI system do not have any sub page except cheatsheet page. And all commands in Falix GUI system's step_command.py file is copied from Felix server's cheatsheet. 
