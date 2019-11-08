@@ -48,10 +48,13 @@ zongzeli2@my.unt.edu
 			The "path" element in step_commands.py for opening power_control page is not really useful. 
 		C) stave_control
 			Stave_control is configuating staves by calling functions in folder "py_gui". It have four buttoms:
-			a. Write 11 parameters in configuation file in py_gui.
+			a. Write 11 parameters to "parameter.json" file in py_gui.
 			b. Write the parameters from configuation file to stave chip.
 			c. Write default parameter values to configuation file.
-			d. Read parameter values from stave chips and write to feed back file in py_gui, then show on the sub page.
+			d. Read parameter values from stave chips and write to "read_parameter.json" file in py_gui, then show on the sub page.
+			Please notice: 
+			a. If there is no "parameter.json" file in py_gui, "config stave" operation will write default values to stave.
+			b. You don't need to write parameter.json file before you config staves.
 
 			Currently we only have one stave chip working, this sub page can only operate on this chip.
 	4) Folder "notes"

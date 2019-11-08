@@ -3,7 +3,7 @@ zongzeli2@my.unt.edu
 
 Here is something must hidden from user. If you are not a developer, please do not change anything in source code.
 
-1. For calling sub pages from GUI page
+1. About calling sub pages from GUI page
 	If you developed a sub page, please first import this sub page's python file as external lib on the top of class_opts.py then add the sub page's show_page function to the function "import_outside_functions" in class_opts.py.
 	For example:
 		1) Path "sub_pages" is already added to class_opts.py.
@@ -28,7 +28,8 @@ Here is something must hidden from user. If you are not a developer, please do n
 				def show_power_control (self, e, button_num, path):
 			No matter if the element "path" is useful in sub page or not.
 
-2. For sub page "power_control"
+2. About sub page "power_control"
+	The element "path" in power_control's step_command is not useful in this page.
 	Sub page "power_control" is designed to control power supply devices. All the controlling functions are defined in library files "e3633a/e3646a_monitor_lib_version.py". These files are converted from original files from "/home/maps/git/misc_software/usbserial_testbeam/".
 	In sub page power_control there are three groups of power supply devices:
 		PS_0: e3646a type, /dev/ttyUSB_id4 
@@ -44,7 +45,7 @@ Here is something must hidden from user. If you are not a developer, please do n
 			#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
 	
 	IMPORTANT:
-	In the command line control method (/home/maps/git/misc_software/usbserial_testbeam/e3646a/e3633a_monitor.py) it use a while loop to update power supply devices' status. My understanding is once write command to power supply device the control process need to wait a period for devices' respond. That is why in  there are a lot of sleep(WAIT). 
+	In the command line control method (for example, /home/maps/git/misc_software/usbserial_testbeam/e3646a/e3633a_monitor.py) it use a while loop to update power supply devices' status. My understanding is once write command to power supply device the control process need to wait a period for devices' respond. That is why in functions like power_on(ser), recall_settings(ser) there are a lot of sleep(WAIT). 
 
 	One main different from my sub page to the original command line control method is the pages generated from wxpython library cannot use while loop, otherwise the following functions cannot be called. As I can find in each while loop round it will wait no longer than one second. Only recall_settings need to wait one second (5*WAIT). This made me assign each PS device a timer which will trigger the PS_*_opt_process function in each one second. 
 	Once user click the bottom for one PS device, the value of "self.PS_*_last_opt" will change to: 
@@ -59,5 +60,14 @@ Here is something must hidden from user. If you are not a developer, please do n
 	As the main function in e3646/e3636a_monitor.py described, when connected with USB port the initial operation is redraw_settings(), so I make each device's last_opt initial value as 'r1', which will call redraw_settings() function.
 	As recall_settings function need to wait one second, 'r0' status will occupy one second. 
 	
-	   
+
+3. About sub page "stave_config"
+	Sub page "stave_config" have two columns of parameters and four buttons. The element "path" in stave_config's step_command is very important. The path should indicate the path of my function library folder "py_gui".
+	I suggest you copy the "py_gui" folder to the same path of "py", r,g, "/home/maps/git/misc_software/usbserial_testbeam/"
+	As I said in user_manual.txt, please update the files in "py_gui" if the files in "py" have any update.
+	Here are three important things need to pay attention:
+		1) Right now we only have one stave to test, so my stave_config sub page will only call "./testbench1.py setup_sensors" in "exe_button_click". If in the future you have more than one stave want to configure, please add a stave select feature.
+		2) The stave config result message are shown from stderr, not stdout. So use stderr message as reference to color the button is not a good idea.
+		3) I add a "read_sensors" function in testbench_base.py which will read parameters from stave 1 (use testbench1.py to call this function). The read button must be click twice to read parameters. Temporary don't know why.
+  
 	

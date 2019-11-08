@@ -5,7 +5,6 @@ import json
 import subprocess
 import time
 
-
 HORI = 200 #horizontal
 VERT = 100 #vertical
 #textbox_style = (wx.TE_MULTILINE | wx.TE_AUTO_SCROLL)
@@ -57,13 +56,6 @@ class stave_config(wx.Frame):
 		self.declare_status_box()
 		
 		self.declare_exe_button()
-
-
-
-
-
-
-
 
 		#this is destroy function, with light off call button feature
 		self.Bind(wx.EVT_CLOSE, self.destroy)
@@ -151,10 +143,6 @@ class stave_config(wx.Frame):
 
 		#self.Bind(wx.EVT_COMBOBOX, self.change_combobox_command, self.stave_select_combo_box)
 	#}}}
-
-
-
-
 	def declare_exe_button (self):	
 	#{{{		
 		#declare config exe button
@@ -189,7 +177,7 @@ class stave_config(wx.Frame):
 	#{{{
 
 		path = self.exe_path
-	
+
 		stave_name = self.stave_select_combo_box.GetValue()
 	
 		if stave_name == 'Select stave':
@@ -207,14 +195,14 @@ class stave_config(wx.Frame):
 
 		cmd = "cd " + path + "; " + command
 
+		stdout_list = []	
+		stderr_list = []	
+		
 		#DEBUG
 		#In release version open this	
 		#sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 		#stdout_list = sp.stdout.readlines()
 		#stderr_list = sp.stderr.readlines()
-
-		stdout_list = []	
-		stderr_list = []	
 		
 		stdout_tmp = ""	
 		for line in stdout_list:
@@ -272,14 +260,14 @@ class stave_config(wx.Frame):
 		self.stdout_text.SetValue("")
 
 		cmd = "cd " + path + "; " + command
+		stdout_list = []	
+		stderr_list = []	
+
 		#DEBUG
 		#in release version open this	
 		#sp = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 		#stdout_list = sp.stdout.readlines()
 		#stderr_list = sp.stderr.readlines()
-		
-		stdout_list = []	
-		stderr_list = []	
 
 		stdout_tmp = ""	
 		for line in stdout_list:
@@ -364,7 +352,6 @@ class stave_config(wx.Frame):
 	
 		fl.close()     
 	#}}}
-
 
 	def parameter_dict_write_to_json_file (self):
 	#{{{
