@@ -26,10 +26,10 @@ step_commands.append(step)
 
 step = ["", "", "", "", ""]
 step[0] = "Setup DAQ"
-step[1] = "~/meeg/felix/daq/felix_rcdaq/build"
-step[2] = "flx-init -X ~/gtm/clockscripts/Si5345-RevB-40_08MHz.slabtimeproj_1_10_17-Registers_2_10_output_default.h"
+step[1] = "~/gtm/clockscripts/"
+step[2] = "flx-init -X Si5345-RevB-40_08MHz.slabtimeproj_1_10_17-Registers_2_10_output_default.h"
 step[3] = "Setup DAQ"
-step[4] = "0"
+step[4] = 0
 step_commands.append(step)
 
 step = ["", "", "", "", ""]
@@ -37,7 +37,7 @@ step[0] = "Run DAQ"
 step[1] = " ~/meeg/felix/daq/felix_rcdaq"
 step[2] = "./setup_felix_rcdaq_felixTrigger.sh ; daq_set_runtype calib"
 step[3] = "Run DAQ"
-step[4] = "0"
+step[4] = 0
 step_commands.append(step)
 
 

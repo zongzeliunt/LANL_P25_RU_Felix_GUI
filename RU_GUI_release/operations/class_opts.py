@@ -128,7 +128,7 @@ def exe_buttonbox_command(self, event, button_num):
 	clicked_button = self.step_button_list[button_num]
 
 	
-	if exe_mode == 0:
+	if exe_mode == 0 or exe_mode == "0":
 		external_command_exec(self, button_num)
 	else:
 		path = self.path_text.GetValue()

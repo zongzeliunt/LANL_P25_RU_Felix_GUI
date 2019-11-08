@@ -1,7 +1,7 @@
 #run on Felix server:
-#source /opt/Xilinx/Vivado/2015.4/settings64.sh
-#source ~/newfelix/software/setup.sh
-#source ~/meeg/rcdaq/setup.sh
+source /opt/Xilinx/Vivado/2015.4/settings64.sh
+source ~/newfelix/software/setup.sh
+source ~/meeg/rcdaq/setup.sh
 
 
 

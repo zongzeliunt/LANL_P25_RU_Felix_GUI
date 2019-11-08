@@ -16,7 +16,7 @@ class my_GUI(wx.Frame):
 
 		self.status_list = []
 
-		self.step_commands = step_commands.step_commands_1
+		self.step_commands = step_commands.step_commands
 
 		wx.Frame.__init__(self, parent, title = title, size = (800, 600))
 		#1. overall box	

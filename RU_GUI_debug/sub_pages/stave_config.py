@@ -248,7 +248,7 @@ class stave_config(wx.Frame):
 	
 		if stave_name == 'Select stave':
 			#not selected any stave
-			self.read_button.SetBackgroundColour('red')
+			self.exe_button.SetBackgroundColour('red')
 				
 			self.stdout_text.SetValue("Please select one stave to operate")
 			return
