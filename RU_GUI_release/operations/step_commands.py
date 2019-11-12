@@ -20,7 +20,7 @@ step = ["", "", "", "", ""]
 step[0] = "PS control page"
 step[1] = "'./sub_pages'"
 step[2] = "self.show_power_control"
-step[3] = "power supply control"
+step[3] = "Open power supply control sub page"
 step[4] = 1
 step_commands.append(step)
 
@@ -61,60 +61,12 @@ step_commands.append(step)
 step = ["", "", "", "", ""]
 step[0] = "Show Stave config page"
 step[1] = "'/home/maps/git/RUv1_Test_sync2018-08/software/py_gui/'"
-#for real system, change this path to the orig software path
 step[2] = "self.show_stave_config"
-step[3] = "test pop page, call internal function"
+step[3] = "Open the Stave config sub page"
 step[4] = 1 
 step_commands.append(step)
 
 
 
 
-#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-#debug
-
-step_commands_1 = []
-
-step = ["", "", "", "", ""]
-step[0] = "PS control page"
-step[1] = "'./sub_pages'"
-step[2] = "self.show_power_control"
-step[3] = "power supply control"
-step[4] = 1
-step_commands_1.append(step)
-
-"""
-step = ["", "", "", "", ""]
-step[0] = "Test step 0"
-step[1] = "/home/ares/LANL_work/LANL_P25_RU_Felix_GUI/test_folder/"
-step[2] = "sh test.sh"
-step[3] = "test step 0"
-step[4] = 0
-step_commands_1.append(step)
-"""
-
-step = ["", "", "", "", ""]
-step[0] = "Test step 1"
-step[1] = "/home/ares/LANL_work/LANL_P25_RU_Felix_GUI/test_folder/level_1"
-step[2] = "sh test.sh"
-step[3] = "test step 1"
-step[4] = 0
-step_commands_1.append(step)
-
-step = ["", "", "", "", ""]
-step[0] = "Test step 2"
-step[1] = "/home/ares/LANL_work/LANL_P25_RU_Felix_GUI/test_folder/level_2"
-step[2] = "sh test.sh"
-step[3] = "test step 2"
-step[4] = 0
-step_commands_1.append(step)
-
-step = ["", "", "", "", ""]
-step[0] = "Show Stave config page"
-step[1] = "'./sub_pages'"
-#for real system, change this path to the orig software path
-step[2] = "self.show_stave_config"
-step[3] = "test pop page, call internal function"
-step[4] = 1 
-step_commands_1.append(step)
 

@@ -86,7 +86,7 @@ step_commands_1.append(step)
 """
 step = ["", "", "", "", ""]
 step[0] = "Test step 0"
-step[1] = "/home/ares/LANL_work/LANL_P25_RU_Felix_GUI/test_folder/"
+step[1] = "test_folder/"
 step[2] = "sh test.sh"
 step[3] = "test step 0"
 step[4] = 0
@@ -95,7 +95,7 @@ step_commands_1.append(step)
 
 step = ["", "", "", "", ""]
 step[0] = "Test step 1"
-step[1] = "/home/ares/LANL_work/LANL_P25_RU_Felix_GUI/test_folder/level_1"
+step[1] = "test_folder/level_1"
 step[2] = "sh test.sh"
 step[3] = "test step 1"
 step[4] = 0
@@ -103,7 +103,7 @@ step_commands_1.append(step)
 
 step = ["", "", "", "", ""]
 step[0] = "Test step 2"
-step[1] = "/home/ares/LANL_work/LANL_P25_RU_Felix_GUI/test_folder/level_2"
+step[1] = "test_folder/level_2"
 step[2] = "sh test.sh"
 step[3] = "test step 2"
 step[4] = 0

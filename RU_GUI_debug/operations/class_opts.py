@@ -129,7 +129,7 @@ def exe_buttonbox_command(self, event, button_num):
 	self.explain_text.SetValue(explain)
 	clicked_button = self.step_button_list[button_num]
 
-	
+	time.sleep(0.1)	
 	if exe_mode == 0 or exe_mode == "0":
 		external_command_exec(self, button_num)
 	else:
@@ -162,7 +162,8 @@ def external_command_exec (self, button_num):
 		self.status_list.append(time_format + " " + "STEP " + str(button_num) + " exec fail")
 		self.step_button_list[button_num].SetBackgroundColour('red')
 	
-	if len(self.status_list) == 10:
+	if len(self.status_list) == 11:
+		#only keep the last 10 messages
 		del(self.status_list[0])
 
 	status_tmp = ""
