@@ -24,16 +24,6 @@ step[3] = "Open power supply control sub page"
 step[4] = 1
 step_commands.append(step)
 
-"""
-step = ["", "", "", "", ""]
-step[0] = "Open power terminals"
-step[1] = "/home/maps/git/misc_software/usbserial_testbeam/"
-step[2] = "./open_terminals.sh"
-step[3] = "Open power supply terminals"
-step[4] = 0
-step_commands.append(step)
-"""
-
 step = ["", "", "", "", ""]
 step[0] = "Program RU FPGA"
 step[1] = "/home/maps/git/RUv1_Test_sync2018-08/bitstreams/"
@@ -43,18 +33,26 @@ step[4] = 0
 step_commands.append(step)
 
 step = ["", "", "", "", ""]
-step[0] = "Config GBTx0"
+step[0] = "Config I2C, HIC"
 step[1] = "/home/maps/git/RUv1_Test_sync2018-08/software/py"
-step[2] = "./testbench1.py rdo i2c-gbtx gbtx-config ../../modules/gbt/software/GBTx_configs/GBTx0_Config_RUv1_1.xml"
+step[2] = "./testbench_hic.py rdo i2c-gbtx gbtx-config ../../modules/gbt/software/GBTx_configs/GBTx0_Config_RUv1_1.xml"
 step[3] = "Config GBTx0"
 step[4] = 0
 step_commands.append(step)
 
 step = ["", "", "", "", ""]
-step[0] = "Config GBTx1"
-step[1] = "/home/maps/git/RUv1_Test_sync2018-08/software/py/"
-step[2] = "./testbench2.py rdo i2c-gbtx gbtx-config ../../modules/gbt/software/GBTx_configs/GBTx0_Config_RUv1_1.xml"
-step[3] = "Config GBTx1"
+step[0] = "Disable Clock"
+step[1] = "/home/maps/git/RUv1_Test_sync2018-08/software/py"
+step[2] = "./testbench_hic.py rdo dctrl set-dclk-mask 0"
+step[3] = "Disable Clock"
+step[4] = 0
+step_commands.append(step)
+
+step = ["", "", "", "", ""]
+step[0] = "Enable Clock"
+step[1] = "/home/maps/git/RUv1_Test_sync2018-08/software/py"
+step[2] = "./testbench_hic.py rdo dctrl set-dclk-mask 0x1F"
+step[3] = "Enable Clock"
 step[4] = 0
 step_commands.append(step)
 

@@ -29,55 +29,66 @@ def recall_settings(ser):
 
 def print_settings(ser,end="\n"):
 #{{{
-    outstr = ""
-    ser.write("VOLT?\r\n".encode()); response = ser.readline()
-    volt_set = float(response)
-    ser.write("CURR?\r\n".encode()); response = ser.readline()
-    curr_set = float(response)
-    outstr += "setpoints {0:.3f} V {1:.3f} A, ".format(volt_set, curr_set)
-
-    ser.write("VOLT:PROT:STATE?\r\n".encode()); response = ser.readline()
-    ovp_enabled = "ENABLED" if int(response)==1 else "DISABLED"
-    ser.write("VOLT:PROT:LEVEL?\r\n".encode()); response = ser.readline()
-    ovp_setpoint = float(response)
-    outstr += "OVP {0} @ {1} V ".format(ovp_enabled, ovp_setpoint)
-
-    #not supported by E3646A?
-    ser.write("CURR:PROT:STATE?\r\n".encode()); response = ser.readline()
-    ocp_enabled = "ENABLED" if int(response)==1 else "DISABLED"
-    ser.write("CURR:PROT:LEVEL?\r\n".encode()); response = ser.readline()
-    ocp_setpoint = float(response)
-    outstr += "OCP {0} @ {1} A".format(ocp_enabled, ocp_setpoint)
-
-    return outstr
+	outstr = ""
+	ser.write("VOLT?\r\n".encode())
+	response = ser.readline()
+	volt_set = float(response)
+	ser.write("CURR?\r\n".encode())
+	response = ser.readline()
+	curr_set = float(response)
+	outstr += "setpoints {0:.3f} V {1:.3f} A, ".format(volt_set, curr_set)
+	
+	ser.write("VOLT:PROT:STATE?\r\n".encode())
+	response = ser.readline()
+	ovp_enabled = "ENABLED" if int(response)==1 else "DISABLED"
+	ser.write("VOLT:PROT:LEVEL?\r\n".encode())
+	response = ser.readline()
+	ovp_setpoint = float(response)
+	outstr += "OVP {0} @ {1} V ".format(ovp_enabled, ovp_setpoint)
+	
+	#not supported by E3646A?
+	ser.write("CURR:PROT:STATE?\r\n".encode())
+	response = ser.readline()
+	ocp_enabled = "ENABLED" if int(response)==1 else "DISABLED"
+	ser.write("CURR:PROT:LEVEL?\r\n".encode())
+	response = ser.readline()
+	ocp_setpoint = float(response)
+	outstr += "OCP {0} @ {1} A".format(ocp_enabled, ocp_setpoint)
+	
+	return outstr
 #}}}
 
 
 def print_status(ser,end="\n"):
-    outstr = ""
-    #ser.write("APPLY?\r\n".encode()); response = ser.readline()
-    #print(response.decode().strip())
-
-    ser.write("OUTPUT?\r\n".encode()); response = ser.readline()
-    output_enabled = "ON" if int(response)==1 else "OFF"
-    outstr += "output {0}, ".format(output_enabled)
-
-    ser.write("MEAS:VOLT?\r\n".encode()); response = ser.readline()
-    volt_readback = float(response)
-    ser.write("MEAS:CURR?\r\n".encode()); response = ser.readline()
-    curr_readback = float(response)
-    outstr += "readbacks {0:.6f} V {1:.6f} A, ".format(volt_readback, curr_readback)
-
-    ser.write("VOLT:PROT:TRIP?\r\n".encode()); response = ser.readline()
-    ovp_tripped = "TRIPPED" if int(response)==1 else "OK"
-    outstr += "OVP {0} ".format(ovp_tripped)
-
-    #not supported by E3646A?
-    ser.write("CURR:PROT:TRIP?\r\n".encode()); response = ser.readline()
-    ocp_tripped = "TRIPPED" if int(response)==1 else "OK"
-    outstr += "OCP {0}".format(ocp_tripped)
-
-    return outstr
+	outstr = ""
+	#ser.write("APPLY?\r\n".encode()); response = ser.readline()
+	#print(response.decode().strip())
+	
+	ser.write("OUTPUT?\r\n".encode())
+	response = ser.readline()
+	output_enabled = "ON" if int(response)==1 else "OFF"
+	outstr += "output {0}, ".format(output_enabled)
+	
+	ser.write("MEAS:VOLT?\r\n".encode())
+	response = ser.readline()
+	volt_readback = float(response)
+	ser.write("MEAS:CURR?\r\n".encode())
+	response = ser.readline()
+	curr_readback = float(response)
+	outstr += "readbacks {0:.6f} V {1:.6f} A, ".format(volt_readback, curr_readback)
+	
+	ser.write("VOLT:PROT:TRIP?\r\n".encode())
+	response = ser.readline()
+	ovp_tripped = "TRIPPED" if int(response)==1 else "OK"
+	outstr += "OVP {0} ".format(ovp_tripped)
+	
+	#not supported by E3646A?
+	ser.write("CURR:PROT:TRIP?\r\n".encode())
+	response = ser.readline()
+	ocp_tripped = "TRIPPED" if int(response)==1 else "OK"
+	outstr += "OCP {0}".format(ocp_tripped)
+	
+	return outstr
 
 #DEBUG
 def e3633a_serial_connect(USB_ID):

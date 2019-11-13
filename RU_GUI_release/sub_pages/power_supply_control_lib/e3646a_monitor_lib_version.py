@@ -11,7 +11,7 @@ def redraw_settings(ser):
 	outstr += response.decode().strip() + "\n"
 	
 	time.sleep(WAIT)
-	
+	"""	
 	ser.write("INST:NSEL 1\r\n".encode())
 	time.sleep(WAIT)
 	outstr += print_settings(ser) + "\n"
@@ -19,19 +19,24 @@ def redraw_settings(ser):
 	ser.write("INST:NSEL 2\r\n".encode())
 	time.sleep(WAIT)
 	outstr += print_settings(ser) + "\n"
+	"""	
+	outstr += get_status (ser, 2)
+	
+	
 	return outstr
 
-def get_status (ser):
+def get_status (ser, channel = 0):
 	outstr = ""
-	ser.write("INST:NSEL 1\r\n".encode())
-	time.sleep(WAIT)
-	outstr += print_status(ser) + "\n"
-
-	ser.write("INST:NSEL 2\r\n".encode())
-	time.sleep(WAIT)
-	outstr += print_status(ser) + "\n"
+	if channel == 0 or channel == 2:
+		ser.write("INST:NSEL 1\r\n".encode())
+		time.sleep(WAIT)
+		outstr += print_status(ser) + "\n"
+	
+	if channel == 1 or channel == 2:
+		ser.write("INST:NSEL 2\r\n".encode())
+		time.sleep(WAIT)
+		outstr += print_status(ser) + "\n"
 	return outstr
-
 
 def power_on(ser):
     ser.write("OUTPUT ON\r\n".encode())
@@ -68,27 +73,32 @@ def print_settings(ser,end="\n"):
 def print_status(ser,end="\n"):
 #{{{
 	#no need to change
-
-    outstr = ""
-    ser.write("INST:SEL?\r\n".encode()); response = ser.readline()
-    channel = response.decode().strip()
-    outstr += "channel {0}: ".format(channel)
-
-    ser.write("OUTPUT?\r\n".encode()); response = ser.readline()
-    output_enabled = "ON" if int(response)==1 else "OFF"
-    outstr += "output {0}, ".format(output_enabled)
-
-    ser.write("MEAS:VOLT?\r\n".encode()); response = ser.readline()
-    volt_readback = float(response)
-    ser.write("MEAS:CURR?\r\n".encode()); response = ser.readline()
-    curr_readback = float(response)
-    outstr += "readbacks {0:.6f} V {1:.6f} A, ".format(volt_readback, curr_readback)
-
-    ser.write("VOLT:PROT:TRIP?\r\n".encode()); response = ser.readline()
-    ovp_tripped = "TRIPPED" if int(response)==1 else "OK"
-    outstr += "OVP {0}".format(ovp_tripped)
-
-    return outstr
+	
+	outstr = ""
+	ser.write("INST:SEL?\r\n".encode())
+	response = ser.readline()
+	channel = response.decode().strip()
+	outstr += "channel {0}: ".format(channel)
+	
+	ser.write("OUTPUT?\r\n".encode())
+	response = ser.readline()
+	output_enabled = "ON" if int(response)==1 else "OFF"
+	outstr += "output {0}, ".format(output_enabled)
+	
+	ser.write("MEAS:VOLT?\r\n".encode())
+	response = ser.readline()
+	volt_readback = float(response)
+	ser.write("MEAS:CURR?\r\n".encode())
+	response = ser.readline()
+	curr_readback = float(response)
+	outstr += "readbacks {0:.6f} V {1:.6f} A, ".format(volt_readback, curr_readback)
+	
+	ser.write("VOLT:PROT:TRIP?\r\n".encode())
+	response = ser.readline()
+	ovp_tripped = "TRIPPED" if int(response)==1 else "OK"
+	outstr += "OVP {0}".format(ovp_tripped)
+	
+	return outstr
 #}}}
 
 #DEBUG

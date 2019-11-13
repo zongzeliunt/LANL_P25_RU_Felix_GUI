@@ -45,16 +45,19 @@ class power_control(wx.Frame):
 		self.declare_PS_0_status_box()
 		self.PS_0_buttom_event_bind()
 		
-		#DEBUG
-		#self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
-		self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
-
 		self.PS_0_timer = wx.Timer(self)
 		self.PS_0_timer.Start(WAIT)
+		self.PS_0_opt_list = []
+
+		#DEBUG. Switch to control or do not control 
+		########################################################
+		#self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
+		self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
 		
-		#DEBUG
-		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
 		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
+		########################################################
+
 
 		self.PS_0_last_opt = "r1"
 			#initial status is recall_1, need to call redraw_settings
@@ -72,38 +75,40 @@ class power_control(wx.Frame):
 		self.declare_PS_1_status_box()
 		self.PS_1_buttom_event_bind()
 		
-		#DEBUG
+		self.PS_1_timer = wx.Timer(self)
+		self.PS_1_timer.Start(WAIT)  
+		self.PS_1_opt_list = []
+		
+		#DEBUG. Switch to control or do not control 
+		####################################################################
 		#self.PS_1_ser = e3633a.e3633a_serial_connect(PS_1_USB_ID)
 		self.PS_1_ser = e3633a.e3633a_serial_connect_debug(PS_1_USB_ID)
 		
-		self.PS_1_timer = wx.Timer(self)
-		self.PS_1_timer.Start(WAIT)  
-		
-		#DEBUG
-		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
 		#self.Bind(wx.EVT_TIMER, self.PS_1_opt_process, self.PS_1_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
+		####################################################################
 
 		self.PS_1_last_opt = "r1"
 	
 		#PS_2
 		#==============================================================================
-		#operate library
-
 		PS_2_USB_ID = "/dev/ttyUSB_id6"
 		self.declare_PS_2_buttom_box()
 		self.declare_PS_2_status_box()
 		self.PS_2_buttom_event_bind()
 		
-		#DEBUG
+		self.PS_2_timer = wx.Timer(self)
+		self.PS_2_timer.Start(WAIT)  
+		self.PS_2_opt_list = []
+		
+		#DEBUG. Switch to control or do not control 
+		####################################################################
 		#self.PS_2_ser = e3633a.e3633a_serial_connect(PS_2_USB_ID)
 		self.PS_2_ser = e3633a.e3633a_serial_connect_debug(PS_2_USB_ID)
 		
-		self.PS_2_timer = wx.Timer(self)
-		self.PS_2_timer.Start(WAIT)  
-		
-		#DEBUG
-		self.Bind(wx.EVT_TIMER, self.PS_2_opt_process_debug, self.PS_2_timer)
 		#self.Bind(wx.EVT_TIMER, self.PS_2_opt_process, self.PS_2_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_2_opt_process_debug, self.PS_2_timer)
+		####################################################################
 
 		self.PS_2_last_opt = "r1"
 
@@ -128,6 +133,13 @@ class power_control(wx.Frame):
 		self.PS_0_recall_buttom = wx.Button(self, 2, "PS_0 Recall", size=(HORI, 50))
 		self.PS_0_recall_buttom.SetBackgroundColour('white')
 		buttombox.Add(self.PS_0_recall_buttom, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
+
+
+		#as Yassar requested, only PS_0 (e3346a) need to select channel	
+		channel_select_list = ["Channel_0", "Channel_1", "All"]
+	
+		self.PS_0_channel_select_box=wx.ComboBox(self, -1, value='Channel_0', choices=channel_select_list, size = (HORI, 50),style=wx.CB_SORT)
+		buttombox.Add(self.PS_0_channel_select_box, 1, flag=wx.LEFT |wx.RIGHT|wx.FIXED_MINSIZE,border=5)
 		
 		self.sizer.Add(buttombox, 0, wx.ALIGN_LEFT)
 		#}}}
@@ -159,25 +171,47 @@ class power_control(wx.Frame):
 		self.PS_0_on_buttom.SetBackgroundColour('green')
 		self.PS_0_off_buttom.SetBackgroundColour('white')
 		self.PS_0_recall_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_0_operate_text.SetValue(now_time + " PS_0 on")
 		self.PS_0_last_opt = "o"
+		self.PS_0_opt_text_update("on")
+
 		
 	def PS_0_off (self, e):
 		self.PS_0_off_buttom.SetBackgroundColour('green')
 		self.PS_0_on_buttom.SetBackgroundColour('white')
 		self.PS_0_recall_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_0_operate_text.SetValue(now_time + " PS_0 off")
 		self.PS_0_last_opt = "f"
+		self.PS_0_opt_text_update("off")
+		
+
 
 	def PS_0_recall (self, e):
 		self.PS_0_recall_buttom.SetBackgroundColour('green')
 		self.PS_0_off_buttom.SetBackgroundColour('white')
 		self.PS_0_on_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_0_operate_text.SetValue(now_time + " PS_0 recall")
 		self.PS_0_last_opt = "r0"
+		self.PS_0_opt_text_update("recall")
+		
+
+	def PS_0_opt_text_update(self, opt):
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		if opt == "on":
+			self.PS_0_opt_list.append(now_time + " PS_0 on")
+		if opt == "off":
+			self.PS_0_opt_list.append(now_time + " PS_0 off")
+		if opt == "recall":
+			self.PS_0_opt_list.append(now_time + " PS_0 recall")
+			
+		if len(self.PS_0_opt_list) == 5:
+			#only keep the last 10 messages
+			del(self.PS_0_opt_list[0])
+
+		status_tmp = ""
+
+		for i in range (len(self.PS_0_opt_list) - 1, -1, -1):
+			status = self.PS_0_opt_list[i]
+			status_tmp += status + '\n'
+
+		self.PS_0_operate_text.SetValue(status_tmp)
 	#}}}
 
 	def PS_0_opt_process(self, e):
@@ -190,7 +224,15 @@ class power_control(wx.Frame):
 		last_opt = self.PS_0_last_opt
 
 		if last_opt == "w":
-			status = self.e3646a.get_status(self.PS_0_ser)
+			channel = self.PS_0_channel_select_box.GetValue()
+			channel_num = 0
+			if channel == "Channel_0":
+				channel_num = 0	
+			if channel == "Channel_1":
+				channel_num = 1	
+			if channel == "All":
+				channel_num = 2	
+			status = self.e3646a.get_status(self.PS_0_ser, channel_num)
 			#get status wait 0.4 s
 			self.PS_0_status_text.SetValue(status)
 			self.PS_0_last_opt = "w"
@@ -214,7 +256,7 @@ class power_control(wx.Frame):
 	def PS_0_opt_process_debug(self, e):
 		#Example: https://blog.csdn.net/rumswell/article/details/6564181
 		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_0_status_text.SetValue(now_time + " " + self.PS_0_last_opt)
+		self.PS_0_status_text.SetValue(now_time + " " + self.PS_0_last_opt + " " + self.PS_0_channel_select_box.GetValue())
 
 		#this is the gap all operations must be done!:
 		#	WAIT / 1000 - 0.1
@@ -272,27 +314,49 @@ class power_control(wx.Frame):
 		self.PS_1_on_buttom.SetBackgroundColour('green')
 		self.PS_1_off_buttom.SetBackgroundColour('white')
 		self.PS_1_recall_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_1_operate_text.SetValue(now_time + " PS_1 on")
 		self.PS_1_last_opt = "o"
+		self.PS_1_opt_text_update("on")
+
 		
 	def PS_1_off (self, e):
 		self.PS_1_off_buttom.SetBackgroundColour('green')
 		self.PS_1_on_buttom.SetBackgroundColour('white')
 		self.PS_1_recall_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_1_operate_text.SetValue(now_time + " PS_1 off")
 		self.PS_1_last_opt = "f"
+		self.PS_1_opt_text_update("off")
+		
+
 
 	def PS_1_recall (self, e):
 		self.PS_1_recall_buttom.SetBackgroundColour('green')
 		self.PS_1_off_buttom.SetBackgroundColour('white')
 		self.PS_1_on_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_1_operate_text.SetValue(now_time + " PS_1 recall")
 		self.PS_1_last_opt = "r0"
-	#}}}
+		self.PS_1_opt_text_update("recall")
+		
 
+	def PS_1_opt_text_update(self, opt):
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		if opt == "on":
+			self.PS_1_opt_list.append(now_time + " PS_1 on")
+		if opt == "off":
+			self.PS_1_opt_list.append(now_time + " PS_1 off")
+		if opt == "recall":
+			self.PS_1_opt_list.append(now_time + " PS_1 recall")
+			
+		if len(self.PS_1_opt_list) == 5:
+			#only keep the last 10 messages
+			del(self.PS_1_opt_list[0])
+
+		status_tmp = ""
+
+		for i in range (len(self.PS_1_opt_list) - 1, -1, -1):
+			status = self.PS_1_opt_list[i]
+			status_tmp += status + '\n'
+
+		self.PS_1_operate_text.SetValue(status_tmp)
+	#}}}
+	
 	def PS_1_opt_process(self, e):
 		#{{{
 		#all operations must be done in the gap of WAIT!
@@ -382,25 +446,47 @@ class power_control(wx.Frame):
 		self.PS_2_on_buttom.SetBackgroundColour('green')
 		self.PS_2_off_buttom.SetBackgroundColour('white')
 		self.PS_2_recall_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_2_operate_text.SetValue(now_time + " PS_2 on")
 		self.PS_2_last_opt = "o"
+		self.PS_2_opt_text_update("on")
+
 		
 	def PS_2_off (self, e):
 		self.PS_2_off_buttom.SetBackgroundColour('green')
 		self.PS_2_on_buttom.SetBackgroundColour('white')
 		self.PS_2_recall_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_2_operate_text.SetValue(now_time + " PS_2 off")
 		self.PS_2_last_opt = "f"
+		self.PS_2_opt_text_update("off")
+		
+
 
 	def PS_2_recall (self, e):
 		self.PS_2_recall_buttom.SetBackgroundColour('green')
 		self.PS_2_off_buttom.SetBackgroundColour('white')
 		self.PS_2_on_buttom.SetBackgroundColour('white')
-		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-		self.PS_2_operate_text.SetValue(now_time + " PS_2 recall")
 		self.PS_2_last_opt = "r0"
+		self.PS_2_opt_text_update("recall")
+		
+
+	def PS_2_opt_text_update(self, opt):
+		now_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+		if opt == "on":
+			self.PS_2_opt_list.append(now_time + " PS_2 on")
+		if opt == "off":
+			self.PS_2_opt_list.append(now_time + " PS_2 off")
+		if opt == "recall":
+			self.PS_2_opt_list.append(now_time + " PS_2 recall")
+			
+		if len(self.PS_2_opt_list) == 5:
+			#only keep the last 10 messages
+			del(self.PS_2_opt_list[0])
+
+		status_tmp = ""
+
+		for i in range (len(self.PS_2_opt_list) - 1, -1, -1):
+			status = self.PS_2_opt_list[i]
+			status_tmp += status + '\n'
+
+		self.PS_2_operate_text.SetValue(status_tmp)
 	#}}}
 
 	def PS_2_opt_process(self, e):
@@ -454,11 +540,11 @@ class power_control(wx.Frame):
 		#we need to change call button color when close the frame
 		self.call_button = call_button
 		if not self.call_button == "":
-			self.call_button.SetBackgroundColour('green') 
+			self.call_button.SetBackgroundColour('blue') 
 
 	def destroy(self, e):
 		if not self.call_button == "":
-			self.call_button.SetBackgroundColour('blue') 
+			self.call_button.SetBackgroundColour('grey') 
 		self.Destroy()
 	#}}}
 

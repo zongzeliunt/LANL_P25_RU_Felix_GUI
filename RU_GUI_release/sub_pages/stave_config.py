@@ -415,11 +415,11 @@ class stave_config(wx.Frame):
 		#we need to change call button color when close the frame
 		self.call_button = call_button
 		if not self.call_button == "":
-			self.call_button.SetBackgroundColour('green') 
+			self.call_button.SetBackgroundColour('blue') 
 
 	def destroy(self, e):
 		if not self.call_button == "":
-			self.call_button.SetBackgroundColour('blue') 
+			self.call_button.SetBackgroundColour('grey') 
 		self.Destroy()
 	#}}}
 

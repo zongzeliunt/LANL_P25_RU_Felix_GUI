@@ -276,7 +276,7 @@ class stave_config(wx.Frame):
 			stdout_tmp += str(line) + '\n'
 		
 		if stderr_list == []:
-                        self.exe_button.SetBackgroundColour('green')
+                        self.exe_button.SetBackgroundColour('red')
 		else:
                         self.exe_button.SetBackgroundColour('green')
 		
@@ -415,11 +415,11 @@ class stave_config(wx.Frame):
 		#we need to change call button color when close the frame
 		self.call_button = call_button
 		if not self.call_button == "":
-			self.call_button.SetBackgroundColour('green') 
+			self.call_button.SetBackgroundColour('blue') 
 
 	def destroy(self, e):
 		if not self.call_button == "":
-			self.call_button.SetBackgroundColour('blue') 
+			self.call_button.SetBackgroundColour('grey') 
 		self.Destroy()
 	#}}}
 
