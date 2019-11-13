@@ -13,23 +13,23 @@ def redraw_settings(ser):
 	time.sleep(WAIT)
 	
 	ser.write("INST:NSEL 1\r\n".encode())
-	outstr += print_settings(ser) + "\n"
 	time.sleep(WAIT)
+	outstr += print_settings(ser) + "\n"
 	
 	ser.write("INST:NSEL 2\r\n".encode())
-	outstr += print_settings(ser) + "\n"
 	time.sleep(WAIT)
+	outstr += print_settings(ser) + "\n"
 	return outstr
 
 def get_status (ser):
 	outstr = ""
 	ser.write("INST:NSEL 1\r\n".encode())
-	outstr += print_status(ser) + "\n"
 	time.sleep(WAIT)
+	outstr += print_status(ser) + "\n"
 
 	ser.write("INST:NSEL 2\r\n".encode())
-	outstr += print_status(ser) + "\n"
 	time.sleep(WAIT)
+	outstr += print_status(ser) + "\n"
 	return outstr
 
 
@@ -96,6 +96,7 @@ def e3646a_serial_connect(PS_0_USB_ID):
 	ser = serial.Serial(PS_0_USB_ID, 9600, timeout=1, dsrdtr=True)
 	ser.flush()
 	ser.write("SYST:REM\r\n".encode())
+	time.sleep(WAIT)
 	return ser
 
 

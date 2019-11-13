@@ -261,7 +261,7 @@ class stave_config(wx.Frame):
 
 		cmd = "cd " + path + "; " + command
 		stdout_list = []	
-		stderr_list = []	
+		stderr_list = []
 
 		#DEBUG
 		#in release version open this	
@@ -432,6 +432,6 @@ def show_stave_config (self, e, button_num, path):
 if __name__ == '__main__':
 	#this is only for developer debug
 	root = wx.App()
-	frame = stave_config(None, title = "Stave_config", exe_path = os.getcwd(),)
+	frame = stave_config(None, title = "Stave_config", exe_path = os.getcwd())
 	frame.Show()
 	root.MainLoop()

@@ -58,22 +58,27 @@ def print_status(ser,end="\n"):
     #ser.write("APPLY?\r\n".encode()); response = ser.readline()
     #print(response.decode().strip())
 
-    ser.write("OUTPUT?\r\n".encode()); response = ser.readline()
+    ser.write("OUTPUT?\r\n".encode())
+	response = ser.readline()
     output_enabled = "ON" if int(response)==1 else "OFF"
     outstr += "output {0}, ".format(output_enabled)
 
-    ser.write("MEAS:VOLT?\r\n".encode()); response = ser.readline()
+    ser.write("MEAS:VOLT?\r\n".encode())
+	response = ser.readline()
     volt_readback = float(response)
-    ser.write("MEAS:CURR?\r\n".encode()); response = ser.readline()
+    ser.write("MEAS:CURR?\r\n".encode())
+	response = ser.readline()
     curr_readback = float(response)
     outstr += "readbacks {0:.6f} V {1:.6f} A, ".format(volt_readback, curr_readback)
 
-    ser.write("VOLT:PROT:TRIP?\r\n".encode()); response = ser.readline()
+    ser.write("VOLT:PROT:TRIP?\r\n".encode())
+	response = ser.readline()
     ovp_tripped = "TRIPPED" if int(response)==1 else "OK"
     outstr += "OVP {0} ".format(ovp_tripped)
 
     #not supported by E3646A?
-    ser.write("CURR:PROT:TRIP?\r\n".encode()); response = ser.readline()
+    ser.write("CURR:PROT:TRIP?\r\n".encode())
+	response = ser.readline()
     ocp_tripped = "TRIPPED" if int(response)==1 else "OK"
     outstr += "OCP {0}".format(ocp_tripped)
 

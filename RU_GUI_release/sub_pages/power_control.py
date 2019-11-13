@@ -8,7 +8,7 @@ HORI = 200 #horizontal
 VERT = 100 #vertical
 textbox_style = (wx.TE_MULTILINE | wx.HSCROLL)
 
-WAIT = 1000
+WAIT = 2000
 
 #WAIT = 200
  
@@ -45,15 +45,15 @@ class power_control(wx.Frame):
 		self.PS_0_buttom_event_bind()
 		
 		#DEBUG
-		#self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
-		self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
+		self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
+		#self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
 
 		self.PS_0_timer = wx.Timer(self)
 		self.PS_0_timer.Start(WAIT)
 		
 		#DEBUG
-		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
-		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
 
 		self.PS_0_last_opt = "r1"
 			#initial status is recall_1, need to call redraw_settings
@@ -72,15 +72,15 @@ class power_control(wx.Frame):
 		self.PS_1_buttom_event_bind()
 		
 		#DEBUG
-		self.PS_1_ser = e3633a.e3633a_serial_connect(PS_1_USB_ID)
-		#self.PS_1_ser = e3633a.e3633a_serial_connect_debug(PS_1_USB_ID)
+		#self.PS_1_ser = e3633a.e3633a_serial_connect(PS_1_USB_ID)
+		self.PS_1_ser = e3633a.e3633a_serial_connect_debug(PS_1_USB_ID)
 		
 		self.PS_1_timer = wx.Timer(self)
 		self.PS_1_timer.Start(WAIT)  
 		
 		#DEBUG
-		#self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
-		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process, self.PS_1_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_1_opt_process, self.PS_1_timer)
 
 		self.PS_1_last_opt = "r1"
 	
@@ -94,15 +94,15 @@ class power_control(wx.Frame):
 		self.PS_2_buttom_event_bind()
 		
 		#DEBUG
-		self.PS_2_ser = e3633a.e3633a_serial_connect(PS_2_USB_ID)
-		#self.PS_2_ser = e3633a.e3633a_serial_connect_debug(PS_2_USB_ID)
+		#self.PS_2_ser = e3633a.e3633a_serial_connect(PS_2_USB_ID)
+		self.PS_2_ser = e3633a.e3633a_serial_connect_debug(PS_2_USB_ID)
 		
 		self.PS_2_timer = wx.Timer(self)
 		self.PS_2_timer.Start(WAIT)  
 		
 		#DEBUG
-		#self.Bind(wx.EVT_TIMER, self.PS_2_opt_process_debug, self.PS_2_timer)
-		self.Bind(wx.EVT_TIMER, self.PS_2_opt_process, self.PS_2_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_2_opt_process_debug, self.PS_2_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_2_opt_process, self.PS_2_timer)
 
 		self.PS_2_last_opt = "r1"
 
@@ -412,7 +412,7 @@ class power_control(wx.Frame):
 		last_opt = self.PS_2_last_opt
 
 		if last_opt == "w":
-			status = self.e3633a.get_status(self.PS_2_ser)
+			status = self.e3633a.print_status(self.PS_2_ser)
 			#get status wait 0.4 s
 			self.PS_2_status_text.SetValue(status)
 			self.PS_2_last_opt = "w"

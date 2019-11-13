@@ -8,7 +8,8 @@ HORI = 200 #horizontal
 VERT = 100 #vertical
 textbox_style = (wx.TE_MULTILINE | wx.HSCROLL)
 
-WAIT = 1000
+WAIT = 2000
+#tragger all PS process every 2 seconds 
 
 #WAIT = 200
  
@@ -412,7 +413,7 @@ class power_control(wx.Frame):
 		last_opt = self.PS_2_last_opt
 
 		if last_opt == "w":
-			status = self.e3633a.get_status(self.PS_2_ser)
+			status = self.e3633a.print_status(self.PS_2_ser)
 			#get status wait 0.4 s
 			self.PS_2_status_text.SetValue(status)
 			self.PS_2_last_opt = "w"
