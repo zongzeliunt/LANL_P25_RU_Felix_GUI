@@ -277,37 +277,35 @@ class Testbench(object):
         return result_dict
     
     def read_sensors(self,enable_strobe_generation=0,LinkSpeed=3,disable_manchester=1, pattern=SensorMatrixPattern.EMPTY):
-        maskdict = self.read_maskfile("masklist_"+TBNAME+".txt")
-        #do GRST at the beginning, since it's global
-        self.rdo.dctrl.set_dctrl_mask(0x1F) #restore broadcast to all connectors
-        #ch_broadcast = Alpide(self.rdo, chipid=0x0F)
-        #ch_broadcast.reset()
-       
-        for connector,chipid in CHIP_MAP[0]:
-			self.rdo.dctrl.set_dctrl_mask(1<<connector)
-			self.rdo.dctrl.set_input(connector,force=True)
-			ch = Alpide(self.rdo, chipid=chipid)
-			
-			#=================================
-			read_parameter_dict = {}
-
-			read_parameter_dict["PULSE_VPULSEH"] = ch.getreg_VPULSEH(commitTransaction = True)[0] 
-			read_parameter_dict["PULSE_VPULSEL"] = ch.getreg_VPULSEL(commitTransaction = True)[0] 
-			read_parameter_dict["IBIAS"] = ch.getreg_IBIAS  (commitTransaction = True)[0] 
-			read_parameter_dict["VRESETD"] = ch.getreg_VRESETD(commitTransaction = True)[0] 
-			read_parameter_dict["VCASN"] = ch.getreg_VCASN  (commitTransaction = True)[0] 
-			read_parameter_dict["VCASP"] = ch.getreg_VCASP  (commitTransaction = True)[0] 
-			read_parameter_dict["VCLIP"] = ch.getreg_VCLIP  (commitTransaction = True)[0] 
-			read_parameter_dict["VCASN2"] = ch.getreg_VCASN2 (commitTransaction = True)[0] 
-			read_parameter_dict["IDB"] = ch.getreg_IDB    (commitTransaction = True)[0] 
-			read_parameter_dict["ITHR"] = ch.getreg_ITHR   (commitTransaction = True)[0] 
-			read_parameter_dict["ITHR_commitTransaction"] = "True"
-			file_name = "./read_parameter.json"
-			fl = open(file_name, "w")
-			json.dump(read_parameter_dict, fl)
-			fl.close()
-
-			#=================================
+		self.rdo.dctrl.set_dctrl_mask(0x1F) #restore broadcast to all connectors
+		#ch_broadcast = Alpide(self.rdo, chipid=0x0F)
+		#ch_broadcast.reset()
+		
+		connector,chipid = CHIP_MAP[0][0], CHIP_MAP[0][1]
+		self.rdo.dctrl.set_dctrl_mask(1<<connector)
+		self.rdo.dctrl.set_input(connector,force=True)
+		ch = Alpide(self.rdo, chipid=chipid)
+		
+		#=================================
+		read_parameter_dict = {}
+		
+		read_parameter_dict["PULSE_VPULSEH"] = ch.getreg_VPULSEH(commitTransaction = True)[0] 
+		read_parameter_dict["PULSE_VPULSEL"] = ch.getreg_VPULSEL(commitTransaction = True)[0] 
+		read_parameter_dict["IBIAS"] = ch.getreg_IBIAS  (commitTransaction = True)[0] 
+		read_parameter_dict["VRESETD"] = ch.getreg_VRESETD(commitTransaction = True)[0] 
+		read_parameter_dict["VCASN"] = ch.getreg_VCASN  (commitTransaction = True)[0] 
+		read_parameter_dict["VCASP"] = ch.getreg_VCASP  (commitTransaction = True)[0] 
+		read_parameter_dict["VCLIP"] = ch.getreg_VCLIP  (commitTransaction = True)[0] 
+		read_parameter_dict["VCASN2"] = ch.getreg_VCASN2 (commitTransaction = True)[0] 
+		read_parameter_dict["IDB"] = ch.getreg_IDB    (commitTransaction = True)[0] 
+		read_parameter_dict["ITHR"] = ch.getreg_ITHR   (commitTransaction = True)[0] 
+		read_parameter_dict["ITHR_commitTransaction"] = "True"
+		file_name = "./read_parameter.json"
+		fl = open(file_name, "w")
+		json.dump(read_parameter_dict, fl)
+		fl.close()
+		
+		#=================================
 
 
     def setup_sensors(self,enable_strobe_generation=0,LinkSpeed=3,disable_manchester=1, pattern=SensorMatrixPattern.EMPTY):

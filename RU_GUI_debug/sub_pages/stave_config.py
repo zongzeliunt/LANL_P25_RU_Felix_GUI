@@ -276,9 +276,9 @@ class stave_config(wx.Frame):
 			stdout_tmp += str(line) + '\n'
 		
 		if stderr_list == []:
-                        self.exe_button.SetBackgroundColour('red')
-		else:
                         self.exe_button.SetBackgroundColour('green')
+		else:
+                        self.exe_button.SetBackgroundColour('red')
 		
 		self.stdout_text.SetValue(stdout_tmp)
 		self.update_status_list ( "exe", stave_name)
