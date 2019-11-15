@@ -51,11 +51,11 @@ class power_control(wx.Frame):
 
 		#DEBUG. Switch to control or do not control 
 		########################################################
-		#self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
-		self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
+		self.PS_0_ser = e3646a.e3646a_serial_connect(PS_0_USB_ID)
+		#self.PS_0_ser = e3646a.e3646a_serial_connect_debug(PS_0_USB_ID)
 		
-		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
-		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_0_opt_process, self.PS_0_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_0_opt_process_debug, self.PS_0_timer)
 		########################################################
 
 
@@ -81,11 +81,11 @@ class power_control(wx.Frame):
 		
 		#DEBUG. Switch to control or do not control 
 		####################################################################
-		#self.PS_1_ser = e3633a.e3633a_serial_connect(PS_1_USB_ID)
-		self.PS_1_ser = e3633a.e3633a_serial_connect_debug(PS_1_USB_ID)
+		self.PS_1_ser = e3633a.e3633a_serial_connect(PS_1_USB_ID)
+		#self.PS_1_ser = e3633a.e3633a_serial_connect_debug(PS_1_USB_ID)
 		
-		#self.Bind(wx.EVT_TIMER, self.PS_1_opt_process, self.PS_1_timer)
-		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
+		self.Bind(wx.EVT_TIMER, self.PS_1_opt_process, self.PS_1_timer)
+		#self.Bind(wx.EVT_TIMER, self.PS_1_opt_process_debug, self.PS_1_timer)
 		####################################################################
 
 		self.PS_1_last_opt = "r1"

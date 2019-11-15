@@ -14,7 +14,9 @@ zongzeli2@my.unt.edu
 =============================================================
 	Please use "run_RU_GUI.sh" to run the GUI. All currently required source commands are listed in this file. For example, "source scl_source enable rh-python36" is making RU NUC use python3.6 as default python. 
 	A sub-page "power_control" needs to use lib "serial" which installed in python3.6 to control the power supply devices. That is why we need to use python 3.6 to run this GUI. 
-		
+	Please close all sub pages before closing the main RU GUI page, or you should use ctrl+c in linux terminal to close the sub page.	
+	Programming FPGA will take almost 30 seconds, in this time period there is no response from GUI. Please wait for it's response before you do anything else.
+	
 	1) Folder "operations"
 		If you are a user, please only edit one file in this folder, "step_commands.py".
 		You can add whatever execution you want in this file, please make sure the format is following this:
@@ -26,7 +28,6 @@ zongzeli2@my.unt.edu
 		#2: command
 			The command you want to execute. 
 			For example, you want to program the RU board using vivado, your vivado tcl file is stored at "/home/maps/git/RUv1_Test_sync2018-08/bitstreams/" and the FPGA program command is "vivado -mode batch -source program_3plus1.tcl". Please list the path and command in step[1] and step[2]
-			Programming FPGA will take almost 30 seconds, in this time period there is no response from GUI. Please wait for it's response before you do anything else.
 
 		#3: explain
 			Will show in explain box.
@@ -54,7 +55,7 @@ zongzeli2@my.unt.edu
 		B) power_control
 			Power control sub page is used to control power supply devices. All three power supply devices are listed here. We can make them on/off/recall. Currently PS_0 (e3633a) and PS_1 (e3646a) can be controlled.
 			The "path" element in step_commands.py for opening power_control page is not really useful.
-			If the power_control sub page is opened, the main RU GUI page could respond slow. I have discussion in developer_manual.txt. If you don't like the slow responding, after you are done with configuration the power supply devices please close this sub page.
+			If the power_control sub page is opened, the main RU GUI page could respond slow. I have discussion in developer_manual.txt. If you don't like the slow responding, please close this sub page after you have done all the power supply devices configutaions. 
 
 
  
@@ -67,7 +68,7 @@ zongzeli2@my.unt.edu
 			Please notice: 
 			a. If there is no "parameter.json" file in py_gui, "config stave" operation will write default values to stave.
 			b. You don't need to write parameter.json file before you config staves.
-			c. As I mentioned in py_gui section, please write stave name and corresponding testbench file in "py_gui/stave_config_file.txt". Please select one stave before you write parameter or try to read, otherwise you will receive an error message.
+			c. As I mentioned in py_gui section, please write stave name and corresponding testbench file in "py_gui/stave_config_file.txt". Please select one stave before you write parameter or try to read, or you will receive an error message.
 			d. In current version, writing parameter to stave can receive feed back messages. However, these messages are output from stderr, not stdout. In current version I change the color into red. If you don't like it, please refer to developer_manual.txt for change.
 			 
 			
