@@ -85,4 +85,5 @@ Here is something must hidden from user. If you are not a developer, please do n
 	2) In RU cheatshee, there are a lot of operations calling py/testbench1.py to configurate the staves. Right now we only have one stave. It will be easy and clear to write such operations into step_commands.py. However, if in the future we add more staves into the system, keep adding step commands maybe not a good idea. We can have two solutions:
 		a. Group operations into shell script and use one step command to execute this shell script.
 		b. Add one sub page to select which stave you want to configurate and execute step commands which listed in this sub page.
-	   In my opinion, the solution a. is a good idea. But if you want to add new sub page, please 
+	   In my opinion, the solution a. is a good idea. Please refer my note 1. for the procedure of adding new sub page.
+	3) In Power_control sub page. Once open it, all the buttons' color are white. Its color should be initialized according to the status message read from power supply device. To add this feature you need to add a message pattern recognition feature in "wait" stage or "r1" stage. The status message is also shown in the message box, so the button color is not initialized will not be a big problem.
